@@ -1,0 +1,25 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs">
+
+	<h:form>
+		<ul>
+
+			<li><h:commandLink action="/pages/welcome?faces-redirect=true">Home</h:commandLink></li>
+			<c:if test="#{!loginController.authenticated}">
+				<li><h:commandLink action="home">#{global.login}</h:commandLink></li>
+			</c:if>
+
+			<c:if test="#{loginController.authenticated}">
+				<li><h:commandLink action="/pages/config/teamlist?faces-redirect=true">MEMBERS</h:commandLink></li>
+			</c:if>
+			
+			
+		</ul>
+	</h:form>
+</ui:composition>
+
+
