@@ -160,7 +160,7 @@ a:hover {
 
 #imixs-content dl dt {
 	float: left;
-	width: 120px;
+	width: 500px;
 }
 
 #imixs-content dl dd {
@@ -174,7 +174,7 @@ a:hover {
 }
 
 #imixs-content dl.columns-2 dt {
-	width: 120px;
+	width: 500px;
 }
 
 #imixs-content dl.columns-2 dd {

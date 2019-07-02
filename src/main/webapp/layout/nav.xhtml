@@ -10,7 +10,22 @@
 
 			<li><h:commandLink action="/pages/welcome?faces-redirect=true">Home</h:commandLink></li>
 			<c:if test="#{!loginController.authenticated}">
-				<li><h:commandLink action="home">#{global.login}</h:commandLink></li>
+				<li><h:commandLink action="home">Home</h:commandLink></li>
+			</c:if>
+
+			<li><h:commandLink action="/pages/requests?faces-redirect=true">BioCompACE Requests</h:commandLink></li>
+			<c:if test="#{!loginController.authenticated}">
+				<li><h:commandLink action="requests">BioCompACE Requests</h:commandLink></li>
+			</c:if>
+			
+			<li><h:commandLink action="/pages/sub_newRequest?faces-redirect=true">New BioCompACE Request</h:commandLink></li>
+			<c:if test="#{!loginController.authenticated}">
+				<li><h:commandLink action="requests">New BioCompACE Request</h:commandLink></li>
+			</c:if>
+			
+			<li><h:commandLink action="/pages/sub_admin?faces-redirect=true">BioCompACE Admin Dashboard</h:commandLink></li>
+			<c:if test="#{!loginController.authenticated}">
+				<li><h:commandLink action="requests">BioCompACE Admin Dashboard</h:commandLink></li>
 			</c:if>
 
 			

@@ -7,12 +7,12 @@
 
 
 	<div class="imixs-panel">
-		<h3>#{global.workflow}</h3>
+		<h3></h3>
 
 		<i:imixsWorkflowActions workflowController="#{workflowController}"
 			disabletooltip="false" />
-
-		<h:commandButton value="#{global.close}" action="/pages/welcome?faced-redirect=true"
+ 
+		<h:commandButton value="#{global.close}" action="/pages/requests?faced-redirect=true"
 		actionListener="#{workflowController.close()}" />
 
 		<ui:fragment
