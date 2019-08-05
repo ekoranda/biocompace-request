@@ -1,0 +1,49 @@
+<f:subview xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs"
+	xmlns:p="http://primefaces.org/ui">
+
+	<!-- **** General info ***** -->
+	
+
+	<dl>
+		<ui:fragment 
+				rendered="#{workflowController.workitem.item['$TaskID']==1500 or(!empty workflowController.workitem.item['reviewThree'] )}">
+						
+		
+		
+		
+				<dt style="clear: left;">
+			<h:outputLabel for="team_id" value="Reviewer Theree Name:">
+				<h:message style="color: red" for="team_id" showSummary="true"
+					showDetail="false" />
+			</h:outputLabel>
+		</dt>
+		<dd>
+			<h:selectOneMenu id="team_id"
+				value="#{workflowController.workitem.item['reviewerName3']}" required="false">
+				<f:selectItem required="true" itemLabel="#{global.please_select}"
+					itemValue="" />
+				<f:selectItems value="#{teamController.teamSelection}" />
+			</h:selectOneMenu>
+		</dd>
+		
+		
+			<dt style="clear: left; width = 400px">Review Three</dt>
+			<dd>
+				<h:inputTextarea class="imixs-editor"
+					value="#{workflowController.workitem.item['reviewThree']}" />
+			</dd>
+			</ui:fragment>
+	
+	
+	</dl>
+
+	
+
+<div style="clear: left;" />
+
+</f:subview>

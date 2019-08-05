@@ -44,7 +44,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- 4.5.5 -->
-        <org.imixs.workflow.version>4.5.0</org.imixs.workflow.version>
+        <!-- 4.5.0 -->
+        
+        <org.imixs.workflow.version>5.0.2</org.imixs.workflow.version>
         <custom.webResources>src/main/webapp</custom.webResources>
         <custom.unpackTypes>war</custom.unpackTypes>
         <lucene.version>7.5.0</lucene.version>
@@ -134,6 +136,15 @@
             <version>2.0</version>
             <scope>provided</scope>
         </dependency>
+        
+        <!--  Micro Pro Health -->
+        <!-- https://mvnrepository.com/artifact/org.eclipse.microprofile.health/microprofile-health-api -->
+<dependency>
+    <groupId>org.eclipse.microprofile.health</groupId>
+    <artifactId>microprofile-health-api</artifactId>
+    <version>1.0</version>
+</dependency>
+        
 
         <!-- Imixs Workflow -->
 
@@ -155,7 +166,11 @@
             <version>${org.imixs.workflow.version}</version>
         </dependency>
 
-
+		<dependency>
+    <groupId>org.primefaces</groupId>
+    <artifactId>primefaces</artifactId>
+    <version>7.0</version>
+</dependency>
         <!-- Apache Lucene -->
         <dependency>
             <groupId>org.apache.lucene</groupId>
