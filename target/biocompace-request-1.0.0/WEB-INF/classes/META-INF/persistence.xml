@@ -9,8 +9,8 @@
 	<!-- eclipselink -->
 	<persistence-unit name="org.imixs.workflow.jpa" transaction-type="JTA">	
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>	
-		<jta-data-source>jdbc/workflow</jta-data-source>
-		<jar-file>lib/imixs-workflow-engine-5.0.2.jar</jar-file>
+		<jta-data-source>jdbc/biocompace</jta-data-source>
+		<jar-file>lib/imixs-workflow-engine-5.0.0.jar</jar-file>
 		<properties>
 			<!-- target-database Auto MySQL PostgreSQL  -->
 			<property name="eclipselink.target-database" value="Auto" />

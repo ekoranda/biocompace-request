@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>us.researchdata.java</groupId>
@@ -46,7 +46,7 @@
         <!-- 4.5.5 -->
         <!-- 4.5.0 -->
         
-        <org.imixs.workflow.version>5.0.2</org.imixs.workflow.version>
+        <org.imixs.workflow.version>5.0.0</org.imixs.workflow.version>
         <custom.webResources>src/main/webapp</custom.webResources>
         <custom.unpackTypes>war</custom.unpackTypes>
         <lucene.version>7.5.0</lucene.version>

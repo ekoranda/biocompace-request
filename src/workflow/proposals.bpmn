@@ -13,9 +13,9 @@
       <imixs:value><![CDATA[org.imixs.workflow.engine.plugins.RulePlugin]]></imixs:value>
     </imixs:item>
     <imixs:item name="txtfieldmapping" type="xs:string">
-      <imixs:value><![CDATA[reviewer | {ekoranda@wisc.edu}]]></imixs:value>
+      <imixs:value><![CDATA[reviewer | namReviewer]]></imixs:value>
       <imixs:value><![CDATA[administrator | {testing}]]></imixs:value>
-      <imixs:value><![CDATA[user | {imixs}]]></imixs:value>
+      <imixs:value><![CDATA[user | namUser]]></imixs:value>
     </imixs:item>
     <imixs:item name="txtworkflowmodelversion" type="xs:string">
       <imixs:value><![CDATA[1.1.0]]></imixs:value>

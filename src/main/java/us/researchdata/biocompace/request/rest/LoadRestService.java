@@ -65,7 +65,7 @@ import org.imixs.workflow.exceptions.ProcessingErrorException;
 public class LoadRestService {
 
 	@javax.ws.rs.core.Context
-	private static HttpServletRequest servletRequest;
+	private HttpServletRequest servletRequest;
 
 	private static Logger logger = Logger.getLogger(LoadRestService.class.getName());
 
@@ -89,9 +89,8 @@ public class LoadRestService {
 
 			// create example workitem
 			ItemCollection workitem = new ItemCollection();
-			workitem.replaceItemValue(WorkflowKernel.MODELVERSION, modelversion);
-			workitem.replaceItemValue(WorkflowKernel.PROCESSID, processid);
-			workitem.replaceItemValue(WorkflowKernel.EVENTID, activityid);
+			
+			workitem.model( modelversion).task( processid).event( activityid);
 			workitem.replaceItemValue(WorkflowKernel.TYPE, "workitem");
 			workitem.replaceItemValue("subject", "Loadtest-" + System.currentTimeMillis());
 			try {
