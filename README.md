@@ -3,98 +3,111 @@
 ---
 ## Overview
 
->The African Centers of Excellence in Bioinformatics program leverages an existing African Centers of Excellence program in Mali and provides high-performance computing (HPC) infrastructure and training on advanced biomedical data analysis to research institutes in Africa. It empowers African researchers to utilize computing resources and perform advanced biomedical data analysis, while creating an independent community of Bioinformatics specialists to encourage sharing of data, best practices and collaborative projects. 
+The African Centers of Excellence in Bioinformatics program leverages an existing African Centers of Excellence program in Mali and provides high-performance computing (HPC) infrastructure and training on advanced biomedical data analysis to research institutes in Africa. It empowers African researchers to utilize computing resources and perform advanced biomedical data analysis, while creating an independent community of Bioinformatics specialists to encourage sharing of data, best practices and collaborative projects. 
 
->The Biocompace-Request service was created to provide extensible workflow management for submitting, reviewing, and managing proposals for HPC resources provided by the Biocompace project. It creates a platform for researchers to submit proposals for HPC resources as well as software tools. Reviewers may then approve or deny the proposal. At least two reviewers must approve the proposal, or else the workflow process ends. After two reviewers approve it the workflow assigns the proposal to the system administrator who can review the approved request before provisioning resources.
+The Biocompace-Request service was created to provide extensible workflow management for submitting, reviewing, and managing proposals for HPC resources provided by the Biocompace project. It creates a platform for researchers to submit proposals for HPC resources as well as software tools. Reviewers may then approve or deny the proposal. At least two reviewers must approve the proposal, or else the workflow process ends. After two reviewers approve it the workflow assigns the proposal to the system administrator who can review the approved request before provisioning resources.
 
->The Biocompace-Request service is built upon the Imixs Workflow engine. The Imixs Workflow engine (Imixs) is an open source workflow engine based on the Java Enterprise Architecture (JEE). Imixs provides components to build human-centric workflow applications within a flexible framework. It controls business processes and distributes tasks within an organization as well as ensures that all tasks are processed in accordance to any compliance guidelines and business rules.
+The Biocompace-Request service is built upon the Imixs Workflow engine. The Imixs Workflow engine (Imixs) is an open source workflow engine based on the Java Enterprise Architecture (JEE). Imixs provides components to build human-centric workflow applications within a flexible framework. It controls business processes and distributes tasks within an organization as well as ensures that all tasks are processed in accordance to any compliance guidelines and business rules.
 
 
 See [Imixs-Workflow](https://www.imixs.org/)
 
 ---
-## 1. Build the Application
-The Biocompace-request is based on Maven to build the project from sources run
+## Build the Application
+
+Building the Biocompace-Request service requires JDK8+ and Maven 3.0.3+. To build the project from source
 
 ```
-$ mvn clean install
+git clone https://github.com/ekoranda/biocompace-request.git
+cd biocompace-request
+mvn clean install
 ```
 
-You can also download the application from the [latest release](https://github.com/ekoranda/biocompace-request/releases).
+You can also download the application war file for the [latest release](https://github.com/ekoranda/biocompace-request/releases).
 
 ----
-## 2. Deploy the Application
+## Deploy the Application
 
-* **Install Java**
+1. Install Java
 
->You can get latest version of java from [here](https://www.java.com/en/download/mac_download.jsp).
+    Biocompace-Request requires JDK8+. The application has been tested and is known to work with OpenJDK 1.8.0\_212.
 
-* **Install WildFly 17.0.0.Final**
+1. Install the WildFly Application Server
 
->You can get the link from [here](https://tomee.apache.org/download-ng.html). 
+    Biocompace-Request has been tested and is known to work with WildFly 17.0.0. You can download Wildfly from [here](https://wildfly.org/downloads/). 
 
->Use wget to download the WildFly archive into the /tmp directory
+    Use wget to download the WildFly archive into the /tmp directory
 
-```
-$ wget https://download.jboss.org/wildfly/17.0.0.Final/wildfly-17.0.0.Final.tar.gz -P /tmp
-```
+    ```
+    wget https://download.jboss.org/wildfly/17.0.0.Final/wildfly-17.0.0.Final.tar.gz -P /tmp
+    ```
 
->Unpack the tar.zg and move it to the /opt directory
+    Unpack the tar.gz and move it to the /opt directory
 
-```
-sudo tar xf /tmp/wildfly-17.0.0.Final.tar.gz -C /opt/
-```
+    ```
+    sudo tar xf /tmp/wildfly-17.0.0.Final.tar.gz -C /opt/
+    ```
 
-* **Create a database using PostgreSQL**
+1. Create a database using PostgreSQL
 
->**1. Install From the CentOS Repositories**
+    Install From the CentOS Repositories
 
-```
-sudo yum install postgresql-server postgresql-contrib
-```
+    ```
+    sudo yum install postgresql-server postgresql-contrib
+    ```
 
->**2. Initialize PostgreSQL**
+    Initialize PostgreSQL
 
-```
-sudo postgresql-setup initdb
-sudo systemctl start postgresql
-```
+    ```
+    sudo postgresql-setup initdb
+    sudo systemctl start postgresql
+    ```
 
->**3. Change the password of the Linux user** *postgres*
+    Change the password of the Linux user *postgres*
 
-```
-sudo passwd postgres
-su - postgres
-psql -d template1 -c "ALTER USER postgres WITH PASSWORD 'newpassword';"
-```
+    ```
+    sudo passwd postgres
+    su - postgres
+    psql -d template1 -c "ALTER USER postgres WITH PASSWORD 'newpassword';"
+    ```
 
->**4. Create a role**
+    Create a role
 
-```
-createuser examplerole --pwprompt
-```
+    ```
+    createuser examplerole --pwprompt
+    ```
 
->You will be prompted to create a password for the new user
+    You will be prompted to create a password for the new user
 
->**5. Create a database with the new user**
+    Create a database with the new user
 
-```
-createdb mytestdb -O examplerole
-```
+    ```
+    createdb mytestdb -O examplerole
+    ```
 
->**6. Change the driver details in standalone.xml**
+1. Download and install PostgreSQL JDBC jar
 
->Add the following driver in /opt/wildfly-17.0.0.Final/standalone/configuration/standalone.xml
+TODO
 
-```
-<drivers>
-...
-	<driver name="postgres" module="org.postgres">
-		<driver-class>org.postgresql.Driver</driver-class>
-	</driver>
-...
-</drivers>
-```
+Need to explain where to download
+
+
+
+wildfly-17.0.1.Final.good/modules/org/postgres/main/postgresql-42.2.5.jar
+
+1. Change the driver details in standalone.xml
+
+   Add the following driver in /opt/wildfly-17.0.0.Final/standalone/configuration/standalone.xml
+
+    ```
+    <drivers>
+    ...
+        <driver name="postgres" module="org.postgres">
+            <driver-class>org.postgresql.Driver</driver-class>
+        </driver>
+    ...
+    </drivers>
+    ```
 
 >**7. Change the datasource details in standalone.xml**
 
@@ -103,15 +116,15 @@ createdb mytestdb -O examplerole
 ```
 <datasources>
 ...
-	<datasource jndi-name="java:/jdbc/biocompace" pool-name="biocompace">
-     	<connection-url>jdbc:postgresql://127.0.0.1:5432/biocompace</connection-url>
-		<driver>postgres</driver>
-     	<security>
-     		<user-name>username</user-name>
-         	<password>password</password>
-      	</security>
+    <datasource jndi-name="java:/jdbc/biocompace" pool-name="biocompace">
+        <connection-url>jdbc:postgresql://127.0.0.1:5432/biocompace</connection-url>
+        <driver>postgres</driver>
+        <security>
+            <user-name>username</user-name>
+            <password>password</password>
+        </security>
       </datasource>
-	
+    
 ...
 </datasources>
 ```
@@ -223,10 +236,10 @@ $ ./bin/standalone.sh -b=0.0.0.0 -bmanagement=0.0.0.0
 
 ```
 $ mvn archetype:generate 
-	-DgroupId={project-packaging}
-	-DartifactId={project-name}
-	-DarchetypeArtifactId={maven-template} 
-	-DinteractiveMode=false
+    -DgroupId={project-packaging}
+    -DartifactId={project-name}
+    -DarchetypeArtifactId={maven-template} 
+    -DinteractiveMode=false
 ```
 
 > Click file >import
