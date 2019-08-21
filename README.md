@@ -87,15 +87,18 @@ You can also download the application war file for the [latest release](https://
 
 1. Download and install PostgreSQL JDBC jar
 
-	TODO
-
-	Need to explain where to download
-
-
-
-	wildfly-17.0.1.Final.good/modules/org/postgres/main/postgresql-42.2.5.jar
+	Biocompace-request has been tested and is known to work with postgresql-42.2.5
 	
-	Change the driver details in standalone.xml
+	You can download the newest version of postgresql JDBC from [here](https://jdbc.postgresql.org/download.html).
+	
+	Move the jar file into the following location
+	
+	```
+	wildfly-17.0.1.Final.good/modules/org/postgres/main/postgresql-42.2.5.jar
+	```
+	
+1. Edit standalone.xml
+
 	
 	Add the following driver in /opt/wildfly-17.0.0.Final/standaloneconfiguration/standalone.xml
 
@@ -109,7 +112,6 @@ You can also download the application war file for the [latest release](https://
     </drivers>
     ```
 
-	Change the datasource details in standalone.xml
 
 	Add the following datasource in /opt/wildfly-17.0.0.Final/standalone/configuration/standalone.xml with the database you created.
 
@@ -129,7 +131,7 @@ You can also download the application war file for the [latest release](https://
 	</datasources>
 	```
 
-	Change the persistence details in persistence.xml in source of biocompace-request**
+	Change the persistence details in persistence.xml in source of biocompace-request
 
 	Edit the following file: biocompace-request/src/main/resources/META-INF/persistence.xml
 
@@ -304,7 +306,7 @@ You can also download the application war file for the [latest release](https://
 
 	Read [here](https://www.imixs.org/doc/engine/acl.html) to find information on the Imixs roles.
 
-* **To find more information about how the Workflow engine works and how to edit a workitem read about Imixs [here](https://www.imixs.org/doc/index.html).**
+**To find more information about how the Workflow engine works and how to edit a workitem read about Imixs [here](https://www.imixs.org/doc/index.html).**
 
 ----
 ## Roadmap
