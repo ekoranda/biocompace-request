@@ -21,14 +21,9 @@
 
 
 			<h:form id="workitem_form_id">
+		
 
-				<h2>#{loginController.getUserNameList().contains("emily")}</h2>
-				<h2>#{loginController.getUserNameList()}</h2>
 				
-
-				<!-- Error  -->
-				<!--  <ui:include src="error.xhtml" /> -->
-
 
 				<div class="imixs-tabs">
 				
@@ -37,7 +32,10 @@
 						<li><a href="#tab-2">Files</a></li>
 						<ui:fragment 
 							rendered="#{(workflowController.workitem.item['$TaskID']==1100 or(!empty workflowController.workitem.item['reviewOne'] ))}">
+							<ui:fragment
+								rendered="#{loginController.getUserNameList().contains('reviewer')|| loginController.getUserNameList().contains('administrator')}">
 								<li><a href="#tab-3">Reviewer 1</a></li>
+							</ui:fragment>
 						</ui:fragment>
 						<ui:fragment 
 							rendered="#{workflowController.workitem.item['$TaskID']==1300 or(!empty workflowController.workitem.item['reviewTwo'] )}">

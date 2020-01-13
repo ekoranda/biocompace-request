@@ -14,8 +14,7 @@
 	
 	<!-- Basic authentication -->
 	<login-config>
-		<auth-method>BASIC</auth-method>
-		<realm-name>imixsrealm</realm-name>
+		<auth-method>KEYCLOAK-SAML</auth-method>
 	</login-config>
 	
 	<!-- SSO 

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keycloak-saml-adapter xmlns="urn:keycloak:saml:adapter"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xsi:schemaLocation="urn:keycloak:saml:adapter https://www.keycloak.org/schema/keycloak_saml_adapter_1_11.xsd">
+    <SP entityID="https://imixs.emilykoranda.com/sp/keycloak-wildfly-adapter"
+        sslPolicy="ALL"
+        nameIDPolicyFormat="urn:oasis:names:tc:SAML:2.0:nameid-format:transient"
+        forceAuthentication="false"
+        isPassive="false"
+        turnOffChangeSessionIdOnLogin="false"
+        autodetectBearerOnly="true">
+        <Keys>
+            <Key encryption="true">
+                <CertificatePem>
+MIIEUTCCArmgAwIBAgIUPDiem1ldtwPhmV8d+nN4DCfQyMwwDQYJKoZIhvcNAQEL
+BQAwITEfMB0GA1UEAxMWaW1peHMuZW1pbHlrb3JhbmRhLmNvbTAeFw0yMDAxMDky
+MjMyNDFaFw0zMDAxMDYyMjMyNDFaMCExHzAdBgNVBAMTFmltaXhzLmVtaWx5a29y
+YW5kYS5jb20wggGiMA0GCSqGSIb3DQEBAQUAA4IBjwAwggGKAoIBgQC/NelyWHjq
+K3mKip4fr/dVpO/ZJKbA7tkTrYlNXpE6St6QDhq8C1hTe9tiCzdFZSgVjPBA0BXt
+8giP71fCqlWegyitXmvYmbK+rPLPLiQf6w0ZiWL4Zj1INp6YNSYG/IJIyjog/CZ1
+hvBzcg2kulgXuZLnUFUtSpLKNNu28mF5Lh0kRDw9sOCM6i8rPfFhfIfBpSR2aQ7j
+Dm4B0k/BqFo/XToCXF7Kq14pgnMA/18/nJzkTiU6KFfJq2EUsA2j5pLRhyQU4X7U
+9FKIxS+Gvxz+tarB2C/jZ8Q0FgY5+WhGnlYKpchwxn56TU7ljAoHx305c6/zcGjG
+8Bla5eMMLN1BFeND1UL+gpMPm4bIX8o3zx32rKfCeasztipLof2YUmRh7aDQSkQ+
+SZKXIKmKm59HAMPICCQbWfFilfNRNb9l3BbAUYRABP3TLYcky3hWe+9SNb23MMsO
+krFhHRs0PPa7Sb6XSZmkRXYHu82yWo9XX9eXAU5OlOUY6slebJ5Zyx0CAwEAAaOB
+gDB+MF0GA1UdEQRWMFSCFmltaXhzLmVtaWx5a29yYW5kYS5jb22GOmh0dHBzOi8v
+aW1peHMuZW1pbHlrb3JhbmRhLmNvbS9zcC9rZXljbG9hay13aWxkZmx5LWFkYXB0
+ZXIwHQYDVR0OBBYEFBQ2zFV+3VdJUo7BIoO8vlcit10YMA0GCSqGSIb3DQEBCwUA
+A4IBgQBvDlPZSG6MTvs7XXJ13h/IKPzFtXE0SZSdulpOsCH/tXJ2oyv6HFpPGLhZ
+Cll5ZOSN0c3wlQXJ216sm15DxAouOcx+AazB56z01gBxjjAEsMMQR52SO99qKUIi
+aWHRb7LNwmZFl5Yc2N7QGvYIvLrADPF1bIGOzOQpehe4Q1tprf/R0I5TBsTPckGT
+1+8m7KjXCnyaOnlyNuDWYDfRG5qd9x/heLMhIbv8HrrWB8JkNWu5105TYFE26fSr
+aH2TTJd49xfhlDzH6blUIoCIyzGjrTcgVlYDHJr+26tBWrblDEwL6BMOo1D/MXSW
+edSFrvN4a6hiG1UufSH/tFYcFoTcN0qrtG4oVQQ9e8ZbtpzeHmg1Wg6ZLnhHVF2R
+ZRGvrlMprrZC4TwzjBRAKUsezQv9SOc/Hos6KO+i6PRbkZG3lKFnFXThPrlOloVg
+v5LRpfF60h9300PHs/yUffSrR+BZxFZ/bRS/r+epYrqvWiw++iNL5sHFklREs8h7
+yvBvtlY=
+                </CertificatePem>
+                <PrivateKeyPem>
+xxx
+                </PrivateKeyPem>
+            </Key>
+        </Keys>
+        <PrincipalNameMapping policy="FROM_ATTRIBUTE" attribute="urn:oid:2.5.4.4"/>
+        <RoleIdentifiers>
+            <Attribute name="urn:oid:1.3.6.1.4.1.5923.1.5.1.1"/>
+        </RoleIdentifiers>
+        <IDP entityID="https://login-dev.sphericalcowgroup.com/idp/shibboleth"
+             signaturesRequired="false">
+        <SingleSignOnService requestBinding="REDIRECT"
+                             bindingUrl="https://login-dev.sphericalcowgroup.com/idp/profile/SAML2/Redirect/SSO"
+                             validateResponseSignature="true"
+                             responseBinding="POST"
+                             assertionConsumerServiceUrl="https://imixs.emilykoranda.com/biocompace/saml"
+                    />
+
+            <SingleLogoutService
+                    requestBinding="POST"
+                    responseBinding="POST"
+                    postBindingUrl="http://localhost:8081/auth/realms/demo/protocol/saml"
+                    redirectBindingUrl="http://localhost:8081/auth/realms/demo/protocol/saml"
+                    />
+            <Keys>
+                <Key signing="true">
+                    <CertificatePem>
+MIIEajCCAtKgAwIBAgIVAMO+TxYobPNgHagBvSPz0S14Jd+WMA0GCSqGSIb3DQEB
+CwUAMCoxKDAmBgNVBAMMH2xvZ2luLWRldi5zcGhlcmljYWxjb3dncm91cC5jb20w
+HhcNMTkwMTA3MTgzOTE2WhcNMzkwMTA3MTgzOTE2WjAqMSgwJgYDVQQDDB9sb2dp
+bi1kZXYuc3BoZXJpY2FsY293Z3JvdXAuY29tMIIBojANBgkqhkiG9w0BAQEFAAOC
+AY8AMIIBigKCAYEAkiNbeNlkCsM90AmSKUj56Dp6KQyzBnTKbLTvAT+oafu4WoQE
+Gvz79YDEo+bduS8GnMv+JLA3t4jRtQl2OmUED7Zea0BFUNw+kC8QvnQlaN9nuMhf
+hYFjtrgYmMptkJH8tXU7rLoVTMh4OWdw86387G2uMAq0nFot6kZhlguqPZaCD4wv
+VW47Ij3y74PHlG1YpUYYemfL5LMB2hZhn96xvDB9463W19oZJFVGhN5ozE+PSxzd
+gFrOwMt6rwGBuAie8Mpjq8jlYx9ZhY9kIgyzA6ZPHA6bOtmn7khlxsbOmmeGWrLN
+uaZO1DfI53fblRbgDYqYPlOrCUqT2eIRbZndGHUZ2GD8ZaIpgtvKp94tvC+STDu1
+eDJp0VpRWn1YgnXkXamg+GfbFbdktKu5cGca0eFYb6UVfw8cMD4CdLddjJIaoizR
+K5+nv7DjMYhkVlj+CehGxB9SKVtcGDZTKYYmwUBuzClDNahZA1ZccnL5mhIOaW7X
+svmbI6qbWBNi4bN1AgMBAAGjgYYwgYMwHQYDVR0OBBYEFJIsmarhIszlsE+desbJ
+XxIgOI8VMGIGA1UdEQRbMFmCH2xvZ2luLWRldi5zcGhlcmljYWxjb3dncm91cC5j
+b22GNmh0dHBzOi8vbG9naW4tZGV2LnNwaGVyaWNhbGNvd2dyb3VwLmNvbS9pZHAv
+c2hpYmJvbGV0aDANBgkqhkiG9w0BAQsFAAOCAYEAR6+XzMewVsVdk1cTARiAN23L
+ZArd0MkE1M8/ea7oxVXhBaGn3CMEVhrLR/231RS4EpVxvcC9ACawYHiGvyDkM6ch
+sYmbu3wAQU77/2Z4gUGLnGrghkPiRC573VwBZsaf2p9hYGMf22o7Waxmgu0Z0A6o
+Mj0if4+KULHm9GK4NzUp5P2r2dEK5Yq3AV15K6PxkUUnRjb4DHmUcBDE5oWMbcWr
+1TxSr56GX9Cc//r/Oc147uIrSRb2/RQ194tuQXRTUydzE7D8zBacqcvsmEKMux8/
+aBLkSJg8zTD2RzlXRHLQ/TUZTUWIkdfM8XKDjGBWXkwZw/PLDRzr89Wm/62mizJO
+fbN+PjqnCCJViNxDz2ZYL9f03as1TV8w7cniwyzKEyCEUyc2l2ZfdqJ2ugCEljjD
+Quis102v5ci1t5DDLcAhqGaEUgQT+wRZ5vId7VOeqny/3NLWpZxkGWirSpdDFbH+
+xovv58KqN06lChgZASjnjGWhkFeMriMhip3/1bir
+                    </CertificatePem>
+                </Key>
+            </Keys>
+                    <AllowedClockSkew unit="SECONDS">180</AllowedClockSkew>
+            
+        </IDP>
+     </SP>
+</keycloak-saml-adapter>
