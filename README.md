@@ -100,7 +100,7 @@ You can also download the application war file for the [latest release](https://
 1. Edit standalone.xml
 
 	
-	Add the following driver in /opt/wildfly-17.0.0.Final/standaloneconfiguration/standalone.xml
+	Add the following driver in /opt/wildfly-17.0.0.Final/standalone/configuration/standalone.xml
 
     ```
     <drivers>
