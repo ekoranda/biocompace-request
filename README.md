@@ -190,11 +190,12 @@ You can also download the application war file for the [latest release](https://
 	Safe copy the war file into /tmp
 	```
 	scp biocompace-request/target/biocompace-request-1.0.0.war <username>@<to_host>:/tmp
+	```
 
 	Copy the file into standalone/deployments/
 	
 	```
-	cp /tmp/biocompace-request.war standalone/deployments/	
+	cp biocompace-request-1.0.0.war /opt/wildfly-17.0.1.Final/standalone/deployments/	
 	```
 
 1. Push the model up to the sever
