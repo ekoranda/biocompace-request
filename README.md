@@ -183,7 +183,7 @@ You can also download the application war file for the [latest release](https://
 
 	Sign in using the username and passsword you added in sampleapp-users.properties.
 
-	Copy the biocompace-request.war file into /wildfly/standalone/deployments/
+	### Copy the biocompace-request.war file into /wildfly/standalone/deployments/
 
 	Stop Wildfly with Control+c
 
