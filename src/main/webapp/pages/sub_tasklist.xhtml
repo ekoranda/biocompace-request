@@ -28,8 +28,10 @@
 						<h:link outcome="/pages/workflow/workitem">
 						  <h:outputText value="#{workitem.item['name']}" /> 
 							
-	
 							<!--  <h:outputText value="#{workitem.item['subject']} "/> -->
+									
+										
+							
 							<f:param name="id" value="#{workitem.item['$uniqueid']}" />
 					</h:link>
 				</h:column>	
@@ -52,7 +54,13 @@
 							<h:outputText value="#{workitem.item['phone']}" />
 				</h:column>
 				
-				
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Country Code" />
+					</f:facet>
+						
+							<h:outputText value="#{workitem.item['countryCode']}" />
+				</h:column>
 				
 				
 				<h:column>

@@ -17,9 +17,6 @@
 
 
 			
-			<h2><h:link outcome="/pages/">
-							 <h:outputText value="BioCompACE Requests" />
-				</h:link></h2> 
 			
 			<h:dataTable class="imixsdatatable" style="width:50%"
 				value="#{viewHandler.getData(proposalController)}" var="workitem">
@@ -42,27 +39,16 @@
 						
 							<h:outputText value="#{workitem.item['reviewerName1']}" />
 				</h:column>
-				<h:column>
-					<f:facet name="header">
-						<h:outputText value="Reviewer 1 Decision" />
-
-					</f:facet>
-					
-					<ui:fragment 
-						rendered="#{workitem.item['$TaskID']>=1300 }">
-						<h:outputText value="Approved" />
-		
-					</ui:fragment>
-					<ui:fragment 
-						rendered="#{workitem.item['$TaskID']==1200 }">
-						<h:outputText value="Declined" />
-		
-					</ui:fragment>					
-						
-							
-				</h:column>
 				
 				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Reviewer 2 Decision" />
+					</f:facet>
+						<h:outputText value="#{workitem.item['decision1']}" />
+										
+				</h:column>
+				
+	<h:column>
 					<f:facet name="header">
 						<h:outputText value="Reviewer 2 Name" />
 					</f:facet>
@@ -75,12 +61,7 @@
 
 					</f:facet>
 					
-					<ui:fragment 
-						rendered="#{workitem.item['$TaskID']>=1400  }">
-						<h:outputText value="Review Turned in" />
-		
-					</ui:fragment>
-				
+					<h:outputText value="#{workitem.item['decision2']}" />			
 						
 							
 				</h:column>
@@ -98,16 +79,8 @@
 
 					</f:facet>
 					
-					<ui:fragment 
-						rendered="#{workitem.item['$TaskID']>=1600 }">
-						<h:outputText value="Approved" />
-		
-					</ui:fragment>
-					<ui:fragment 
-						rendered="#{workitem.item['$TaskID']== 1500 }">
-						<h:outputText value="Declined" />
-		
-					</ui:fragment>					
+					<h:outputText value="#{workitem.item['decision3']}" />			
+								
 						
 							
 				</h:column>

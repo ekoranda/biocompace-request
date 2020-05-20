@@ -16,15 +16,14 @@
 				
 				<i:imixsWorkflowActions workflowController="#{workflowController}"
 				
-			
+				
 				disabletooltip="false" />
 		</ui:fragment>
-		<!-- If author does not have auther access -->
+		<!-- If author does not have author access -->
 		<ui:fragment
 			rendered="#{!(empty workflowController.workitem.item['$lastevent'] or workflowController.workitem.item['$isauthor'])}">
 			<p style="color:red">You are not allowed to edit this Workitem!</p>
 		</ui:fragment>
-		
 		<h:commandButton value="#{global.close}"
 			action="/pages/requests?faced-redirect=true"
 			actionListener="#{workflowController.close()}" />

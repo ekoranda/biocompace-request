@@ -14,41 +14,62 @@
 	</f:metadata>
 
 
-
+	
 	<ui:define name="content">
 		<f:view>
-			
-
-
 			<h:form id="workitem_form_id">
-		
-
-				
-
+	
 				<div class="imixs-tabs">
 				
 					<ul>
+					  <ui:fragment
+							rendered="#{(workflowController.workitem.item['$TaskID']>=1100 )}">
+							<li><a href="#tab-6">Proposal</a></li>
+						</ui:fragment>
+					
+						<!-- Input page for proposers only shows when proposer is editing -->
+						<ui:fragment
+							rendered="#{workflowController.workitem.item['$TaskID']==1000}">
 						<li><a href="#tab-1">General</a></li>
+						</ui:fragment>
+						
 						<li><a href="#tab-2">Files</a></li>
 						<ui:fragment 
-							rendered="#{(workflowController.workitem.item['$TaskID']==1100 or(!empty workflowController.workitem.item['reviewOne'] ))}">
-							<ui:fragment
-								rendered="#{loginController.getUserNameList().contains('reviewer')|| loginController.getUserNameList().contains('administrator')}">
+							rendered="#{(workflowController.workitem.item['$TaskID']==1100 and loginController.getUserNameList().contains('org.imixs.ACCESSLEVEL.AUTHORACCESS'))}">
 								<li><a href="#tab-3">Reviewer 1</a></li>
-							</ui:fragment>
 						</ui:fragment>
+						<ui:fragment
+							rendered="#{workflowController.workitem.item['$TaskID']>1100}">
+								<li><a href="#tab-7">Review 1</a></li>
+						</ui:fragment>
+						
 						<ui:fragment 
-							rendered="#{workflowController.workitem.item['$TaskID']==1300 or(!empty workflowController.workitem.item['reviewTwo'] )}">
+							rendered="#{workflowController.workitem.item['$TaskID']==1300 }">
 								<li><a href="#tab-4">Reviewer 2</a></li>
 						</ui:fragment>
+						
+						<ui:fragment
+							rendered="#{workflowController.workitem.item['$TaskID']>1300 }">
+								<li><a href="#tab-8">Review 2</a></li>
+						</ui:fragment>
+						
 						<ui:fragment 
-							rendered="#{workflowController.workitem.item['$TaskID']==1500 or(!empty workflowController.workitem.item['reviewThree'] )}">
+							rendered="#{workflowController.workitem.item['$TaskID']==1500 }">
 								<li><a href="#tab-5">Reviewer 3</a></li>
+						</ui:fragment>
+						
+						<ui:fragment
+							rendered="#{workflowController.workitem.item['$TaskID']>1500 }">
+								<li><a href="#tab-9">Review 3</a></li>
 						</ui:fragment>
 						
 				
 						
 					</ul>
+				  <div id="tab-6">
+						<ui:include src="/pages/workflow/proposal.xhtml"/>
+					</div>
+				
 					<div id="tab-1">
 						<ui:include src="/pages/workflow/sub_main.xhtml" />
 					</div> 
@@ -60,11 +81,20 @@
 					<div id="tab-3">
 						<ui:include src="/pages/workflow/sub_reviewer.xhtml" />
 					</div>
+					<div id="tab-7">
+						<ui:include src="/pages/workflow/review1.xhtml" />
+					</div>
 					<div id="tab-4">
 						<ui:include src="/pages/workflow/sub_reviewer2.xhtml" />
 					</div>
+					<div id="tab-8">
+						<ui:include src="/pages/workflow/review2.xhtml" />
+					</div>
 					<div id="tab-5">
 						<ui:include src="/pages/workflow/sub_reviewer3.xhtml" />
+					</div>
+					<div id="tab-9">
+						<ui:include src="/pages/workflow/review3.xhtml" />
 					</div>
 					
 				</div>

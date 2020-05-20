@@ -92,25 +92,15 @@
 						
 							<h:outputText value="#{workitem.item['reviewerName1']}" />
 				</h:column>
+				
 				<h:column>
 					<f:facet name="header">
-						<h:outputText value="Reviewer 1 Decision" />
-
+						<h:outputText value="Reviewer 2 Decision" />
 					</f:facet>
-					
-					<ui:fragment 
-						rendered="#{workitem.item['$TaskID']>=1300 }">
-						<h:outputText value="Approved" />
-		
-					</ui:fragment>
-					<ui:fragment 
-						rendered="#{workitem.item['$TaskID']==1200 }">
-						<h:outputText value="Declined" />
-		
-					</ui:fragment>					
-						
-							
+						<h:outputText value="#{workitem.item['decision1']}" />
+										
 				</h:column>
+				
 				
 				<h:column>
 					<f:facet name="header">
@@ -125,22 +115,14 @@
 
 					</f:facet>
 					
-					<ui:fragment 
-						rendered="#{workitem.item['$TaskID']>=1500 }">
-						<h:outputText value="Approved" />
-		
-					</ui:fragment>
-					<ui:fragment 
-						rendered="#{workitem.item['$TaskID']==1400 }">
-						<h:outputText value="Declined" />
-		
-					</ui:fragment>					
-				
+					<h:outputText value="#{workitem.item['decision2']}" />			
 						
 							
 				</h:column>
 				
-								<h:column>
+				
+				
+				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Reviewer 3 Name" />
 					</f:facet>
@@ -153,16 +135,8 @@
 
 					</f:facet>
 					
-					<ui:fragment 
-						rendered="#{workitem.item['$TaskID']>=1700 }">
-						<h:outputText value="Approved" />
-		
-					</ui:fragment>
-					<ui:fragment 
-						rendered="#{workitem.item['$TaskID']== 1600 }">
-						<h:outputText value="Declined" />
-		
-					</ui:fragment>					
+					<h:outputText value="#{workitem.item['decision3']}" />			
+								
 						
 							
 				</h:column>

@@ -8,12 +8,10 @@
 
 	<!-- **** General info ***** -->
 	
-
+	
 	<dl>
-			<ui:fragment 
-							rendered="#{(workflowController.workitem.item['$TaskID']==1100 or(!empty workflowController.workitem.item['reviewOne'] ))  }">
-								
-						
+		<ui:fragment 
+			rendered="#{(workflowController.workitem.item['$TaskID']==1100  and loginController.getUserNameList().contains('org.imixs.ACCESSLEVEL.AUTHORACCESS'))}">								
 			<dt style="clear: left;">
 				<h:outputLabel for="team_id" value="Reviewer One Name:">
 					<h:message style="color: red" for="team_id" showSummary="true"

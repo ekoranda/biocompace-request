@@ -10,13 +10,10 @@
 
 	<!-- **** General info ***** -->
 
-
+<ui:fragment 
+	rendered="#{workflowController.workitem.item['$TaskID']==1000}">
 	<dl>
-
-	              
-
-
-		<dt style="clear: left; width: 400px;">Requester Name</dt>
+	<dt style="clear: left; width: 400px;">Requester Name</dt>
 		<dd style="width: 600px;">
 			<h:inputText style="width: 20em;" required="true" 
 				value="#{workflowController.workitem.item['name']}"
@@ -52,8 +49,8 @@
 		<dt style="clear: left; width: 400px;">Country Code</dt>
 		 <dd style="width: 600px;">
 			<h:inputText style="width: 20em;" 
-				value="#{workflowController.workitem.item['country']}"
-				id="country_id">
+				value="#{workflowController.workitem.item['countryCode']}"
+				id="countryCode_id">
 			</h:inputText>
 		</dd>
 		
@@ -75,15 +72,7 @@
 		</dd>
 		
 		 <dt style="clear: left; width: 400px;">Research Title</dt>
-		 <!--  
-		 <dd style="width: 600px;">
 
-			<h:inputText style="width: 20em;" 
-				value="#{workflowController.workitem.item['title']}"
-				id="title_id">
-			</h:inputText>
-		</dd>
-		-->
 		
 		<dd>
 			<h:outputLabel style="color: gray; width: 400px;"
@@ -107,21 +96,6 @@
 		
  
 		 <dt style="clear: left; width: 400px;">Type of Analysis</dt>
-		 
-		 <!--  
-		 <dd>
-        	<p:selectOneMenu id="types" value="#{workflowController.workitem.itemListArray['type']}" style="width:125px">
-            	<f:selectItem itemLabel="Select One" itemValue="" />
-            	<f:selectItem itemLabel="Data Presentation" itemValue="Data Presentation" />
-            	<f:selectItem itemLabel="Next Gen Sequencing" itemValue="Next Gen Sequencing" />
-            	<f:selectItem itemLabel="Sequence Analysis" itemValue="Sequence Analysis" />
-            	<f:selectItem itemLabel="Structural Biology" itemValue="Structural Biology" />
-            
-            
-       		</p:selectOneMenu>
-		 
-		 </dd>
-		 -->
 
 	
   	<dd>
@@ -156,6 +130,7 @@
     	<p:dialog modal="true" resizable="false" header="Values" widgetVar="dlg" showEffect="fold">
             <h:outputText value=":Proposed Start Date" />
             <h:outputText value="#{workflowController.workitem.item['startDate']}">
+            <f:convertDateTime type="date" dateStyle="full"/>
             </h:outputText>
     	</p:dialog>
     </dd>
@@ -169,23 +144,17 @@
     	<p:dialog modal="true" resizable="false" header="Values" widgetVar="dlg" showEffect="fold">
             <h:outputText value=":Proposed End Date" />
             <h:outputText value="#{workflowController.workitem.item['endDate']}">
+            <f:convertDateTime type="date" dateStyle="full"/>
             </h:outputText>
     	</p:dialog>
     </dd>
-		
-		
-		
-		
-		
-
 			
-	
-		
 		
 	</dl>
 	
 
 	<div style="clear: left;" />
+	</ui:fragment>
 
 
 
