@@ -40,11 +40,14 @@
           <imixs:value><![CDATA[namUser]]></imixs:value>
           <imixs:value><![CDATA[namCurrentEditor]]></imixs:value>
           <imixs:value><![CDATA[{imixs}]]></imixs:value>
+          <imixs:value><![CDATA[{proposer1, proposer2}]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[{proposer1, proposer2}]]></imixs:value>
         </imixs:item>
-        <imixs:item name="namownershipnames" type="xs:string"/>
+        <imixs:item name="namownershipnames" type="xs:string">
+          <imixs:value><![CDATA[imixs]]></imixs:value>
+        </imixs:item>
         <imixs:item name="keyaddwritefields" type="xs:string">
           <imixs:value><![CDATA[{proposer1, proposer2}]]></imixs:value>
         </imixs:item>
@@ -471,7 +474,7 @@
           <imixs:value><![CDATA[<itemvalue>subject</itemvalue> ]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>false</imixs:value>
+          <imixs:value>true</imixs:value>
         </imixs:item>
         <imixs:item name="namaddreadaccess" type="xs:string"/>
       </bpmn2:extensionElements>
@@ -606,7 +609,7 @@
     <bpmn2:task id="Task_10" imixs:processid="1900" name="Proposal Declined">
       <bpmn2:extensionElements>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>false</imixs:value>
+          <imixs:value>true</imixs:value>
         </imixs:item>
         <imixs:item name="namaddreadaccess" type="xs:string"/>
         <imixs:item name="keyaddreadfields" type="xs:string">

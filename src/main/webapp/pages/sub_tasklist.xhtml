@@ -25,15 +25,23 @@
 					<f:facet name="header">
 						<h:outputText value="Requester Name" />
 					</f:facet>
+					<!-- Only the creator of the proposal can open up the proposal to edit it -->
+						<ui:fragment 
+							rendered="#{(loginController.userPrincipal == workitem.item['$creator']  or loginController.getUserNameList().contains('org.imixs.ACCESSLEVEL.AUTHORACCESS'))}">
 						<h:link outcome="/pages/workflow/workitem">
+						
 						  <h:outputText value="#{workitem.item['name']}" /> 
 							
 							<!--  <h:outputText value="#{workitem.item['subject']} "/> -->
-									
 										
 							
 							<f:param name="id" value="#{workitem.item['$uniqueid']}" />
 					</h:link>
+					</ui:fragment>
+					<ui:fragment
+						rendered="#{!(loginController.userPrincipal == workitem.item['$creator'] or loginController.getUserNameList().contains('org.imixs.ACCESSLEVEL.AUTHORACCESS'))}">
+						<h:outputText value="#{workitem.item['name']}" />
+					</ui:fragment>
 				</h:column>	
 				
 				
