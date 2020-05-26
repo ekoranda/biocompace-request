@@ -707,7 +707,7 @@
         </imixs:item>
         <imixs:item name="keymailreceiverfields" type="xs:string"/>
         <imixs:item name="$readaccess" type="xs:string">
-          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.EDITORACCESS]]></imixs:value>
+          <imixs:value><![CDATA[test]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_14</bpmn2:incoming>

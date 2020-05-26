@@ -1,43 +1,41 @@
 package us.researchdata.biocompace.request.ui;
 
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import javax.annotation.Resource;
+import javax.annotation.security.DeclareRoles;
+import javax.annotation.security.PermitAll;
+import javax.annotation.security.RolesAllowed;
+import javax.annotation.security.RunAs;
+import javax.ejb.EJB;
+import javax.ejb.SessionContext;
+import javax.ejb.Stateless;
 import javax.enterprise.event.Observes;
 
 import org.imixs.workflow.engine.UserGroupEvent;
 import org.imixs.workflow.exceptions.AccessDeniedException;
 import org.imixs.workflow.faces.data.WorkflowEvent;
 
+@Stateless()
+@DeclareRoles({ "test"})
 public class PopulateGroupMembers {
-	static String creator;
-	
-    private static Logger logger = Logger.getLogger(PopulateGroupMembers.class.getName());
-
-    public void onWorkflowEvent(@Observes WorkflowEvent workflowEvent) throws AccessDeniedException {
-    	creator = workflowEvent.getWorkitem().getItemValueString("$creator");
-	    
-
-	}
-	public void onUserGroupEvent(@Observes UserGroupEvent userGroupEvent) {
+	@Resource SessionContext ctx;
+    public List<String> onUserGroupEvent(@Observes UserGroupEvent userGroupEvent) {
 	    List<String> customGroups = new ArrayList<String>();
-	    String userID = userGroupEvent.getUserId();
-	    if(userID.equals("reviewer")) {
-	    	customGroups.add("reviwer");
+	    if (ctx.isCallerInRole("test")) {
+	        customGroups.add("test");
 	    }
-	   // if(userID.equals("user")) {
-	    	//customGroups.add("user");
-	   // }
-	    if(userID.equals("administrator")) {
-	    	customGroups.add("administrator");
+	    Principal principal = ctx.getCallerPrincipal();
+	    String name = principal.getName();
+	    if(name.equals("proposer1")) {
+	    	customGroups.add("test");
 	    }
-	    if(userID.equals(creator)) {
-	    	customGroups.add("creator");
-	    }
-	 
-	    
-	    // getUserID();
+	    customGroups.add("addedGroup");
 	    userGroupEvent.setGroups(customGroups);
+	    System.out.println(ctx.isCallerInRole("test"));
+	    return customGroups;
 	}
 }

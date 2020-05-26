@@ -14,8 +14,8 @@
     </imixs:item>
     <imixs:item name="txtfieldmapping" type="xs:string">
       <imixs:value><![CDATA[reviewer | {reviewer1, reviewer2, reviewer3}]]></imixs:value>
-      <imixs:value><![CDATA[manager | {manager}]]></imixs:value>
       <imixs:value><![CDATA[proposer | {proposer1, proposer2}]]></imixs:value>
+      <imixs:value><![CDATA[manager | {manager}]]></imixs:value>
     </imixs:item>
     <imixs:item name="txtworkflowmodelversion" type="xs:string">
       <imixs:value><![CDATA[1.1.0]]></imixs:value>
@@ -25,7 +25,7 @@
     <bpmn2:startEvent id="StartEvent_1" name="Start ">
       <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
     </bpmn2:startEvent>
-    <bpmn2:task id="Task_1" imixs:processid="1000" name="Create Proposal ">
+    <bpmn2:task id="Task_1" imixs:processid="1000" name="Create Proposal">
       <bpmn2:extensionElements>
         <imixs:item name="txtworkflowsummary" type="xs:string">
           <imixs:value><![CDATA[<itemvalue>subject</itemvalue> ]]></imixs:value>
@@ -51,7 +51,7 @@
       </bpmn2:extensionElements>
       <bpmn2:documentation id="Documentation_28"><![CDATA[User creates a request for a project]]></bpmn2:documentation>
       <bpmn2:incoming>SequenceFlow_2</bpmn2:incoming>
-      <bpmn2:incoming>SequenceFlow_28</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_8</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_14</bpmn2:outgoing>
     </bpmn2:task>
     <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="StartEvent_1" targetRef="Task_1"/>
@@ -63,35 +63,39 @@
         <imixs:item name="keyupdateacl" type="xs:boolean">
           <imixs:value>true</imixs:value>
         </imixs:item>
-        <imixs:item name="keyownershipfields" type="xs:string">
-          <imixs:value><![CDATA[namReviewer]]></imixs:value>
-        </imixs:item>
+        <imixs:item name="keyownershipfields" type="xs:string"/>
         <imixs:item name="keyaddwritefields" type="xs:string">
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
           <imixs:value><![CDATA[{emily}]]></imixs:value>
+          <imixs:value><![CDATA[namUser]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
+          <imixs:value><![CDATA[{proposer1, proposer2}]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
+          <imixs:value><![CDATA[namUser]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
+          <imixs:value><![CDATA[{proposer1, proposer2}]]></imixs:value>
         </imixs:item>
         <imixs:item name="namaddwriteaccess" type="xs:string"/>
         <imixs:item name="txtworkflowabstract" type="CDATA">
           <imixs:value><![CDATA[if current user is not owner]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
-      <bpmn2:incoming>SequenceFlow_15</bpmn2:incoming>
-      <bpmn2:outgoing>SequenceFlow_8</bpmn2:outgoing>
+      <bpmn2:incoming>SequenceFlow_36</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_26</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_4</bpmn2:outgoing>
     </bpmn2:task>
     <bpmn2:eventBasedGateway id="EventBasedGateway_1" name="Approved?" gatewayDirection="Diverging">
-      <bpmn2:incoming>SequenceFlow_8</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_26</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_9</bpmn2:outgoing>
       <bpmn2:outgoing>SequenceFlow_10</bpmn2:outgoing>
-      <bpmn2:outgoing>SequenceFlow_30</bpmn2:outgoing>
     </bpmn2:eventBasedGateway>
-    <bpmn2:sequenceFlow id="SequenceFlow_8" sourceRef="Task_2" targetRef="EventBasedGateway_1"/>
     <bpmn2:intermediateCatchEvent id="IntermediateCatchEvent_3" imixs:activityid="20" name="Decline Proposal">
       <bpmn2:extensionElements>
         <imixs:item name="txtactivityresult" type="CDATA">
           <imixs:value><![CDATA[<item name="approved_reviewer1" type="boolean">false</item>
+<item name="decision1">Declined</item>
 <item name="action">worklist</item>
 
 ]]></imixs:value>
@@ -106,7 +110,7 @@
           <imixs:value><![CDATA[namUser]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyownershipfields" type="xs:string">
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
@@ -130,9 +134,10 @@
         </imixs:item>
         <imixs:item name="keyrestrictedvisibility" type="xs:string">
           <imixs:value><![CDATA[{emily}]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
         <imixs:item name="$readaccess" type="xs:string">
-          <imixs:value><![CDATA[emily]]></imixs:value>
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.AUTHORACCESS]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:documentation id="Documentation_101"><![CDATA[General administrator declined proposal ]]></bpmn2:documentation>
@@ -152,6 +157,7 @@
       <bpmn2:extensionElements>
         <imixs:item name="txtactivityresult" type="CDATA">
           <imixs:value><![CDATA[<item name="approved_reviewer1" type="boolean">true</item>
+<item name="decision1">Approved</item>
 <item name="action">worklist</item>
 ]]></imixs:value>
         </imixs:item>
@@ -165,7 +171,7 @@
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyownershipfields" type="xs:string">
           <imixs:value><![CDATA[namGeneralAdministrator]]></imixs:value>
@@ -192,9 +198,10 @@
         </imixs:item>
         <imixs:item name="keyrestrictedvisibility" type="xs:string">
           <imixs:value><![CDATA[{emily}]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
         <imixs:item name="$readaccess" type="xs:string">
-          <imixs:value><![CDATA[emily]]></imixs:value>
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.AUTHORACCESS]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:documentation id="Documentation_100"><![CDATA[General administrator approved proposal to be further reviewed by reviewers]]></bpmn2:documentation>
@@ -216,16 +223,18 @@
           <imixs:value><![CDATA[<itemvalue>subject</itemvalue> ]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>false</imixs:value>
+          <imixs:value>true</imixs:value>
         </imixs:item>
         <imixs:item name="keyownershipfields" type="xs:string">
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyaddwritefields" type="xs:string">
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_7</bpmn2:incoming>
@@ -245,9 +254,11 @@
         </imixs:item>
         <imixs:item name="keyaddwritefields" type="xs:string">
           <imixs:value><![CDATA[namProjectAdministrator]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[namProjectAdministrator]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_29</bpmn2:incoming>
@@ -264,6 +275,7 @@
       <bpmn2:extensionElements>
         <imixs:item name="txtactivityresult" type="CDATA">
           <imixs:value><![CDATA[<item name="approved_reviewer3" type="boolean">false</item>
+<item name="decision3">Declined</item>
 <item name="action">worklist</item>
 
 
@@ -291,10 +303,13 @@
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
           <imixs:value><![CDATA[namAdministrator]]></imixs:value>
           <imixs:value><![CDATA[{testing}]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
-        <imixs:item name="$readaccess" type="xs:string"/>
+        <imixs:item name="$readaccess" type="xs:string">
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.AUTHORACCESS]]></imixs:value>
+        </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[namAdministrator]]></imixs:value>
@@ -322,6 +337,7 @@
       <bpmn2:extensionElements>
         <imixs:item name="txtactivityresult" type="CDATA">
           <imixs:value><![CDATA[<item name="approved_reviewer3" type="boolean">true</item>
+<item name="decision3">Approved</item>
 <item name="action">worklist</item>
 
 ]]></imixs:value>
@@ -348,10 +364,13 @@
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
           <imixs:value><![CDATA[namAdministrator]]></imixs:value>
           <imixs:value><![CDATA[{testing}]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
-        <imixs:item name="$readaccess" type="xs:string"/>
+        <imixs:item name="$readaccess" type="xs:string">
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.AUTHORACCESS]]></imixs:value>
+        </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[namAdministrator]]></imixs:value>
@@ -388,9 +407,11 @@
         </imixs:item>
         <imixs:item name="keyaddwritefields" type="xs:string">
           <imixs:value><![CDATA[namSystemAdministrator]]></imixs:value>
+          <imixs:value><![CDATA[{manager}]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[namSystemAdministrator]]></imixs:value>
+          <imixs:value><![CDATA[{manager}]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_6</bpmn2:incoming>
@@ -413,10 +434,14 @@
         <imixs:item name="keypublicresult" type="xs:string">
           <imixs:value><![CDATA[1]]></imixs:value>
         </imixs:item>
-        <imixs:item name="keyrestrictedvisibility" type="xs:string"/>
-        <imixs:item name="$readaccess" type="xs:string"/>
+        <imixs:item name="keyrestrictedvisibility" type="xs:string">
+          <imixs:value><![CDATA[{manager}]]></imixs:value>
+        </imixs:item>
+        <imixs:item name="$readaccess" type="xs:string">
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.AUTHORACCESS]]></imixs:value>
+        </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="namaddreadaccess" type="xs:string">
           <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.READERACCESS]]></imixs:value>
@@ -446,11 +471,9 @@
           <imixs:value><![CDATA[<itemvalue>subject</itemvalue> ]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.READACCESS]]></imixs:value>
-        </imixs:item>
+        <imixs:item name="namaddreadaccess" type="xs:string"/>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_11</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_27</bpmn2:outgoing>
@@ -466,6 +489,7 @@
       <bpmn2:extensionElements>
         <imixs:item name="txtactivityresult" type="CDATA">
           <imixs:value><![CDATA[<item name="approved_reviewer2" type="boolean">false</item>
+<item name="decision2">Declined</item>
 <item name="action">worklist</item>
 
 ]]></imixs:value>
@@ -485,10 +509,13 @@
         <imixs:item name="keyrestrictedvisibility" type="xs:string">
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
           <imixs:value><![CDATA[{emily}]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
-        <imixs:item name="$readaccess" type="xs:string"/>
+        <imixs:item name="$readaccess" type="xs:string">
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.AUTHORACCESS]]></imixs:value>
+        </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[{emily}]]></imixs:value>
@@ -513,6 +540,7 @@
       <bpmn2:extensionElements>
         <imixs:item name="txtactivityresult" type="CDATA">
           <imixs:value><![CDATA[<item name="approved_reviewer2" type="boolean">true</item>
+<item name="decision2">Approved</item>
 <item name="action">worklist</item>
 
 ]]></imixs:value>
@@ -527,7 +555,7 @@
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyownershipfields" type="xs:string">
           <imixs:value><![CDATA[namGeneralAdministrator]]></imixs:value>
@@ -552,8 +580,11 @@
         <imixs:item name="keyrestrictedvisibility" type="xs:string">
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
           <imixs:value><![CDATA[{emily}]]></imixs:value>
+          <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
-        <imixs:item name="$readaccess" type="xs:string"/>
+        <imixs:item name="$readaccess" type="xs:string">
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.AUTHORACCESS]]></imixs:value>
+        </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:documentation id="Documentation_64"><![CDATA[General administrator approved proposal to be further reviewed by reviewers]]></bpmn2:documentation>
       <bpmn2:incoming>SequenceFlow_25</bpmn2:incoming>
@@ -575,11 +606,9 @@
     <bpmn2:task id="Task_10" imixs:processid="1900" name="Proposal Declined">
       <bpmn2:extensionElements>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.READERACCESS]]></imixs:value>
-        </imixs:item>
+        <imixs:item name="namaddreadaccess" type="xs:string"/>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[{emily}]]></imixs:value>
         </imixs:item>
@@ -603,6 +632,17 @@
       <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_5">((workitem.approved_reviewer1 &amp;&amp; workitem.approved_reviewer1[0]==true) &amp;&amp; (workitem.approved_reviewer2 &amp;&amp; workitem.approved_reviewer2[0]==true)) || ((workitem.approved_reviewer1 &amp;&amp; workitem.approved_reviewer1[0]==true) &amp;&amp; (workitem.approved_reviewer3 &amp;&amp; workitem.approved_reviewer3[0]==true)) || ((workitem.approved_reviewer2 &amp;&amp; workitem.approved_reviewer2[0]==true)&amp;&amp;(workitem.approved_reviewer3 &amp;&amp; workitem.approved_reviewer3[0]==true))</bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
     <bpmn2:task id="Task_3" imixs:processid="2000" name="System Administrator reviwing Declined Project">
+      <bpmn2:extensionElements>
+        <imixs:item name="keyupdateacl" type="xs:boolean">
+          <imixs:value>true</imixs:value>
+        </imixs:item>
+        <imixs:item name="keyaddreadfields" type="xs:string">
+          <imixs:value><![CDATA[{manager}]]></imixs:value>
+        </imixs:item>
+        <imixs:item name="keyaddwritefields" type="xs:string">
+          <imixs:value><![CDATA[{manager}]]></imixs:value>
+        </imixs:item>
+      </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_5</bpmn2:outgoing>
     </bpmn2:task>
@@ -612,7 +652,7 @@
     <bpmn2:intermediateCatchEvent id="IntermediateCatchEvent_2" imixs:activityid="10" name="Proposal Solved">
       <bpmn2:extensionElements>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="namaddreadaccess" type="xs:string">
           <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.READERACCESS]]></imixs:value>
@@ -620,46 +660,29 @@
         <imixs:item name="txtactivityresult" type="CDATA">
           <imixs:value><![CDATA[<item name="action">worklist</item>]]></imixs:value>
         </imixs:item>
+        <imixs:item name="$readaccess" type="xs:string">
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.AUTHORACCESS]]></imixs:value>
+        </imixs:item>
+        <imixs:item name="keyrestrictedvisibility" type="xs:string">
+          <imixs:value><![CDATA[{manager}]]></imixs:value>
+        </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_5</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_13</bpmn2:outgoing>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:sequenceFlow id="SequenceFlow_5" sourceRef="Task_3" targetRef="IntermediateCatchEvent_2"/>
     <bpmn2:sequenceFlow id="SequenceFlow_13" sourceRef="IntermediateCatchEvent_2" targetRef="Task_10"/>
-    <bpmn2:intermediateCatchEvent id="IntermediateCatchEvent_10" imixs:activityid="40" name="Edit">
-      <bpmn2:extensionElements>
-        <imixs:item name="keyrestrictedvisibility" type="xs:string"/>
-        <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
-        </imixs:item>
-        <imixs:item name="keyaddreadfields" type="xs:string">
-          <imixs:value><![CDATA[{imixs}]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="keyaddwritefields" type="xs:string">
-          <imixs:value><![CDATA[{imixs}]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="keypublicresult" type="xs:string">
-          <imixs:value><![CDATA[1]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="$readaccess" type="xs:string">
-          <imixs:value><![CDATA[imixs]]></imixs:value>
-        </imixs:item>
-      </bpmn2:extensionElements>
-      <bpmn2:incoming>SequenceFlow_30</bpmn2:incoming>
-      <bpmn2:outgoing>SequenceFlow_28</bpmn2:outgoing>
-    </bpmn2:intermediateCatchEvent>
-    <bpmn2:sequenceFlow id="SequenceFlow_28" sourceRef="IntermediateCatchEvent_10" targetRef="Task_1"/>
-    <bpmn2:sequenceFlow id="SequenceFlow_30" sourceRef="EventBasedGateway_1" targetRef="IntermediateCatchEvent_10"/>
-    <bpmn2:intermediateCatchEvent id="IntermediateCatchEvent_5" imixs:activityid="10" name="Submit EDITED">
+    <bpmn2:intermediateCatchEvent id="IntermediateCatchEvent_5" imixs:activityid="10" name="Submit">
       <bpmn2:extensionElements>
         <imixs:item name="txtactivityresult" type="CDATA">
           <imixs:value><![CDATA[<item name="action">worklist</item>]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyrestrictedvisibility" type="xs:string">
           <imixs:value><![CDATA[{imixs}]]></imixs:value>
+          <imixs:value><![CDATA[{proposer1, proposer2}]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyownershipfields" type="xs:string">
           <imixs:value><![CDATA[{imixs}]]></imixs:value>
@@ -683,16 +706,30 @@
           <imixs:value><![CDATA[ekoranda1@gmail.com]]></imixs:value>
         </imixs:item>
         <imixs:item name="keymailreceiverfields" type="xs:string"/>
-        <imixs:item name="keypublicresult" type="xs:string">
-          <imixs:value><![CDATA[1]]></imixs:value>
+        <imixs:item name="$readaccess" type="xs:string">
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.EDITORACCESS]]></imixs:value>
         </imixs:item>
-        <imixs:item name="$readaccess" type="xs:string"/>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_14</bpmn2:incoming>
-      <bpmn2:outgoing>SequenceFlow_15</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_36</bpmn2:outgoing>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:sequenceFlow id="SequenceFlow_14" sourceRef="Task_1" targetRef="IntermediateCatchEvent_5"/>
-    <bpmn2:sequenceFlow id="SequenceFlow_15" sourceRef="IntermediateCatchEvent_5" targetRef="Task_2"/>
+    <bpmn2:intermediateCatchEvent id="IntermediateCatchEvent_1" imixs:activityid="40" name="Edit">
+      <bpmn2:extensionElements>
+        <imixs:item name="$readaccess" type="xs:string">
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.EDITORACCESS]]></imixs:value>
+        </imixs:item>
+        <imixs:item name="keyrestrictedvisibility" type="xs:string">
+          <imixs:value><![CDATA[{proposer1, proposer2}]]></imixs:value>
+        </imixs:item>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_8</bpmn2:outgoing>
+    </bpmn2:intermediateCatchEvent>
+    <bpmn2:sequenceFlow id="SequenceFlow_26" sourceRef="Task_2" targetRef="EventBasedGateway_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_36" sourceRef="IntermediateCatchEvent_5" targetRef="Task_2"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_4" sourceRef="Task_2" targetRef="IntermediateCatchEvent_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_8" sourceRef="IntermediateCatchEvent_1" targetRef="Task_1"/>
   </bpmn2:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Process Diagram">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="proposals">
@@ -705,7 +742,7 @@
       <bpmndi:BPMNShape id="BPMNShape_Task_1" bpmnElement="Task_1" isExpanded="true">
         <dc:Bounds height="50.0" width="110.0" x="100.0" y="63.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_2">
-          <dc:Bounds height="11.0" width="68.0" x="121.0" y="82.0"/>
+          <dc:Bounds height="11.0" width="66.0" x="122.0" y="82.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_Task_2" bpmnElement="Task_2" isExpanded="true">
@@ -834,16 +871,16 @@
           <dc:Bounds height="11.0" width="66.0" x="1367.0" y="94.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_IntermediateCatchEvent_10" bpmnElement="IntermediateCatchEvent_10">
-        <dc:Bounds height="36.0" width="36.0" x="383.0" y="184.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_26">
-          <dc:Bounds height="11.0" width="16.0" x="393.0" y="220.0"/>
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_IntermediateCatchEvent_5" bpmnElement="IntermediateCatchEvent_5">
         <dc:Bounds height="36.0" width="36.0" x="240.0" y="58.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_4">
-          <dc:Bounds height="11.0" width="64.0" x="226.0" y="94.0"/>
+          <dc:Bounds height="11.0" width="29.0" x="243.0" y="94.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_IntermediateCatchEvent_1" bpmnElement="IntermediateCatchEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="335.0" y="109.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_6">
+          <dc:Bounds height="11.0" width="16.0" x="345.0" y="145.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_2" bpmnElement="SequenceFlow_2" sourceElement="BPMNShape_1" targetElement="BPMNShape_Task_1">
@@ -851,13 +888,6 @@
         <di:waypoint xsi:type="dc:Point" x="78.0" y="88.0"/>
         <di:waypoint xsi:type="dc:Point" x="100.0" y="88.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_3"/>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_8" bpmnElement="SequenceFlow_8" sourceElement="BPMNShape_Task_2" targetElement="BPMNShape_EventBasedGateway_1">
-        <di:waypoint xsi:type="dc:Point" x="408.0" y="35.0"/>
-        <di:waypoint xsi:type="dc:Point" x="445.0" y="35.0"/>
-        <di:waypoint xsi:type="dc:Point" x="445.0" y="88.0"/>
-        <di:waypoint xsi:type="dc:Point" x="479.0" y="88.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_13"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_9" bpmnElement="SequenceFlow_9" sourceElement="BPMNShape_EventBasedGateway_1" targetElement="BPMNShape_IntermediateCatchEvent_3">
         <di:waypoint xsi:type="dc:Point" x="504.0" y="63.0"/>
@@ -1000,19 +1030,6 @@
         <di:waypoint xsi:type="dc:Point" x="1453.0" y="72.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_25"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_28" bpmnElement="SequenceFlow_28" sourceElement="BPMNShape_IntermediateCatchEvent_10" targetElement="BPMNShape_Task_1">
-        <di:waypoint xsi:type="dc:Point" x="383.0" y="202.0"/>
-        <di:waypoint xsi:type="dc:Point" x="155.0" y="202.0"/>
-        <di:waypoint xsi:type="dc:Point" x="155.0" y="113.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_41"/>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_30" bpmnElement="SequenceFlow_30" sourceElement="BPMNShape_EventBasedGateway_1" targetElement="BPMNShape_IntermediateCatchEvent_10">
-        <di:waypoint xsi:type="dc:Point" x="529.0" y="88.0"/>
-        <di:waypoint xsi:type="dc:Point" x="539.0" y="88.0"/>
-        <di:waypoint xsi:type="dc:Point" x="539.0" y="202.0"/>
-        <di:waypoint xsi:type="dc:Point" x="419.0" y="202.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_57"/>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_14" bpmnElement="SequenceFlow_14" sourceElement="BPMNShape_Task_1" targetElement="BPMNShape_IntermediateCatchEvent_5">
         <di:waypoint xsi:type="dc:Point" x="210.0" y="88.0"/>
         <di:waypoint xsi:type="dc:Point" x="225.0" y="88.0"/>
@@ -1020,11 +1037,30 @@
         <di:waypoint xsi:type="dc:Point" x="240.0" y="76.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_8"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_15" bpmnElement="SequenceFlow_15" sourceElement="BPMNShape_IntermediateCatchEvent_5" targetElement="BPMNShape_Task_2">
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_26" bpmnElement="SequenceFlow_26" sourceElement="BPMNShape_Task_2" targetElement="BPMNShape_EventBasedGateway_1">
+        <di:waypoint xsi:type="dc:Point" x="408.0" y="35.0"/>
+        <di:waypoint xsi:type="dc:Point" x="478.0" y="35.0"/>
+        <di:waypoint xsi:type="dc:Point" x="478.0" y="88.0"/>
+        <di:waypoint xsi:type="dc:Point" x="479.0" y="88.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_52"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_36" bpmnElement="SequenceFlow_36" sourceElement="BPMNShape_IntermediateCatchEvent_5" targetElement="BPMNShape_Task_2">
         <di:waypoint xsi:type="dc:Point" x="258.0" y="58.0"/>
         <di:waypoint xsi:type="dc:Point" x="258.0" y="35.0"/>
         <di:waypoint xsi:type="dc:Point" x="298.0" y="35.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_27"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_58"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_4" bpmnElement="SequenceFlow_4" sourceElement="BPMNShape_Task_2" targetElement="BPMNShape_IntermediateCatchEvent_1">
+        <di:waypoint xsi:type="dc:Point" x="353.0" y="60.0"/>
+        <di:waypoint xsi:type="dc:Point" x="353.0" y="84.0"/>
+        <di:waypoint xsi:type="dc:Point" x="353.0" y="109.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_7"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_8" bpmnElement="SequenceFlow_8" sourceElement="BPMNShape_IntermediateCatchEvent_1" targetElement="BPMNShape_Task_1">
+        <di:waypoint xsi:type="dc:Point" x="335.0" y="127.0"/>
+        <di:waypoint xsi:type="dc:Point" x="155.0" y="127.0"/>
+        <di:waypoint xsi:type="dc:Point" x="155.0" y="113.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_13"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
     <bpmndi:BPMNLabelStyle id="BPMNLabelStyle_1">
