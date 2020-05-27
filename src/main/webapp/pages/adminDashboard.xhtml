@@ -1,62 +1,55 @@
-<!-- "f": Tags for JavaServer Faces custom actions that are independent of any particular render kit -->
 <f:subview xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs">
-
-
-
+	
+	<ui:fragment rendered="#{(loginController.getUserNameList().contains('reviewer'))}" >
+	<!-- Administrative DashBoard-->
 	<f:view>
-
-		<!--  "h": JavzaServer Faces component tags for all UIComponent objects -->
 		<h:form>
-			<!-- https://www.imixs.org/doc/webtools/workflowactions.html -->
-			<h2><h:link outcome="/pages/requests">
-							 <h:outputText value="BioCompACE Requests" />
-				</h:link></h2> 
+		
+			<!-- Biocompace requests header and link -->
+			<h2>
+				<h:link outcome="/pages/requests">
+					<h:outputText value="BioCompACE Requests" />
+				</h:link>
+			</h2> 
 				
-			
+			<!-- Data table with condensed biocompace requests -->
 			<h:dataTable class="imixsdatatable" style="width:50%"
 				value="#{viewHandler.getData(proposalController)}" var="workitem">
 				
-				
+				<!-- Requester's Name -->
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Requester Name" />
 					</f:facet>
-						<h:link outcome="/pages/workflow/workitem">
-							 <h:outputText value="#{workitem.item['name']}" />
-							<!--  <h:outputText value="#{workitem.item['subject']} "/> -->
-							<f:param name="id" value="#{workitem.item['$uniqueid']}" />
+					<h:link outcome="/pages/workflow/workitem">
+						<h:outputText value="#{workitem.item['name']}" />
+						<f:param name="id" value="#{workitem.item['$uniqueid']}" />
 					</h:link>
 				</h:column>	
 				
-				
-				
-								
-				
+				<!-- Requester's Institution -->
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Requester's Institution" />
 					</f:facet>
-						
-							<h:outputText value="#{workitem.item['institution']}" />
+					<h:outputText value="#{workitem.item['institution']}" />
 				</h:column>
 				
-				
+				<!-- Research Title -->
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Research Title" />
 					</f:facet>
-						
-							<h:outputText value="#{workitem.item['title']}" />
+					<h:outputText value="#{workitem.item['title']}" />
 				</h:column>
-
 			</h:dataTable>
-
-
+			
+			<!-- Command Buttons -->
 			<h:commandButton actionListener="#{viewHandler.back(proposalController)}"
 				disabled="#{!(proposalController.pageIndex>0)}"
 				value="&lt;&lt; #{global.prev}">
@@ -65,150 +58,145 @@
 				disabled="#{proposalController.endOfList}" 
 				value="#{global.next} &gt;&gt;">
 			</h:commandButton>
+		
+			<!-- Technical Review Header and link -->
+			<h2>
+				<h:link outcome="/pages/technicalReview">
+					<h:outputText value="BioCompACE Request Technical Review"/>
+				</h:link>
+			</h2> 
 			
-			<h2><h:link outcome="/pages/technicalReview">
-							 <h:outputText value="BioCompACE Request Technical Review
-							 " />
-				</h:link></h2> 
-			
+			<!-- Data Table with technical review -->
 			<h:dataTable class="imixsdatatable" style="width:50%"
 				value="#{viewHandler.getData(proposalController)}" var="workitem">
-			
+				
+				<!-- Requester's Name -->
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Requester Name" />
 					</f:facet>
-						<h:link outcome="/pages/workflow/workitem">
-							 <h:outputText value="#{workitem.item['name']}" />
-							<!--  <h:outputText value="#{workitem.item['subject']} "/> -->
-							<f:param name="id" value="#{workitem.item['$uniqueid']}" />
+					<h:link outcome="/pages/workflow/workitem">
+						<h:outputText value="#{workitem.item['name']}" />
+						<f:param name="id" value="#{workitem.item['$uniqueid']}" />
 					</h:link>
 				</h:column>
 				
+				<!-- Reviewer 1 Name -->
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Reviewer 1 Name" />
 					</f:facet>
-						
-							<h:outputText value="#{workitem.item['reviewerName1']}" />
+					<h:outputText value="#{workitem.item['reviewerName1']}" />
 				</h:column>
 				
+				<!-- Reviewer 1 Decision -->
 				<h:column>
 					<f:facet name="header">
-						<h:outputText value="Reviewer 2 Decision" />
+						<h:outputText value="Reviewer 1 Decision" />
 					</f:facet>
-						<h:outputText value="#{workitem.item['decision1']}" />
-										
+						<h:outputText value="#{workitem.item['decision1']}" />				
 				</h:column>
 				
-				
+				<!-- Reviewer 2 Name -->
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Reviewer 2 Name" />
 					</f:facet>
-						
-							<h:outputText value="#{workitem.item['reviewerName2']}" />
+					<h:outputText value="#{workitem.item['reviewerName2']}" />
 				</h:column>
+				
+				<!-- Reviewer 2 Decision -->
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Reviewer 2 Decision" />
-
 					</f:facet>
-					
-					<h:outputText value="#{workitem.item['decision2']}" />			
-						
-							
+					<h:outputText value="#{workitem.item['decision2']}" />				
 				</h:column>
 				
-				
-				
+				<!-- Reviewer 3 Name -->
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Reviewer 3 Name" />
 					</f:facet>
-						
-							<h:outputText value="#{workitem.item['reviewerName3']}" />
+					<h:outputText value="#{workitem.item['reviewerName3']}" />
 				</h:column>
+				
+				<!-- Reviewer 3 Decision -->
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Reviewer 3 Decision" />
-
 					</f:facet>
-					
-					<h:outputText value="#{workitem.item['decision3']}" />			
-								
-						
-							
+					<h:outputText value="#{workitem.item['decision3']}" />				
 				</h:column>
 				
+				<!-- WorkFlowStatus -->
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Workflow Status" />
 					</f:facet>
 					<h:outputText value="#{workitem.item['txtworkflowstatus']}" />
-				</h:column>
-				
-				
+				</h:column>	
 			</h:dataTable>
-	<h2><h:link outcome="/pages/config/reviewerslist">
-							 <h:outputText value="List of Reviewers" />
-				</h:link></h2> 
+			
+			<!-- Reviewers header and link -->
+			<h2>
+				<h:link outcome="/pages/config/reviewerslist">
+					<h:outputText value="List of Reviewers" />
+				</h:link>
+			</h2> 
 
-				<h:dataTable id="datatable_id" columns="7" class="imixsdatatable"
+			<!-- Data table listing name of reviewers -->
+			<h:dataTable id="datatable_id" columns="7" class="imixsdatatable"
 					value="#{viewHandler.getData(teamlistController)}" var="record">
-
+					
+					<!-- Reviewer Name -->
 					<h:column>
 						<f:facet name="header">
 							<h:outputText value="Name" />
 						</f:facet>
-						<h:outputText value="#{record.item['txtName']} " />
+						<h:outputText value="#{record.item['txtName']}" />
 					</h:column>
-
-
+		
+					<!-- Last modified -->
 					<h:column>
 						<f:facet name="header">
 							<h:outputText value="#{global.modified}" />
 						</f:facet>
-						<h:outputText value="#{record.item['$modified']}">
-
-						</h:outputText>
+						<h:outputText value="#{record.item['$modified']}"/>
 					</h:column>
+					
+					<!-- Only manager can edit and delete reviewers -->
+					<ui:fragment
+						rendered="#{loginController.getUserNameList().contains('manager')}" >
+						
+						<!-- edit -->
+						<h:column>
+							<h:link outcome="/pages/config/team?faces-redirect=true">
+								<h:outputText value="#{global.edit}" />
+								<f:param name="id" value="#{record.item['$uniqueid']}" />
+							</h:link>
+						</h:column>
 
-					<!-- edit -->
-					<h:column>
-						<h:link outcome="/pages/config/team?faces-redirect=true">
-							<h:outputText value="#{global.edit}" />
-							<f:param name="id" value="#{record.item['$uniqueid']}" />
-						</h:link>
-					</h:column>
-
-					<!-- delete -->
-					<h:column>
-						<h:commandLink value="#{global.delete}" action="teamlist"
-							actionListener="#{documentController.delete(record.item['$uniqueid'])}" />
-					</h:column>
+						<!-- delete -->
+						<h:column>
+							<h:commandLink value="#{global.delete}" action="teamlist"
+								actionListener="#{documentController.delete(record.item['$uniqueid'])}" />
+						</h:column>
+					</ui:fragment>
 				</h:dataTable>
-
+				
+				<!-- Command Buttons -->
 				<h:commandButton
 					actionListener="#{viewHandler.back(teamlistController)}"
 					disabled="#{teamlistController.pageIndex==0}"
 					value="#{global.prev}">
 				</h:commandButton>
 
-
 				<h:commandButton
 					actionListener="#{viewHandler.forward(teamlistController)}"
 					disabled="#{teamlistController.endOfList}" value="#{global.next}">
 				</h:commandButton>
-
-
-		
-
-			
-
-
 		</h:form>
 	</f:view>
-
-
+	</ui:fragment>
 </f:subview>

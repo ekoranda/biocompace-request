@@ -5,13 +5,9 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs"
 	template="/layout/template.xhtml">
-	<!-- EMILY: "COMPOSITION" Defines a page composition that optionally uses a template. Content outside of this tag is ignored.
 
-	 AKA defines the structure of the page soo like heading and what not -->
-	 <!-- Emily: "DEFINE" Defines content that is inserted into a page by a template. -->
+	<!-- Includes the task list page -->
 	<ui:define name="content">
-
 		<ui:include src="/pages/sub_tasklist.xhtml" />
-
 	</ui:define>
 </ui:composition>

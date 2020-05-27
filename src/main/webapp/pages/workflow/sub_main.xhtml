@@ -5,159 +5,142 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs"
 	xmlns:p="http://primefaces.org/ui"
-	  xmlns:marty="http://java.sun.com/jsf/composite/marty" >
+	xmlns:marty="http://java.sun.com/jsf/composite/marty" >
 	
+	<!-- The form that proposer's fill out -->
 
-	<!-- **** General info ***** -->
-
-<ui:fragment 
-	rendered="#{workflowController.workitem.item['$TaskID']==1000}">
-	<dl>
-	<dt style="clear: left; width: 400px;">Requester Name</dt>
-		<dd style="width: 600px;">
-			<h:inputText style="width: 20em;" required="true" 
-				value="#{workflowController.workitem.item['name']}"
-				id="name_id">
-			</h:inputText>
-		</dd>
-		
-
-		
-		<dt style="clear: left; width: 400px;">Requester Email</dt>
-		<dd style="width: 600px;">
-			<h:inputText style="width: 20em;" 
-				value="#{workflowController.workitem.item['email']}"
-				id="email_id">
-			</h:inputText>
+	<ui:fragment 
+		rendered="#{workflowController.workitem.item['$TaskID']==1000}">
+		<dl>
 			
-		</dd>
-		<dd>
-			<h:outputLabel style="color: gray; width: 400px;" 
-				value="Requester email has to be an institutional email (e.g., .org, .edu, .gov)." >
-			</h:outputLabel>
-		</dd>
-
-		<dt style="clear: left; width: 400px;">Mobile Number</dt>
-		 <dd style="width: 600px;">
-			<h:inputText style="width: 20em;" 
-				value="#{workflowController.workitem.item['phone']}"
-				id="phone_id">
-			</h:inputText>
-		</dd>
-	
-		
-		<dt style="clear: left; width: 400px;">Country Code</dt>
-		 <dd style="width: 600px;">
-			<h:inputText style="width: 20em;" 
-				value="#{workflowController.workitem.item['countryCode']}"
-				id="countryCode_id">
-			</h:inputText>
-		</dd>
-		
-		<dt style="clear: left; width: 400px;">Requester's Institution</dt>
-		 <dd style="width: 600px;">
-			<h:inputText style="width: 20em;" 
-				value="#{workflowController.workitem.item['institution']}"
-				id="institution_id">
-			</h:inputText>
-		</dd>
-		
-		<dt style="clear: left; width: 400px;">Name of Additional Team Members requiring access</dt>
-		 <dd style="width: 600px;">
-		 	<h:panelGrid columns="2">
-    			
+			<!-- Prroposer's name -->
+			<dt style="clear: left; width: 400px;">Requester Name</dt>
+			<dd style="width: 600px;">
+				<h:inputText style="width: 20em;" required="true" 
+					value="#{workflowController.workitem.item['name']}"
+					id="name_id">
+				</h:inputText>
+			</dd>
+			
+			<!-- Requester's email -->
+			<dt style="clear: left; width: 400px;">Requester Email</dt>
+			<dd style="width: 600px;">
+				<h:inputText style="width: 20em;" 
+					value="#{workflowController.workitem.item['email']}"
+					id="email_id">
+				</h:inputText>
+			</dd>	
+			<dd>
+				<h:outputLabel style="color: gray; width: 400px;" 
+					value="Requester email has to be an institutional email (e.g., .org, .edu, .gov)." >
+				</h:outputLabel>
+			</dd>
+			
+			<!-- Mobile Number -->
+			<dt style="clear: left; width: 400px;">Mobile Number</dt>
+		 	<dd style="width: 600px;">
+				<h:inputText style="width: 20em;" 
+					value="#{workflowController.workitem.item['phone']}"
+					id="phone_id">
+				</h:inputText>
+			</dd>
+			
+			<!-- Country Code -->	
+			<dt style="clear: left; width: 400px;">Country Code</dt>
+		 	<dd style="width: 600px;">
+				<h:inputText style="width: 20em;" 
+					value="#{workflowController.workitem.item['countryCode']}"
+					id="countryCode_id">
+				</h:inputText>
+			</dd>
+			
+			<!-- Requester's institution -->
+			<dt style="clear: left; width: 400px;">Requester's Institution</dt>
+		 	<dd style="width: 600px;">
+				<h:inputText style="width: 20em;" 
+					value="#{workflowController.workitem.item['institution']}"
+					id="institution_id">
+				</h:inputText>
+			</dd>
+			
+			<!-- Additional team members -->
+			<dt style="clear: left; width: 400px;">Name of Additional Team Members requiring access</dt>
+		 	<dd style="width: 600px;">
+		 		<h:panelGrid columns="2">
     			<p:chips id="chips" value="#{workflowController.workitem.itemListArray['members']}"/>
-			</h:panelGrid>
-
-		</dd>
-		
-		 <dt style="clear: left; width: 400px;">Research Title</dt>
-
-		
-		<dd>
-			<h:outputLabel style="color: gray; width: 400px;"
-				value="specific summary of proposed work (250 characters max)">
-			</h:outputLabel>
-		</dd>
-		<dd>
-		<p:inputTextarea value="#{workflowController.workitem.item['title']}" rows="5" cols="30" counter="display" maxlength="250" counterTemplate="{0} characters remaining." autoResize="false" />
-    	<br />
-    <h:outputText id="display" />
-		</dd>
-		
-		<dt style="clear: left;">Abstract</dt>
-		<dd>
-		
-			<h:inputTextarea class="imixs-editor"
-				value="#{workflowController.workitem.item['abstract']}" />
-
-		</dd>
-		
-		
- 
-		 <dt style="clear: left; width: 400px;">Type of Analysis</dt>
-
-	
-  	<dd>
-
-        <p:selectCheckboxMenu id="types" value="#{workflowController.workitem.itemListArray['types']}" label="Types" multiple="true"
-                              filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
-            <f:selectItems value="#{typeView.types}" />
-        </p:selectCheckboxMenu>
-  
-        
-
-		</dd>
-		 <dt style="clear: left; width: 400px;">Request for Additional Tools:</dt>
-
- 	<dd>
-        <p:selectCheckboxMenu id="tools" value="#{workflowController.workitem.itemListArray['tools']}" label="Tools" multiple="true"
-                              filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
-            <f:selectItems value="#{checkboxView.tools}" />
-        </p:selectCheckboxMenu>
-  
-        
-
-		</dd>
-
-		 
-				 <dt style="clear: left; width: 400px;">Proposed Start Date</dt>
-		
-
- 
-     <dd>
-        <p:calendar id="start" value="#{workflowController.workitem.item['startDate']}" />
-    	<p:dialog modal="true" resizable="false" header="Values" widgetVar="dlg" showEffect="fold">
-            <h:outputText value=":Proposed Start Date" />
-            <h:outputText value="#{workflowController.workitem.item['startDate']}">
-            <f:convertDateTime type="date" dateStyle="full"/>
-            </h:outputText>
-    	</p:dialog>
-    </dd>
-   
-		
-
-				 <dt style="clear: left; width: 400px;">Proposed End Date</dt>
-		
-     <dd>
-        <p:calendar id="end" value="#{workflowController.workitem.item['endDate']}" />
-    	<p:dialog modal="true" resizable="false" header="Values" widgetVar="dlg" showEffect="fold">
-            <h:outputText value=":Proposed End Date" />
-            <h:outputText value="#{workflowController.workitem.item['endDate']}">
-            <f:convertDateTime type="date" dateStyle="full"/>
-            </h:outputText>
-    	</p:dialog>
-    </dd>
+				</h:panelGrid>
+			</dd>
 			
-		
-	</dl>
-	
-
-	<div style="clear: left;" />
+			
+			<!-- Research Title -->
+			<dt style="clear: left; width: 400px;">Research Title</dt>
+			<dd>
+				<h:outputLabel style="color: gray; width: 400px;"
+					value="specific summary of proposed work (250 characters max)">
+				</h:outputLabel>
+			</dd>
+			<dd>
+				<p:inputTextarea value="#{workflowController.workitem.item['title']}" rows="5" cols="30" counter="display" maxlength="250" counterTemplate="{0} characters remaining." autoResize="false" />
+    			<br/>
+    			<h:outputText id="display" />
+			</dd>
+			
+			
+			<!-- Abstract -->
+			<dt style="clear: left;">Abstract</dt>
+			<dd>
+				<h:inputTextarea class="imixs-editor"
+					value="#{workflowController.workitem.item['abstract']}" />
+			</dd>
+			
+			
+			<!-- Type -->
+			<dt style="clear: left; width: 400px;">Type of Analysis</dt>
+			<dd>
+				<!-- Choose from drop down box -->
+				<p:selectCheckboxMenu id="types" value="#{workflowController.workitem.itemListArray['types']}" label="Types" multiple="true"
+                	filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+            		<f:selectItems value="#{typeView.types}" />
+        		</p:selectCheckboxMenu>
+			</dd>
+			
+			<!-- Tools -->
+		 	<dt style="clear: left; width: 400px;">Request for Additional Tools:</dt>
+ 			<dd>
+ 				<!-- Choose from drop down box -->
+        		<p:selectCheckboxMenu id="tools" value="#{workflowController.workitem.itemListArray['tools']}" label="Tools" multiple="true"
+                	filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
+            		<f:selectItems value="#{checkboxView.tools}" />
+        		</p:selectCheckboxMenu>
+			</dd>
+			
+			<!-- Start Date -->
+			<dt style="clear: left; width: 400px;">Proposed Start Date</dt>
+			 <dd>
+			 	<!-- Choose from calendar pop up -->
+        		<p:calendar id="start" value="#{workflowController.workitem.item['startDate']}" />
+    			<p:dialog modal="true" resizable="false" header="Values" widgetVar="dlg" showEffect="fold">
+            		<h:outputText value=":Proposed Start Date" />
+            		<h:outputText value="#{workflowController.workitem.item['startDate']}">
+            			<f:convertDateTime type="date" dateStyle="full"/>
+            		</h:outputText>
+    			</p:dialog>
+    		</dd>
+    		
+    		<!-- End date -->
+  			<dt style="clear: left; width: 400px;">Proposed End Date</dt>
+			<dd>
+				<!-- Choose from calendar pop up -->
+        		<p:calendar id="end" value="#{workflowController.workitem.item['endDate']}" />
+    			<p:dialog modal="true" resizable="false" header="Values" widgetVar="dlg" showEffect="fold">
+            		<h:outputText value=":Proposed End Date" />
+            		<h:outputText value="#{workflowController.workitem.item['endDate']}">
+            			<f:convertDateTime type="date" dateStyle="full"/>
+            		</h:outputText>
+    			</p:dialog>
+    		</dd>
+		</dl>
 	</ui:fragment>
-
-
-
 </f:subview>
 
 

@@ -6,48 +6,35 @@
 	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs"
 	xmlns:p="http://primefaces.org/ui">
 
-	<!-- **** General info ***** -->
+	<!-- Page for reviewer2 -->
 	
-
 	<dl>
-			
-		
+		<!-- Page is only visible if first review is done -->
 		<ui:fragment 
 			rendered="#{workflowController.workitem.item['$TaskID']==1300 }">
-						
-	
+			<dt style="clear: left;">
+				<!-- Reviewer 2's name -->
+				<h:outputLabel for="team_id" value="Reviewer Two Name:">
+					<h:message style="color: red" for="team_id" showSummary="true"
+						showDetail="false" />
+				</h:outputLabel>
+			</dt>
+			<dd>
+				<!-- They choose their name from drop box options -->
+				<h:selectOneMenu id="team_id"
+					value="#{workflowController.workitem.item['reviewerName2']}" required="false">
+					<f:selectItem required="true" itemLabel="#{global.please_select}"
+						itemValue="" />
+					<f:selectItems value="#{teamController.teamSelection}" />
+				</h:selectOneMenu>
+			</dd>
 		
-				<dt style="clear: left;">
-			<h:outputLabel for="team_id" value="Reviewer Two Name:">
-				<h:message style="color: red" for="team_id" showSummary="true"
-					showDetail="false" />
-			</h:outputLabel>
-		</dt>
-		<dd>
-			<h:selectOneMenu id="team_id"
-				value="#{workflowController.workitem.item['reviewerName2']}" required="false">
-				<f:selectItem required="true" itemLabel="#{global.please_select}"
-					itemValue="" />
-				<f:selectItems value="#{teamController.teamSelection}" />
-			</h:selectOneMenu>
-		</dd>
-		
+			<!-- Text box for review -->
 			<dt style="clear: left; width = 400px">Review Two</dt>
 			<dd>
 				<h:inputTextarea class="imixs-editor"
 					value="#{workflowController.workitem.item['reviewTwo']}" />
 			</dd>
-			</ui:fragment>
-	
-		
-		
-		
-
-	
+		</ui:fragment>
 	</dl>
-
-<div style="clear: left;" />
-
-
-
 </f:subview>

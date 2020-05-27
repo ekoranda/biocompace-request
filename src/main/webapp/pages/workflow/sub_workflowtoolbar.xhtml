@@ -5,40 +5,47 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs">
 
-
+	<!-- controls workflow underneath a workitem -->
+	
 	<div class="imixs-panel">
 		<h3>#{global.workflow}</h3>
 
-
-		<!-- **** Workflow Actions only visible if user is author ***** -->
+		<!-- **** Workflow Actions only visible if user is at least an author ***** -->
 		<ui:fragment 
 			rendered="#{empty workflowController.workitem.item['$lastevent'] or workflowController.workitem.item['$isauthor']}">
-				
 				<i:imixsWorkflowActions workflowController="#{workflowController}"
-				
-				
 				disabletooltip="false" />
 		</ui:fragment>
-		<!-- If author does not have author access -->
+		
+		<!-- If user does not have author access -->
 		<ui:fragment
 			rendered="#{!(empty workflowController.workitem.item['$lastevent'] or workflowController.workitem.item['$isauthor'])}">
 			<p style="color:red">You are not allowed to edit this Workitem!</p>
 		</ui:fragment>
+		
+		<!-- Close button -->
 		<h:commandButton value="#{global.close}"
 			action="/pages/requests?faced-redirect=true"
 			actionListener="#{workflowController.close()}" />
 
+		<!-- Workflow History -->
 		<ui:fragment
 			rendered="#{!empty workflowController.workitem.item['txtworkflowhistory']}">
 			<h:panelGrid columns="3">
+				
+				<!-- When workitem was created -->
 				<h:outputLabel value="#{global.created}: " />
 				<h:outputText
 					value="#{workflowController.workitem.item['$created']} ">
 					<f:convertDateTime timeZone="CET" type="both" dateStyle="medium" />
 				</h:outputText>
+				
+				<!-- The name of the creator -->
 				<h:outputText
 					value=" #{global.by} #{workflowController.workitem.item['namcreator']} " />
 				<h:outputLabel value="#{global.modified}: " />
+				
+				<!-- The name of the current editor -->
 				<h:outputText
 					value="#{workflowController.workitem.item['$modified']} ">
 					<f:convertDateTime timeZone="CET" type="both" dateStyle="medium" />
@@ -46,10 +53,10 @@
 				<h:outputText
 					value=" #{global.by} #{workflowController.workitem.item['namcurrenteditor']}" />
 			</h:panelGrid>
-
+			
+			<!-- Shows workflow history -->
 			<h3>History:</h3>
 			<div>
-
 				<h:dataTable var="log"
 					value="#{workflowController.workitem.itemListArray['txtworkflowhistory']}">
 					<h:column>
@@ -64,11 +71,6 @@
 				</h:dataTable>
 			</div>
 		</ui:fragment>
-
-
 	</div>
-
-
-
 </f:subview>
 

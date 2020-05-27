@@ -6,105 +6,103 @@
 	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs"
 	template="/layout/template.xhtml">
 
-
-
+<!-- Workitem -->
+<!-- Controls the tabs when clicked on a workitem -->
 
 	<f:metadata>
 		<f:viewAction action="#{workflowController.onLoad()}" />
 	</f:metadata>
-
-
-	
 	<ui:define name="content">
 		<f:view>
 			<h:form id="workitem_form_id">
-	
 				<div class="imixs-tabs">
-				
 					<ul>
-					  <ui:fragment
+						<!-- Show Completed propsoals when user has turned in their proposal-->
+						<ui:fragment
 							rendered="#{(workflowController.workitem.item['$TaskID']>=1100 )}">
-							<li><a href="#tab-6">Proposal</a></li>
+							<li><a href="#tab-1">Proposal</a></li>
 						</ui:fragment>
-					
-						<!-- Input page for proposers only shows when proposer is editing -->
+						
+						<!-- Show General proposal page when user is currently submitting or editing their proposal -->
 						<ui:fragment
 							rendered="#{workflowController.workitem.item['$TaskID']==1000}">
-						<li><a href="#tab-1">General</a></li>
+						<li><a href="#tab-2">General</a></li>
 						</ui:fragment>
 						
-						<li><a href="#tab-2">Files</a></li>
+						<!-- Always show Files page-->
+						<li><a href="#tab-3">Files</a></li>
+						
+						<!--  Show reviewer 1 page when user has submitted their finished proposal, and only a revier can see it-->
 						<ui:fragment 
-							rendered="#{(workflowController.workitem.item['$TaskID']==1100 and loginController.getUserNameList().contains('org.imixs.ACCESSLEVEL.AUTHORACCESS'))}">
-								<li><a href="#tab-3">Reviewer 1</a></li>
+							rendered="#{(workflowController.workitem.item['$TaskID']==1100 and loginController.getUserNameList().contains('reviewer'))}">
+								<li><a href="#tab-4">Reviewer 1</a></li>
 						</ui:fragment>
+						
+						<!-- Show completed review 1 -->
 						<ui:fragment
 							rendered="#{workflowController.workitem.item['$TaskID']>1100}">
-								<li><a href="#tab-7">Review 1</a></li>
+								<li><a href="#tab-5">Review 1</a></li>
 						</ui:fragment>
 						
+						<!-- Show reviewer 2 tab when review 1 is finished -->
 						<ui:fragment 
 							rendered="#{workflowController.workitem.item['$TaskID']==1300 }">
-								<li><a href="#tab-4">Reviewer 2</a></li>
+								<li><a href="#tab-6">Reviewer 2</a></li>
 						</ui:fragment>
 						
+						<!-- Show completed review 2 tab -->
 						<ui:fragment
 							rendered="#{workflowController.workitem.item['$TaskID']>1300 }">
-								<li><a href="#tab-8">Review 2</a></li>
+								<li><a href="#tab-7">Review 2</a></li>
 						</ui:fragment>
 						
+						<!-- Show reviewer 3 tab when review 2 is finished -->
 						<ui:fragment 
 							rendered="#{workflowController.workitem.item['$TaskID']==1500 }">
-								<li><a href="#tab-5">Reviewer 3</a></li>
+								<li><a href="#tab-8">Reviewer 3</a></li>
 						</ui:fragment>
 						
+						<!-- Show completed review 3 tab -->
 						<ui:fragment
 							rendered="#{workflowController.workitem.item['$TaskID']>1500 }">
 								<li><a href="#tab-9">Review 3</a></li>
 						</ui:fragment>
 						
-				
-						
+
+					<!-- the pages to go along with the tabs -->
 					</ul>
-				  <div id="tab-6">
+				  	<div id="tab-1">
 						<ui:include src="/pages/workflow/proposal.xhtml"/>
 					</div>
-				
-					<div id="tab-1">
+					<div id="tab-2">
 						<ui:include src="/pages/workflow/sub_main.xhtml" />
 					</div> 
-					<div id="tab-2">
-						<ui:include src="/pages/workflow/sub_attachments.xhtml" />
-
-					</div>
-
 					<div id="tab-3">
-						<ui:include src="/pages/workflow/sub_reviewer.xhtml" />
-					</div>
-					<div id="tab-7">
-						<ui:include src="/pages/workflow/review1.xhtml" />
+						<ui:include src="/pages/workflow/sub_attachments.xhtml" />
 					</div>
 					<div id="tab-4">
-						<ui:include src="/pages/workflow/sub_reviewer2.xhtml" />
-					</div>
-					<div id="tab-8">
-						<ui:include src="/pages/workflow/review2.xhtml" />
+						<ui:include src="/pages/workflow/sub_reviewer.xhtml" />
 					</div>
 					<div id="tab-5">
+						<ui:include src="/pages/workflow/review1.xhtml" />
+					</div>
+					<div id="tab-6">
+						<ui:include src="/pages/workflow/sub_reviewer2.xhtml" />
+					</div>
+					<div id="tab-7">
+						<ui:include src="/pages/workflow/review2.xhtml" />
+					</div>
+					<div id="tab-8">
 						<ui:include src="/pages/workflow/sub_reviewer3.xhtml" />
 					</div>
 					<div id="tab-9">
 						<ui:include src="/pages/workflow/review3.xhtml" />
 					</div>
-					
 				</div>
 
 				<!-- **** Workflow Actions & History ***** -->
 				<ui:include src="/pages/workflow/sub_workflowtoolbar.xhtml" />
-
-
 			</h:form>
 		</f:view>
 	</ui:define>
-
 </ui:composition>

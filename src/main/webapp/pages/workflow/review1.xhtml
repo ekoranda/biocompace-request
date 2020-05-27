@@ -6,35 +6,33 @@
 	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs"
 	xmlns:p="http://primefaces.org/ui">
 
-	<!-- **** General info ***** -->
+	<!-- Completed review 1 -->
 	
+	<!-- Only visible when review 1 is completed -->
 	<ui:fragment 
 		rendered="#{workflowController.workitem.item['$TaskID']>1100}">
 		<table class="imixsdatatable" >
-		<!-- Reviewer's name -->
-		<tr>
-			<td style="clear: left; witdh: 400px;"><b>Reviewer Name</b></td>
-			<td style="witdh: 600px;">
-			<h:outputText style="witdh: 20em;" required="true" 
-				value="#{workflowController.workitem.item['reviewerName1']}"
-				id="name_id">
-			</h:outputText>
-			</td>
-		</tr>
+			<!-- Reviewer's name -->
+			<tr>
+				<td style="clear: left; witdh: 400px;"><b>Reviewer Name</b></td>
+				<td style="witdh: 600px;">
+					<h:outputText style="witdh: 20em;" required="true" 
+						value="#{workflowController.workitem.item['reviewerName1']}"
+						id="name_id">
+					</h:outputText>
+				</td>
+			</tr>
 		
-		<!-- Review One -->
-		<tr>
-			<td style="clear: left; witdh: 400px;"><b>Review One</b></td>
-			<td style="witdh: 600px;">
-			<h:outputText style="witdh: 20em;" 
-				value="#{workflowController.workitem.item['reviewOne']}"
-				escape="false">
-			</h:outputText>
-			</td>
-		</tr>
-		
-		
-</table>	
+			<!-- Review One -->
+			<tr>
+				<td style="clear: left; witdh: 400px;"><b>Review One</b></td>
+				<td style="witdh: 600px;">
+					<h:outputText style="witdh: 20em;" 
+						value="#{workflowController.workitem.item['reviewOne']}"
+						escape="false">
+					</h:outputText>
+				</td>
+			</tr>		
+		</table>	
 	</ui:fragment>
-
 </f:subview>

@@ -23,8 +23,7 @@ a:hover {
 #imixs-contentWrapper {
 	margin: 0 auto;
 	min-height: 100%;
-	/*width: 980px;*/
-	width: 100%;
+	width: 980px;
 }
 
 #imixs-servicenav {
@@ -74,8 +73,7 @@ a:hover {
 	background-repeat: no-repeat;
 	background-position: 15px 5px;
 	height: 80px;
-	/*width: 164px;*/
-	width: 100%;
+	width: 164px;
 }
 
 #imixs-branding {
@@ -161,14 +159,12 @@ a:hover {
 
 #imixs-content dl dt {
 	float: left;
-	/*width: 500px;*/
-	width: 100%;
+	/idth: 500px;
 }
 
 #imixs-content dl dd {
 	float: left;
-	/*width: 740px;*/
-	width: 100%;
+	width: 740px;
 	margin-bottom: 0.7em;
 }
 
@@ -177,8 +173,7 @@ a:hover {
 }
 
 #imixs-content dl.columns-2 dt {
-	/*width: 500px;*/
-	width: 100%;
+	width: 500px;
 }
 
 #imixs-content dl.columns-2 dd {

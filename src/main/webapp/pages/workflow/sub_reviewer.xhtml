@@ -6,19 +6,20 @@
 	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs"
 	xmlns:p="http://primefaces.org/ui">
 
-	<!-- **** General info ***** -->
-	
-	
+	<!-- Page for reviewer 1 -->
 	<dl>
+		<!-- Content is only visible if  proposer has submitted their proposal -->
 		<ui:fragment 
-			rendered="#{(workflowController.workitem.item['$TaskID']==1100  and loginController.getUserNameList().contains('org.imixs.ACCESSLEVEL.AUTHORACCESS'))}">								
+			rendered="#{(workflowController.workitem.item['$TaskID']==1100  and loginController.getUserNameList().contains('reviewer'))}">								
 			<dt style="clear: left;">
+				<!-- Reviewer's name -->
 				<h:outputLabel for="team_id" value="Reviewer One Name:">
 					<h:message style="color: red" for="team_id" showSummary="true"
-					showDetail="false" />
+						showDetail="false" />
 				</h:outputLabel>
 			</dt>
 			<dd>
+				<!-- They choose their name from a drop box -->
 				<h:selectOneMenu id="team_id"
 						value="#{workflowController.workitem.item['reviewerName1']}" required="false">
 					<f:selectItem required="true" itemLabel="#{global.please_select}"
@@ -27,19 +28,12 @@
 				</h:selectOneMenu>
 			</dd>
 			
+			<!-- Text box for review -->
 			<dt style="clear: left; width = 400px">Review One</dt>
 			<dd>
 				<h:inputTextarea class="imixs-editor"
 					value="#{workflowController.workitem.item['reviewOne']}" />
 			</dd>
-			</ui:fragment>
-		
-		
-		
-	
-
-
-</dl>
-<div style="clear: left;" />
-
+		</ui:fragment>
+	</dl>
 </f:subview>
