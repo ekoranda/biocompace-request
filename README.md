@@ -237,23 +237,7 @@ You can also download the application war file for the [latest release](https://
 
 	Download Eclipse Modeling tool from [here](https://www.eclipse.org/downloads/packages/release/2019-06/r/eclipse-modeling-tools)
 
-1. Create a new webapp in Eclipse IDE using Maven
-
-	```
-	mvn archetype:generate 
-    -DgroupId={project-packaging}
-    -DartifactId={project-name}
-    -DarchetypeArtifactId={maven-template} 
-    -DinteractiveMode=false
-	```
-
-	Click file >import
-
-	Click maven >existing maven projects
-
-	Browse to find biocompace-request
-
-	Create the new project
+1. Click on file>open projects from file system, and browse to your project
 
 1. Edit the application in Eclipse IDE
 
