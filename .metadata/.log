@@ -127,3 +127,16 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.egit.core 1 0 2020-05-26 10:02:50.471
 !MESSAGE Using Apache MINA sshd as ssh client.
+!SESSION 2020-05-28 12:35:48.013 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-05-28 12:36:01.871
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-05-28 12:36:01.955
+!MESSAGE Using Apache MINA sshd as ssh client.

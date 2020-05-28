@@ -18,16 +18,16 @@ import javax.enterprise.event.Observes;
 
 import org.imixs.workflow.engine.UserGroupEvent;
 
+/**
+ * Reads from a LDAP file to add roles to the current user
+ * @author ekoranda1
+ *
+ */
 @Stateless()
 @DeclareRoles( "test")
 public class PopulateGroupMembers {
 	@Resource SessionContext ctx;
     public List<String> onUserGroupEvent(@Observes UserGroupEvent userGroupEvent) {
-    	
-    	// create buffer for csvFile
-    	String csvFile = "users.txt";
-        String line = "";
-        String cvsSplitBy = ",";
 
         // list that contains new groups for the current user
         List<String> customGroups = new ArrayList<String>();
@@ -41,6 +41,13 @@ public class PopulateGroupMembers {
 	    // get the name of the current user
 	    Principal principal = ctx.getCallerPrincipal();
 	    String name = principal.getName();
+	    
+	    // hardcode into ldap directory to do a search for users
+	    
+    	// create buffer for csvFile
+    	String csvFile = "users.txt";
+        String line = "";
+        String csvSplitBy = ",";
 	   
 	    // buffer through the csv file line by line to iterate over each user
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
@@ -48,7 +55,7 @@ public class PopulateGroupMembers {
             while ((line = br.readLine()) != null) {
 
                 // use comma as separator
-                String[] users = line.split(cvsSplitBy);
+                String[] users = line.split(csvSplitBy);
                 String roleName;
                 
                 // find the role of the current user and add it to their groups list

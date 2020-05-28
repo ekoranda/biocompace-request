@@ -5,20 +5,20 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs">
 	
-	<ui:fragment rendered="#{(loginController.getUserNameList().contains('reviewer'))}" >
+	
 	<!-- Administrative DashBoard-->
 	<f:view>
 		<h:form>
-		
+			<div style="display: inline-block; float: left; width: 40%; margin-right: 10px; ">
 			<!-- Biocompace requests header and link -->
 			<h2>
 				<h:link outcome="/pages/requests">
 					<h:outputText value="BioCompACE Requests" />
 				</h:link>
 			</h2> 
-				
+			
 			<!-- Data table with condensed biocompace requests -->
-			<h:dataTable class="imixsdatatable" style="width:50%"
+			<h:dataTable class="imixsdatatable" 
 				value="#{viewHandler.getData(proposalController)}" var="workitem">
 				
 				<!-- Requester's Name -->
@@ -58,16 +58,83 @@
 				disabled="#{proposalController.endOfList}" 
 				value="#{global.next} &gt;&gt;">
 			</h:commandButton>
+			
+			<div style = "margin-right: 10px;">
+			<!-- Reviewers header and link -->
+			<h2>
+				<h:link outcome="/pages/config/reviewerslist">
+					<h:outputText value="List of Reviewers" />
+				</h:link>
+			</h2> 
+
+			<!-- Data table listing name of reviewers -->
+			<h:dataTable id="datatable_id" columns="7" class="imixsdatatable"
+					value="#{viewHandler.getData(teamlistController)}" var="record">
+					
+					<!-- Reviewer Name -->
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Name" />
+						</f:facet>
+						<h:outputText value="#{record.item['txtName']}" />
+					</h:column>
 		
+					<!-- Last modified -->
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="#{global.modified}" />
+						</f:facet>
+						<h:outputText value="#{record.item['$modified']}"/>
+					</h:column>
+					
+					<!-- Only manager can edit and delete reviewers -->
+					<ui:fragment
+						rendered="#{loginController.getUserNameList().contains('manager')}" >
+						
+						<!-- edit -->
+						<h:column>
+							<h:link outcome="/pages/config/team?faces-redirect=true">
+								<h:outputText value="#{global.edit}" />
+								<f:param name="id" value="#{record.item['$uniqueid']}" />
+							</h:link>
+						</h:column>
+
+						<!-- delete -->
+						<h:column>
+							<h:commandLink value="#{global.delete}" action="teamlist"
+								actionListener="#{documentController.delete(record.item['$uniqueid'])}" />
+						</h:column>
+					</ui:fragment>
+				</h:dataTable>
+				
+				
+				<!-- Command Buttons -->
+				<h:commandButton
+					actionListener="#{viewHandler.back(teamlistController)}"
+					disabled="#{teamlistController.pageIndex==0}"
+					value="#{global.prev}">
+				</h:commandButton>
+
+				<h:commandButton
+					actionListener="#{viewHandler.forward(teamlistController)}"
+					disabled="#{teamlistController.endOfList}" value="#{global.next}">
+				</h:commandButton>
+				</div>
+			</div>
+			
+			
+			
+			<div style="display: inline-block; width: 50%;">
 			<!-- Technical Review Header and link -->
 			<h2>
 				<h:link outcome="/pages/technicalReview">
-					<h:outputText value="BioCompACE Request Technical Review"/>
+					<h:outputText value="Technical Review"/>
 				</h:link>
 			</h2> 
 			
 			<!-- Data Table with technical review -->
-			<h:dataTable class="imixsdatatable" style="width:50%"
+			
+			<h:dataTable class="imixsdatatable" 
 				value="#{viewHandler.getData(proposalController)}" var="workitem">
 				
 				<!-- Requester's Name -->
@@ -137,66 +204,11 @@
 					<h:outputText value="#{workitem.item['txtworkflowstatus']}" />
 				</h:column>	
 			</h:dataTable>
-			
-			<!-- Reviewers header and link -->
-			<h2>
-				<h:link outcome="/pages/config/reviewerslist">
-					<h:outputText value="List of Reviewers" />
-				</h:link>
-			</h2> 
-
-			<!-- Data table listing name of reviewers -->
-			<h:dataTable id="datatable_id" columns="7" class="imixsdatatable"
-					value="#{viewHandler.getData(teamlistController)}" var="record">
-					
-					<!-- Reviewer Name -->
-					<h:column>
-						<f:facet name="header">
-							<h:outputText value="Name" />
-						</f:facet>
-						<h:outputText value="#{record.item['txtName']}" />
-					</h:column>
+			</div>
 		
-					<!-- Last modified -->
-					<h:column>
-						<f:facet name="header">
-							<h:outputText value="#{global.modified}" />
-						</f:facet>
-						<h:outputText value="#{record.item['$modified']}"/>
-					</h:column>
-					
-					<!-- Only manager can edit and delete reviewers -->
-					<ui:fragment
-						rendered="#{loginController.getUserNameList().contains('manager')}" >
-						
-						<!-- edit -->
-						<h:column>
-							<h:link outcome="/pages/config/team?faces-redirect=true">
-								<h:outputText value="#{global.edit}" />
-								<f:param name="id" value="#{record.item['$uniqueid']}" />
-							</h:link>
-						</h:column>
+			
 
-						<!-- delete -->
-						<h:column>
-							<h:commandLink value="#{global.delete}" action="teamlist"
-								actionListener="#{documentController.delete(record.item['$uniqueid'])}" />
-						</h:column>
-					</ui:fragment>
-				</h:dataTable>
-				
-				<!-- Command Buttons -->
-				<h:commandButton
-					actionListener="#{viewHandler.back(teamlistController)}"
-					disabled="#{teamlistController.pageIndex==0}"
-					value="#{global.prev}">
-				</h:commandButton>
-
-				<h:commandButton
-					actionListener="#{viewHandler.forward(teamlistController)}"
-					disabled="#{teamlistController.endOfList}" value="#{global.next}">
-				</h:commandButton>
 		</h:form>
 	</f:view>
-	</ui:fragment>
+	
 </f:subview>

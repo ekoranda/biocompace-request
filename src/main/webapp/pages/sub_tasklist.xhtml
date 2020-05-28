@@ -23,7 +23,7 @@
 					<!-- Only the creator of the proposal can open up the proposal to edit it -->
 					<!-- A reviewer can open the proposal, but workflow does not let them edit it -->
 					<ui:fragment 
-							rendered="#{(loginController.userPrincipal == workitem.item['$creator'] or loginController.getUserNameList().contains('reviewer'))}">
+							rendered="#{(loginController.userPrincipal == workitem.item['$creator'] or loginController.getUserNameList().contains('group.reviewer'))}">
 						<h:link outcome="/pages/workflow/workitem">
 						<h:outputText value="#{workitem.item['name']}" /> 
 						<f:param name="id" value="#{workitem.item['$uniqueid']}" />
@@ -31,7 +31,7 @@
 					</ui:fragment>
 					<!-- If a user is not the creator or a reviewer, they can no open up the link -->
 					<ui:fragment
-						rendered="#{!(loginController.userPrincipal == workitem.item['$creator'] or loginController.getUserNameList().contains('reviewer'))}">
+						rendered="#{!(loginController.userPrincipal == workitem.item['$creator'] or loginController.getUserNameList().contains('group.reviewer'))}">
 						<h:outputText value="#{workitem.item['name']}" />
 					</ui:fragment>
 				</h:column>	
@@ -146,7 +146,7 @@
 				<!-- WorkFlow Status -->
 				<!-- Proposers can not see workflow Status -->
 				<ui:fragment
-					rendered="{! loginController.getUserNameList().contains('proposer')}" >
+					rendered="{! loginController.getUserNameList().contains('group.proposer')}" >
 					<h:column>
 						<f:facet name="header">
 							<h:outputText value="Workflow Status" />

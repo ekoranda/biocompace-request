@@ -8,16 +8,22 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.model.SelectItem;
 import javax.faces.model.SelectItemGroup;
 
+/**
+ * Class used by sub_main.xhtml that allows the user to pick from an array of types 
+ * from a drop down checkbox
+ * 
+ *@author ekoranda1
+ */
 @ManagedBean
 public class TypeView {
  
-    private String[] selectedConsoles;
-    private String[] selectedConsoles2;
 
     private String[] selectedTypes;
     private List<String> types;
 
- 
+    /**
+     * Adds the different types to the array List
+     */
     @PostConstruct
     public void init() {
         types = new ArrayList<String>();
@@ -30,18 +36,6 @@ public class TypeView {
 
     }
  
-    public String[] getSelectedConsoles() {
-        return selectedConsoles;
-    }
- 
-    public void setSelectedConsoles(String[] selectedConsoles) {
-        this.selectedConsoles = selectedConsoles;
-    }
- 
-
- 
-
- 
     public String[] getSelectedTypes() {
         return selectedTypes;
     }
@@ -49,14 +43,7 @@ public class TypeView {
     public void setSelectedTypes(String[] selectedTypes) {
         this.selectedTypes = selectedTypes;
     }
- 
-    public String[] getSelectedConsoles2() {
-        return selectedConsoles2;
-    }
- 
-    public void setSelectedConsoles2(String[] selectedConsoles2) {
-        this.selectedConsoles2 = selectedConsoles2;
-    }
+
  
     public List<String> getTypes() {
         return types;

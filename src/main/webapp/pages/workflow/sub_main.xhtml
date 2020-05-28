@@ -8,7 +8,7 @@
 	xmlns:marty="http://java.sun.com/jsf/composite/marty" >
 	
 	<!-- The form that proposer's fill out -->
-
+	
 	<ui:fragment 
 		rendered="#{workflowController.workitem.item['$TaskID']==1000}">
 		<dl>
@@ -39,10 +39,10 @@
 			<!-- Mobile Number -->
 			<dt style="clear: left; width: 400px;">Mobile Number</dt>
 		 	<dd style="width: 600px;">
-				<h:inputText style="width: 20em;" 
+        		<h:inputText style="width: 20em;" 
 					value="#{workflowController.workitem.item['phone']}"
 					id="phone_id">
-				</h:inputText>
+				</h:inputText> 
 			</dd>
 			
 			<!-- Country Code -->	

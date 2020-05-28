@@ -13,17 +13,21 @@
 	</context-param>
 	
 	<!-- Basic authentication -->
+
 <login-config>
 		<auth-method>BASIC</auth-method>
 		<realm-name>ApplicationRealm</realm-name>
 	</login-config>
+
 	
-	<!-- SSO 
+<!--  	
 	<login-config>
    		<auth-method>KEYCLOAK</auth-method>
    		<realm-name>Master</realm-name>
 	</login-config>
+	
 	-->
+	
 
 	<security-constraint>
 		<web-resource-collection>

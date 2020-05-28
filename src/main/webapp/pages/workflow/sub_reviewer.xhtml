@@ -10,7 +10,7 @@
 	<dl>
 		<!-- Content is only visible if  proposer has submitted their proposal -->
 		<ui:fragment 
-			rendered="#{(workflowController.workitem.item['$TaskID']==1100  and loginController.getUserNameList().contains('reviewer'))}">								
+			rendered="#{(workflowController.workitem.item['$TaskID']==1100  and loginController.getUserNameList().contains('group.reviewer'))}">								
 			<dt style="clear: left;">
 				<!-- Reviewer's name -->
 				<h:outputLabel for="team_id" value="Reviewer One Name:">

@@ -34,7 +34,7 @@
 						
 						<!--  Show reviewer 1 page when user has submitted their finished proposal, and only a revier can see it-->
 						<ui:fragment 
-							rendered="#{(workflowController.workitem.item['$TaskID']==1100 and loginController.getUserNameList().contains('reviewer'))}">
+							rendered="#{(workflowController.workitem.item['$TaskID']==1100 and loginController.getUserNameList().contains('group.reviewer'))}">
 								<li><a href="#tab-4">Reviewer 1</a></li>
 						</ui:fragment>
 						
