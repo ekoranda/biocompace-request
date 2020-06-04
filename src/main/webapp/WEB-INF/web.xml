@@ -13,16 +13,24 @@
 	</context-param>
 	
 	<!-- Basic authentication -->
+<<<<<<< HEAD
 
 
 <login-config>
+<<<<<<< HEAD
 
 	
+=======
+=======
+	<login-config>
+>>>>>>> my_master_backup
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
 		<auth-method>BASIC</auth-method>
 		<realm-name>ApplicationRealm</realm-name>
 	</login-config>
 
 	
+<<<<<<< HEAD
 <!--  	
 	<login-config>
    		<auth-method>KEYCLOAK</auth-method>
@@ -31,6 +39,8 @@
 	
 	-->
 	
+=======
+>>>>>>> my_master_backup
 
 
 	<security-constraint>
