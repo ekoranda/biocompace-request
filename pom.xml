@@ -42,13 +42,10 @@
     </issueManagement>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- 4.5.5 -->
-        <!-- 4.5.0 -->
-        
-        <org.imixs.workflow.version>5.0.5</org.imixs.workflow.version>
-        <custom.webResources>src/main/webapp</custom.webResources>
-        <custom.unpackTypes>war</custom.unpackTypes>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<org.imixs.workflow.version>5.0.0</org.imixs.workflow.version>
+	<custom.webResources>src/main/webapp</custom.webResources>
+	<custom.unpackTypes>war</custom.unpackTypes>
         <lucene.version>7.5.0</lucene.version>
     </properties>
 
@@ -74,7 +71,8 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <!--  <version>2.3.2</version> -->
+                	<version>3.8.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -122,6 +120,34 @@
     </build>
 
     <dependencies>
+   
+    
+  <dependency>
+    <groupId>org.ldaptive</groupId>
+    <artifactId>ldaptive</artifactId>
+    <version>2.0.0-RC5</version>
+  </dependency>
+
+  
+ <!--  dependency>
+    <groupId>org.ldaptive</groupId>
+    <artifactId>ldaptive-json</artifactId>
+    <version>2.0.0-RC5</version>
+  </dependency>
+  
+  -->
+
+  
+  <!-- https://mvnrepository.com/artifact/org.ldaptive/ldaptive -->
+  <!--  
+ <dependency>
+    <groupId>org.ldaptive</groupId>
+    <artifactId>ldaptive</artifactId>
+    <version>1.2.4</version>
+</dependency>
+
+-->
+
         <!-- JEE Dependencies -->
         <dependency>
             <groupId>javax</groupId>
@@ -137,12 +163,6 @@
             <scope>provided</scope>
         </dependency>
         
-  	<dependency>
-    <groupId>org.ldaptive</groupId>
-    <artifactId>ldaptive</artifactId>
-    <version>2.0.0-RC5</version>
-  </dependency>
-        
         <!--  Micro Pro Health -->
         <!-- https://mvnrepository.com/artifact/org.eclipse.microprofile.health/microprofile-health-api -->
 <dependency>
@@ -150,7 +170,6 @@
     <artifactId>microprofile-health-api</artifactId>
     <version>1.0</version>
 </dependency>
-
         
 
         <!-- Imixs Workflow -->
@@ -176,7 +195,7 @@
 		<dependency>
     <groupId>org.primefaces</groupId>
     <artifactId>primefaces</artifactId>
-    <version>8.0</version>
+    <version>7.0</version>
 </dependency>
         <!-- Apache Lucene -->
         <dependency>

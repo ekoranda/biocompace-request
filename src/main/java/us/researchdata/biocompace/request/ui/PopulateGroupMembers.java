@@ -15,8 +15,13 @@ import javax.annotation.security.DeclareRoles;
 import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import javax.enterprise.event.Observes;
+import javax.jms.ConnectionFactory;
 
 import org.imixs.workflow.engine.UserGroupEvent;
+
+
+
+
 
 /**
  * Reads from a LDAP file to add roles to the current user
@@ -74,6 +79,98 @@ public class PopulateGroupMembers {
         }
         
         
+          /**SearchOperation search = new SearchOperation(
+  			DefaultConnectionFactory.builder()
+    			.config(ConnectionConfig.builder()
+      				.url("ldap://imixs.emilykoranda.com")
+      				// changing to false for now for testing
+      				.useStartTLS(false)
+      				.connectionInitializers(BindConnectionInitializer.builder()
+      					// the credential you are using to authenticate against an LDAP.
+      					// CN = common name 
+      					// ou = organizational unit
+      					// dc = domain component 
+      					 * cn = name of the current user
+      					 * uid = user name of current user
+      					 * .dn("uid=<username> , ou=people, dc=ldaptive, dc=org")
+        				.dn("cn=manager,ou=people,dc=ldaptive,dc=org")
+        				// password
+        				.credential("manager_password")
+        				.build())
+      				.build())
+    			.build(),
+  			"dc=ldaptive,dc=org");	
+  		SearchResponse response = search.execute("(uid=<username>)");
+		LdapEntry entry = response.getEntry();
+		String role = entry.getAttribute("isMemberOf");
+		
+         */
+        
+      /**SearchOperation search = new SearchOperation(
+    		  DefaultConnectionFactory.builder()
+        		    .config(ConnectionConfig.builder()
+        		      .url("ldap://imixs.emilykoranda.com")
+        		      .useStartTLS(true)
+        		      .connectionInitializers(BindConnectionInitializer.builder()
+        		        .dn("uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com")
+        		        .credential("YA8Ry29MgF1p8VpUhgap")
+        		        .build())
+        		      .build())
+        		    .build(),
+        		  "dc=emilykoranda,dc=com");
+        		try {
+					SearchResult response = search.execute("(uid=*proposer1)");
+					LdapEntry entry = response.getEntry();
+					LdapAttribute role = entry.getAttribute("isMemberOf");
+					String group = role.getStringValue();
+					System.out.println(group);
+				} catch (LdapException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					System.out.println("EXCEPTION FAILED");
+				}
+        
+ 	*/
+        	
+     /** ConnectionConfig connConfig = new ConnectionConfig("ldap://imixs.emilykoranda.com");
+        connConfig.setUseStartTLS(true);
+        connConfig.setConnectionInitializer(
+        		new BindConnectionInitializer(
+        				"o=CO,dc=emilykoranda,dc=com", new Credential("YA8Ry29MgF1p8VpUhgap")));
+        		DefaultConnectionFactory cf = new DefaultConnectionFactory(connConfig);
+        		SearchExecutor executor = new SearchExecutor();
+        		executor.setBaseDn("uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com");
+        		/**try {
+        			SearchResult result = executor.search(cf, "(uid=proposer1)").getResult();
+        			LdapEntry entry = result.getEntry();
+        		}catch(LdapException e) {
+        			System.out.println(e);
+        		}
+        */
+        /**
+        
+        
+        
+      
+        /**connConfig.setConnectionInitializer(
+          new BindConnectionInitializer(
+            "uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com", new Credential("YA8Ry29MgF1p8VpUhgap")));
+        DefaultConnectionFactory cf = new DefaultConnectionFactory(connConfig);
+        SearchExecutor executor = new SearchExecutor();
+        executor.setBaseDn("o=CO,dc=emilykoranda,dc=com");
+        try {
+			SearchResult result = executor.search(cf, "(uid=*proposer1)", "cn", "sn").getResult();
+			String test = result.toString();
+			System.out.println(test);
+		} catch (LdapException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+        */
+        
+        
+        //ConnectionConfig connConfig = new ConnectionConfig("ldap://directory.ldaptive.org");
         // add the customGroup to the user's group event
 	    userGroupEvent.setGroups(customGroups);
 

@@ -129,7 +129,7 @@ xovv58KqN06lChgZASjnjGWhkFeMriMhip3/1bir
                 </Key>
             </Keys>
                     <AllowedClockSkew unit="SECONDS">180</AllowedClockSkew>
-            
+
         </IDP>
      </SP>
 </keycloak-saml-adapter>

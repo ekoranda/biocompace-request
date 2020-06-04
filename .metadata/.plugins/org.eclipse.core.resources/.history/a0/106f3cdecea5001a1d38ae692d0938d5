@@ -761,7 +761,7 @@
           <imixs:value><![CDATA[{proposer1, proposer2}]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>false</imixs:value>
+          <imixs:value>true</imixs:value>
         </imixs:item>
         <imixs:item name="keyownershipfields" type="xs:string">
           <imixs:value><![CDATA[{imixs}]]></imixs:value>
@@ -788,8 +788,12 @@
         <imixs:item name="$readaccess" type="xs:string">
           <imixs:value><![CDATA[group.proposer]]></imixs:value>
         </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string"/>
-        <imixs:item name="namaddwriteaccess" type="xs:string"/>
+        <imixs:item name="namaddreadaccess" type="xs:string">
+          <imixs:value><![CDATA[group.proposer]]></imixs:value>
+        </imixs:item>
+        <imixs:item name="namaddwriteaccess" type="xs:string">
+          <imixs:value><![CDATA[group.proposer]]></imixs:value>
+        </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_14</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_36</bpmn2:outgoing>
@@ -804,10 +808,14 @@
           <imixs:value><![CDATA[{proposer1, proposer2}]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>false</imixs:value>
+          <imixs:value>true</imixs:value>
         </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string"/>
-        <imixs:item name="namaddwriteaccess" type="xs:string"/>
+        <imixs:item name="namaddreadaccess" type="xs:string">
+          <imixs:value><![CDATA[group.proposer]]></imixs:value>
+        </imixs:item>
+        <imixs:item name="namaddwriteaccess" type="xs:string">
+          <imixs:value><![CDATA[group.proposer]]></imixs:value>
+        </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_8</bpmn2:outgoing>

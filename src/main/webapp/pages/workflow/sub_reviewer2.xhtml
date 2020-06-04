@@ -8,10 +8,10 @@
 
 	<!-- Page for reviewer2 -->
 	
-	<dl>
+	
 		<!-- Page is only visible if first review is done -->
 		<ui:fragment 
-			rendered="#{workflowController.workitem.item['$TaskID']==1300 }">
+			rendered="#{(workflowController.workitem.item['$TaskID']==1300 and loginController.getUserNameList().contains('group.reviewer')) }">
 			<dt style="clear: left;">
 				<!-- Reviewer 2's name -->
 				<h:outputLabel for="team_id" value="Reviewer Two Name:">
@@ -19,7 +19,7 @@
 						showDetail="false" />
 				</h:outputLabel>
 			</dt>
-			<dd>
+			<dd >
 				<!-- They choose their name from drop box options -->
 				<h:selectOneMenu id="team_id"
 					value="#{workflowController.workitem.item['reviewerName2']}" required="false">
@@ -31,10 +31,11 @@
 		
 			<!-- Text box for review -->
 			<dt style="clear: left; width = 400px">Review Two</dt>
-			<dd>
+			<dd >
 				<h:inputTextarea class="imixs-editor"
 					value="#{workflowController.workitem.item['reviewTwo']}" />
 			</dd>
+		
 		</ui:fragment>
-	</dl>
+
 </f:subview>

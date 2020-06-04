@@ -9,9 +9,10 @@
 	
 	<!-- The form that proposer's fill out -->
 	
+	<h:outputLabel value="#{workflowController.workitem.item['$TaskID']}" />
 	<ui:fragment 
-		rendered="#{workflowController.workitem.item['$TaskID']==1000}">
-		<dl>
+		rendered="#{workflowController.workitem.item['$TaskID'] == 1000 }" >
+
 			
 			<!-- Prroposer's name -->
 			<dt style="clear: left; width: 400px;">Requester Name</dt>
@@ -87,7 +88,7 @@
 			
 			
 			<!-- Abstract -->
-			<dt style="clear: left;">Abstract</dt>
+			<dt style="clear: left; width: 400px">Abstract</dt>
 			<dd>
 				<h:inputTextarea class="imixs-editor"
 					value="#{workflowController.workitem.item['abstract']}" />
@@ -112,6 +113,7 @@
                 	filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
             		<f:selectItems value="#{checkboxView.tools}" />
         		</p:selectCheckboxMenu>
+        		<h:outputText value="#{workflowController.workitem.itemListArray['tools']}" />
 			</dd>
 			
 			<!-- Start Date -->
@@ -139,7 +141,7 @@
             		</h:outputText>
     			</p:dialog>
     		</dd>
-		</dl>
+		
 	</ui:fragment>
 </f:subview>
 

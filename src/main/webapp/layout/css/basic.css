@@ -1,4 +1,6 @@
 
+
+
 h1 {
 	margin-bottom: 0;
 	color: #30332E;
@@ -31,7 +33,7 @@ a:hover {
 	padding: 1px 0 1px 0;
 	text-align: right;
 	font-size: 11px;
-	background: #FFCC00;
+	background: #dc706f;
 	border: 0px;
 	margin: 0px 0 1px 0;
 	border-bottom: 0px solid #FFF;
@@ -60,9 +62,13 @@ a:hover {
 
 /* #80887b */
 #imixs-header {
-	height: 80px;
-	border: 0px dashed silver;
-	background-color: #FFCC00;
+background-color: #b23633;
+	border-bottom: 2px solid #e8e8e8;
+	min-height: 80px;
+	color: #263544;
+	height: 86px;
+	padding: 16px 10px;
+	white-space: nowrap;
 	
 }
 
@@ -90,7 +96,7 @@ a:hover {
 
 .imixs-brandingtext2 {
 	border: 0 none;
-	color: #80887b;
+	color: #fffeff;
 	font-size: 24px;
 	font-weight: bolder;
 	line-height: 36px;
@@ -252,4 +258,3 @@ a:hover {
 .ui-widget {
     font-size: 0.95em;
 }
-

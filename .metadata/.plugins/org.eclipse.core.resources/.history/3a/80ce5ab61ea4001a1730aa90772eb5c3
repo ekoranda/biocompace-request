@@ -12,7 +12,11 @@
       <imixs:value><![CDATA[org.imixs.workflow.engine.plugins.MailPlugin]]></imixs:value>
       <imixs:value><![CDATA[org.imixs.workflow.engine.plugins.RulePlugin]]></imixs:value>
     </imixs:item>
-    <imixs:item name="txtfieldmapping" type="xs:string"/>
+    <imixs:item name="txtfieldmapping" type="xs:string">
+      <imixs:value><![CDATA[reviewer | {reviewer1, reviewer2, reviewer3}]]></imixs:value>
+      <imixs:value><![CDATA[proposer | {proposer1, proposer2}]]></imixs:value>
+      <imixs:value><![CDATA[manager | {manager}]]></imixs:value>
+    </imixs:item>
     <imixs:item name="txtworkflowmodelversion" type="xs:string">
       <imixs:value><![CDATA[1.1.0]]></imixs:value>
     </imixs:item>
@@ -30,7 +34,7 @@
           <imixs:value><![CDATA[Create a new proposal workflow]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>false</imixs:value>
+          <imixs:value>true</imixs:value>
         </imixs:item>
         <imixs:item name="keyownershipfields" type="xs:string">
           <imixs:value><![CDATA[namUser]]></imixs:value>
@@ -109,7 +113,7 @@
           <imixs:value><![CDATA[namUser]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyownershipfields" type="xs:string">
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
@@ -136,12 +140,6 @@
           <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
         <imixs:item name="$readaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
           <imixs:value><![CDATA[group.reviewer]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
@@ -176,7 +174,7 @@
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyownershipfields" type="xs:string">
           <imixs:value><![CDATA[namGeneralAdministrator]]></imixs:value>
@@ -206,12 +204,6 @@
           <imixs:value><![CDATA[{reviewer1, reviewer2, reviewer3}]]></imixs:value>
         </imixs:item>
         <imixs:item name="$readaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
           <imixs:value><![CDATA[group.reviewer]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
@@ -247,11 +239,9 @@
         </imixs:item>
         <imixs:item name="namaddreadaccess" type="xs:string">
           <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
         </imixs:item>
         <imixs:item name="namaddwriteaccess" type="xs:string">
           <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_7</bpmn2:incoming>
@@ -277,11 +267,9 @@
         </imixs:item>
         <imixs:item name="namaddreadaccess" type="xs:string">
           <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
         </imixs:item>
         <imixs:item name="namaddwriteaccess" type="xs:string">
           <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_29</bpmn2:incoming>
@@ -332,7 +320,7 @@
           <imixs:value><![CDATA[group.reviewer]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[namAdministrator]]></imixs:value>
@@ -341,12 +329,6 @@
         <imixs:item name="keyaddwritefields" type="xs:string">
           <imixs:value><![CDATA[namAdministrator]]></imixs:value>
           <imixs:value><![CDATA[{testing}]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:documentation id="Documentation_106"><![CDATA[Project administrator declined proposal]]></bpmn2:documentation>
@@ -399,7 +381,7 @@
           <imixs:value><![CDATA[group.reviewer]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[namAdministrator]]></imixs:value>
@@ -408,12 +390,6 @@
         <imixs:item name="keyaddwritefields" type="xs:string">
           <imixs:value><![CDATA[namAdministrator]]></imixs:value>
           <imixs:value><![CDATA[{testing}]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:documentation id="Documentation_107"><![CDATA[Proposal approved by project administrator to be reviewed by system administrator]]></bpmn2:documentation>
@@ -448,14 +424,6 @@
           <imixs:value><![CDATA[namSystemAdministrator]]></imixs:value>
           <imixs:value><![CDATA[{manager}]]></imixs:value>
         </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_6</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_23</bpmn2:outgoing>
@@ -481,16 +449,13 @@
           <imixs:value><![CDATA[{manager}]]></imixs:value>
         </imixs:item>
         <imixs:item name="$readaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.AUTHORACCESS]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.READERACCESS]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:documentation id="Documentation_109"><![CDATA[Approval closed and project started]]></bpmn2:documentation>
@@ -517,14 +482,9 @@
           <imixs:value><![CDATA[<itemvalue>subject</itemvalue> ]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
-        </imixs:item>
+        <imixs:item name="namaddreadaccess" type="xs:string"/>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_11</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_27</bpmn2:outgoing>
@@ -566,19 +526,13 @@
           <imixs:value><![CDATA[group.reviewer]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[{emily}]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyaddwritefields" type="xs:string">
           <imixs:value><![CDATA[{emily}]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:documentation id="Documentation_60"><![CDATA[General administrator declined proposal ]]></bpmn2:documentation>
@@ -612,7 +566,7 @@
           <imixs:value><![CDATA[namReviewer]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="keyownershipfields" type="xs:string">
           <imixs:value><![CDATA[namGeneralAdministrator]]></imixs:value>
@@ -642,12 +596,6 @@
         <imixs:item name="$readaccess" type="xs:string">
           <imixs:value><![CDATA[group.reviewer]]></imixs:value>
         </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:documentation id="Documentation_64"><![CDATA[General administrator approved proposal to be further reviewed by reviewers]]></bpmn2:documentation>
       <bpmn2:incoming>SequenceFlow_25</bpmn2:incoming>
@@ -669,16 +617,11 @@
     <bpmn2:task id="Task_10" imixs:processid="1900" name="Proposal Declined">
       <bpmn2:extensionElements>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
-        </imixs:item>
+        <imixs:item name="namaddreadaccess" type="xs:string"/>
         <imixs:item name="keyaddreadfields" type="xs:string">
           <imixs:value><![CDATA[{emily}]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_13</bpmn2:incoming>
@@ -710,14 +653,6 @@
         <imixs:item name="keyaddwritefields" type="xs:string">
           <imixs:value><![CDATA[{manager}]]></imixs:value>
         </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_5</bpmn2:outgoing>
@@ -728,22 +663,19 @@
     <bpmn2:intermediateCatchEvent id="IntermediateCatchEvent_2" imixs:activityid="10" name="Proposal Solved">
       <bpmn2:extensionElements>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>true</imixs:value>
+          <imixs:value>false</imixs:value>
         </imixs:item>
         <imixs:item name="namaddreadaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.READERACCESS]]></imixs:value>
         </imixs:item>
         <imixs:item name="txtactivityresult" type="CDATA">
           <imixs:value><![CDATA[<item name="action">worklist</item>]]></imixs:value>
         </imixs:item>
         <imixs:item name="$readaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
+          <imixs:value><![CDATA[org.imixs.ACCESSLEVEL.AUTHORACCESS]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyrestrictedvisibility" type="xs:string">
           <imixs:value><![CDATA[{manager}]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddwriteaccess" type="xs:string">
-          <imixs:value><![CDATA[group.manager]]></imixs:value>
         </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_5</bpmn2:incoming>
@@ -788,8 +720,6 @@
         <imixs:item name="$readaccess" type="xs:string">
           <imixs:value><![CDATA[group.proposer]]></imixs:value>
         </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string"/>
-        <imixs:item name="namaddwriteaccess" type="xs:string"/>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_14</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_36</bpmn2:outgoing>
@@ -803,11 +733,6 @@
         <imixs:item name="keyrestrictedvisibility" type="xs:string">
           <imixs:value><![CDATA[{proposer1, proposer2}]]></imixs:value>
         </imixs:item>
-        <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>false</imixs:value>
-        </imixs:item>
-        <imixs:item name="namaddreadaccess" type="xs:string"/>
-        <imixs:item name="namaddwriteaccess" type="xs:string"/>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_8</bpmn2:outgoing>

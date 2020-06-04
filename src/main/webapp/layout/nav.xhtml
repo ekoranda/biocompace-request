@@ -18,26 +18,23 @@
 				<li><h:commandLink action="requests">BioCompACE Requests</h:commandLink></li>
 			</c:if>
 			
-			<li><h:commandLink action="/pages/sub_newRequest?faces-redirect=true">New BioCompACE Request</h:commandLink></li>
-			<c:if test="#{!loginController.authenticated}">
-				<li><h:commandLink action="requests">New BioCompACE Request</h:commandLink></li>
-			</c:if>
+			<ui:fragment
+				rendered="#{loginController.getUserNameList().contains('group.proposer')}" >
+				<li><h:commandLink action="/pages/sub_newRequest.xhtml">New BioCompACE Request</h:commandLink></li>
+			</ui:fragment>
 			
-			<li><h:commandLink action="/pages/sub_admin?faces-redirect=true">BioCompACE Admin Dashboard</h:commandLink></li>
-			<c:if test="#{!loginController.authenticated}">
-				<li><h:commandLink action="requests">BioCompACE Admin Dashboard</h:commandLink></li>
-			</c:if>
+			<ui:fragment
+				rendered="#{(loginController.getUserNameList().contains('group.reviewer') or loginController.getUserNameList().contains('group.manager'))}" >
+				<li><h:commandLink action="/pages/sub_admin?faces-redirect=true">BioCompACE Admin Dashboard</h:commandLink></li>
+			</ui:fragment>
 			
-			<c:if test="#{loginController.authenticated}">
-				<li><h:commandLink action="/pages/config/reviewerslist?faces-redirect=true">Reviewers</h:commandLink></li>
-			</c:if>
-			
-		
-	
-
+			<ui:fragment
+				rendered="#{loginController.getUserNameList().contains('group.manager')}" >
+					<li><h:commandLink action="/pages/config/reviewerslist?faces-redirect=true">Reviewers</h:commandLink></li>
+			</ui:fragment>	
 			
 			
-			
+				
 		</ul>
 	</h:form>
 </ui:composition>

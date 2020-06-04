@@ -89,7 +89,7 @@
 					
 					<!-- Only manager can edit and delete reviewers -->
 					<ui:fragment
-						rendered="#{loginController.getUserNameList().contains('manager')}" >
+						rendered="#{loginController.getUserNameList().contains('group.manager')}" >
 						
 						<!-- edit -->
 						<h:column>
@@ -204,6 +204,15 @@
 					<h:outputText value="#{workitem.item['txtworkflowstatus']}" />
 				</h:column>	
 			</h:dataTable>
+			<!-- Command Buttons -->
+			<h:commandButton actionListener="#{viewHandler.back(proposalController)}"
+				disabled="#{!(proposalController.pageIndex>0)}"
+				value="&lt;&lt; #{global.prev}">
+			</h:commandButton>
+			<h:commandButton actionListener="#{viewHandler.forward(proposalController)}"
+				disabled="#{proposalController.endOfList}" 
+				value="#{global.next} &gt;&gt;">
+			</h:commandButton>
 			</div>
 		
 			

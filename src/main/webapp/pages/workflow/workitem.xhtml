@@ -17,6 +17,8 @@
 			<h:form id="workitem_form_id">
 				<div class="imixs-tabs">
 					<ul>
+					
+						
 						<!-- Show Completed propsoals when user has turned in their proposal-->
 						<ui:fragment
 							rendered="#{(workflowController.workitem.item['$TaskID']>=1100 )}">
@@ -25,7 +27,7 @@
 						
 						<!-- Show General proposal page when user is currently submitting or editing their proposal -->
 						<ui:fragment
-							rendered="#{workflowController.workitem.item['$TaskID']==1000}">
+							rendered="#{workflowController.workitem.item['$TaskID']==1000 }">
 						<li><a href="#tab-2">General</a></li>
 						</ui:fragment>
 						
@@ -46,7 +48,7 @@
 						
 						<!-- Show reviewer 2 tab when review 1 is finished -->
 						<ui:fragment 
-							rendered="#{workflowController.workitem.item['$TaskID']==1300 }">
+							rendered="#{(workflowController.workitem.item['$TaskID']==1300 and loginController.getUserNameList().contains('group.reviewer')) }">
 								<li><a href="#tab-6">Reviewer 2</a></li>
 						</ui:fragment>
 						
@@ -58,7 +60,7 @@
 						
 						<!-- Show reviewer 3 tab when review 2 is finished -->
 						<ui:fragment 
-							rendered="#{workflowController.workitem.item['$TaskID']==1500 }">
+							rendered="#{(workflowController.workitem.item['$TaskID']==1500 and loginController.getUserNameList().contains('group.reviewer'))}">
 								<li><a href="#tab-8">Reviewer 3</a></li>
 						</ui:fragment>
 						
@@ -71,6 +73,8 @@
 
 					<!-- the pages to go along with the tabs -->
 					</ul>
+	
+					
 				  	<div id="tab-1">
 						<ui:include src="/pages/workflow/proposal.xhtml"/>
 					</div>
@@ -86,9 +90,11 @@
 					<div id="tab-5">
 						<ui:include src="/pages/workflow/review1.xhtml" />
 					</div>
-					<div id="tab-6">
+					
+					<div id="tab-6" >
 						<ui:include src="/pages/workflow/sub_reviewer2.xhtml" />
 					</div>
+					
 					<div id="tab-7">
 						<ui:include src="/pages/workflow/review2.xhtml" />
 					</div>
