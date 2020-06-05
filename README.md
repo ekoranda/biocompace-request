@@ -15,7 +15,7 @@ See [Imixs-Workflow](https://www.imixs.org/)
 ---
 ## Build the Application
 
-Building the Biocompace-Request service requires JDK8+ and Maven 3.0.3+. To build the project from source
+Building the Biocompace-Request service requires JDK11+ and Maven 3.0.3+. To build the project from source
 
 ```
 git clone https://github.com/ekoranda/biocompace-request.git
@@ -30,7 +30,7 @@ You can also download the application war file for the [latest release](https://
 
 1. Install Java
 
-    Biocompace-Request requires JDK8+. The application has been tested and is known to work with OpenJDK 1.8.0\_212.
+    Biocompace-Request requires JDK8+. The application has been tested and is known to work with OpenJDK 11.0.4.
 
 1. Install the WildFly Application Server
 
@@ -298,6 +298,3 @@ You can also download the application war file for the [latest release](https://
 ----
 ## Roadmap
 
-* Allow the user to reopen their proposal to edit it before it is opened by reviewer
-* Create custom acl groups outside of the model for the workflow engine to map users to actor groups
-* Add emails to users in order for mass emails to be sent out to an entire group instead of manually adding emails to model
