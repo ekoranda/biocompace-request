@@ -1,23 +1,38 @@
 package us.researchdata.biocompace.request.ui;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.security.Principal;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 import javax.annotation.Resource;
 import javax.annotation.security.DeclareRoles;
 import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import javax.enterprise.event.Observes;
-import javax.jms.ConnectionFactory;
 
 import org.imixs.workflow.engine.UserGroupEvent;
+import org.ldaptive.BindConnectionInitializer;
+import org.ldaptive.BindOperation;
+import org.ldaptive.BindResponse;
+import org.ldaptive.ConnectionConfig;
+import org.ldaptive.ConnectionFactory;
+import org.ldaptive.Credential;
+import org.ldaptive.DefaultConnectionFactory;
+import org.ldaptive.LdapException;
+import org.ldaptive.SearchOperation;
+import org.ldaptive.SearchResponse;
+import org.ldaptive.SimpleBindRequest;
+import org.ldaptive.SingleConnectionFactory;
+import org.ldaptive.auth.AuthenticationRequest;
+import org.ldaptive.auth.AuthenticationResponse;
+import org.ldaptive.auth.Authenticator;
+import org.ldaptive.auth.SearchDnResolver;
+import org.ldaptive.auth.SimpleBindAuthenticationHandler;
+
 
 
 
@@ -33,15 +48,47 @@ import org.imixs.workflow.engine.UserGroupEvent;
 public class PopulateGroupMembers {
 	@Resource SessionContext ctx;
     public List<String> onUserGroupEvent(@Observes UserGroupEvent userGroupEvent) {
+    	
+    	
+    			
+    	
+    	
+    	/**try {
+    	SingleConnectionFactory cf = new SingleConnectionFactory("ldap://imixs.emilykoranda.com:389/dc=emilykoranda,dc=com");
+    	cf.initialize();
+    	BindOperation bind = new BindOperation(cf);
+    	BindResponse res = bind.execute(SimpleBindRequest.builder()
+    			
+    	  .dn("uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com")
+    	  .password(new Credential("YA8Ry29MgF1p8VpUhgap"))   
+    	  
+    	  .build());
 
+    	if (res.isSuccess()) {
+    	  // bind succeeded
+    		System.out.println("res is successful");
+    	} else {
+    		System.out.println("res is not successful");
+    	  // bind failed
+    	}
+    	// use the connection factory to perform operations as uid=dfisher
+    	cf.close();
+    	}catch(LdapException e) {
+    		
+    		System.out.println("ERROR MADE IT HERE");
+    		e.printStackTrace();
+    	}
+    	
+    	
+    	*/
+		
+    	
+    	
+    	
         // list that contains new groups for the current user
         List<String> customGroups = new ArrayList<String>();
         
-        // checks if current user is in role
-        // this doesn't work
-	    if (ctx.isCallerInRole("test")) {
-	        customGroups.add("test");
-	    }
+       
 	    
 	    // get the name of the current user
 	    Principal principal = ctx.getCallerPrincipal();
@@ -78,33 +125,7 @@ public class PopulateGroupMembers {
             e.printStackTrace();
         }
         
-        
-          /**SearchOperation search = new SearchOperation(
-  			DefaultConnectionFactory.builder()
-    			.config(ConnectionConfig.builder()
-      				.url("ldap://imixs.emilykoranda.com")
-      				// changing to false for now for testing
-      				.useStartTLS(false)
-      				.connectionInitializers(BindConnectionInitializer.builder()
-      					// the credential you are using to authenticate against an LDAP.
-      					// CN = common name 
-      					// ou = organizational unit
-      					// dc = domain component 
-      					 * cn = name of the current user
-      					 * uid = user name of current user
-      					 * .dn("uid=<username> , ou=people, dc=ldaptive, dc=org")
-        				.dn("cn=manager,ou=people,dc=ldaptive,dc=org")
-        				// password
-        				.credential("manager_password")
-        				.build())
-      				.build())
-    			.build(),
-  			"dc=ldaptive,dc=org");	
-  		SearchResponse response = search.execute("(uid=<username>)");
-		LdapEntry entry = response.getEntry();
-		String role = entry.getAttribute("isMemberOf");
-		
-         */
+      
         
       /**SearchOperation search = new SearchOperation(
     		  DefaultConnectionFactory.builder()
@@ -129,48 +150,12 @@ public class PopulateGroupMembers {
 					e.printStackTrace();
 					System.out.println("EXCEPTION FAILED");
 				}
-        
- 	*/
-        	
-     /** ConnectionConfig connConfig = new ConnectionConfig("ldap://imixs.emilykoranda.com");
-        connConfig.setUseStartTLS(true);
-        connConfig.setConnectionInitializer(
-        		new BindConnectionInitializer(
-        				"o=CO,dc=emilykoranda,dc=com", new Credential("YA8Ry29MgF1p8VpUhgap")));
-        		DefaultConnectionFactory cf = new DefaultConnectionFactory(connConfig);
-        		SearchExecutor executor = new SearchExecutor();
-        		executor.setBaseDn("uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com");
-        		/**try {
-        			SearchResult result = executor.search(cf, "(uid=proposer1)").getResult();
-        			LdapEntry entry = result.getEntry();
-        		}catch(LdapException e) {
-        			System.out.println(e);
-        		}
-        */
-        /**
-        
-        
-        
-      
-        /**connConfig.setConnectionInitializer(
-          new BindConnectionInitializer(
-            "uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com", new Credential("YA8Ry29MgF1p8VpUhgap")));
-        DefaultConnectionFactory cf = new DefaultConnectionFactory(connConfig);
-        SearchExecutor executor = new SearchExecutor();
-        executor.setBaseDn("o=CO,dc=emilykoranda,dc=com");
-        try {
-			SearchResult result = executor.search(cf, "(uid=*proposer1)", "cn", "sn").getResult();
-			String test = result.toString();
-			System.out.println(test);
-		} catch (LdapException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+   
         
         */
         
         
-        //ConnectionConfig connConfig = new ConnectionConfig("ldap://directory.ldaptive.org");
+        
         // add the customGroup to the user's group event
 	    userGroupEvent.setGroups(customGroups);
 

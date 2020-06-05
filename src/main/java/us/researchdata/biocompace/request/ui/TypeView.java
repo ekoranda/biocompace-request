@@ -16,6 +16,8 @@ import javax.faces.model.SelectItemGroup;
  */
 @ManagedBean
 public class TypeView {
+	
+	
  
 
     private String[] selectedTypes;

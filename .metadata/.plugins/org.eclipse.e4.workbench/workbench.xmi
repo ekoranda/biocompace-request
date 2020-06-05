@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_gBXWMKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_gBXWMaXlEeqKz4TYlUWWGQ" bindingContexts="_gBZMlaXlEeqKz4TYlUWWGQ">
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.bpmn2.modeler.ui.bpmn2editor&quot; name=&quot;proposals.bpmn&quot; tooltip=&quot;workflow/proposals.bpmn&quot;>&#xA;&lt;persistable path=&quot;/workflow/proposals.bpmn&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
@@ -7,6 +8,8 @@
   <children xsi:type="basic:TrimmedWindow" xmi:id="_gBXWMaXlEeqKz4TYlUWWGQ" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_gBXWMqXlEeqKz4TYlUWWGQ" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1440" height="900">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_mAlgIKEjEeqUS4kViZ_gnA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_mAlgIaEjEeqUS4kViZ_gnA" bindingContexts="_mAmugKEjEeqUS4kViZ_gnA">
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;workbench>&#xA;&lt;mruList>&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.bpmn2.modeler.ui.bpmn2editor&quot; name=&quot;proposals.bpmn&quot; tooltip=&quot;workflow/proposals.bpmn&quot;>&#xA;&lt;persistable path=&quot;/workflow/proposals.bpmn&quot;/>&#xA;&lt;/file>&#xA;&lt;/mruList>&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
@@ -19,6 +22,9 @@
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_jxf5gjPiEeqwqonKmxy2Gw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_kFUNYDPiEeqwqonKmxy2Gw" label="%trimmedwindow.label.eclipseSDK" x="0" y="0" width="1440" height="900">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
@@ -122,6 +128,7 @@
               </children>
             </children>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <children xsi:type="basic:PartSashContainer" xmi:id="_gBXWP6XlEeqKz4TYlUWWGQ" containerData="7500" selectedElement="_gBXWQKXlEeqKz4TYlUWWGQ">
               <children xsi:type="basic:PartSashContainer" xmi:id="_gBXWQKXlEeqKz4TYlUWWGQ" containerData="5606" selectedElement="_gBXWQaXlEeqKz4TYlUWWGQ" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_gBXWQaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_gBX99KXlEeqKz4TYlUWWGQ"/>
@@ -130,6 +137,8 @@
                     <children xsi:type="advanced:Placeholder" xmi:id="_gBXWRKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.mylyn.tasks.ui.views.tasks" ref="_gBX-a6XlEeqKz4TYlUWWGQ" closeable="true">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
             <children xsi:type="basic:PartSashContainer" xmi:id="_mAlgL6EjEeqUS4kViZ_gnA" containerData="7500" selectedElement="_mAlgOqEjEeqUS4kViZ_gnA">
               <children xsi:type="basic:PartSashContainer" xmi:id="_mAlgMKEjEeqUS4kViZ_gnA" containerData="5606" selectedElement="_mAlgMaEjEeqUS4kViZ_gnA" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_mAlgMaEjEeqUS4kViZ_gnA" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_mAlhkaEjEeqUS4kViZ_gnA"/>
@@ -144,6 +153,9 @@
                   <children xsi:type="basic:PartStack" xmi:id="_kW-lLjPiEeqwqonKmxy2Gw" elementId="org.eclipse.mylyn.tasks.ui.views.tasksMStack" containerData="5000" selectedElement="_kW-lLzPiEeqwqonKmxy2Gw">
                     <children xsi:type="advanced:Placeholder" xmi:id="_kW-lLzPiEeqwqonKmxy2Gw" elementId="org.eclipse.mylyn.tasks.ui.views.tasks" ref="_kW8v8DPiEeqwqonKmxy2Gw" closeable="true">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
                       <tags>View</tags>
                       <tags>categoryTag:Mylyn</tags>
@@ -174,15 +186,21 @@
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
                 <tags>General</tags>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <children xsi:type="advanced:Placeholder" xmi:id="_gBXWS6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.views.ProblemView" ref="_gBX-UqXlEeqKz4TYlUWWGQ" closeable="true">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
                 <tags>active</tags>
                 <tags>noFocus</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_mAlgO6EjEeqUS4kViZ_gnA" elementId="org.eclipse.ui.views.ProblemView" ref="_mAmHR6EjEeqUS4kViZ_gnA" closeable="true">
 =======
                 <children xsi:type="advanced:Placeholder" xmi:id="_kW-lNjPiEeqwqonKmxy2Gw" elementId="org.eclipse.ui.views.ProblemView" ref="_kWxJwjPiEeqwqonKmxy2Gw" closeable="true">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
                   <tags>View</tags>
                   <tags>categoryTag:General</tags>
@@ -212,6 +230,10 @@
                   <tags>categoryTag:General</tags>
                 </children>
                 <children xsi:type="advanced:Placeholder" xmi:id="_gBXWUqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.views.PropertySheet" ref="_gBYkcKXlEeqKz4TYlUWWGQ" closeable="true">
+                  <tags>View</tags>
+                  <tags>categoryTag:General</tags>
+                </children>
+                <children xsi:type="advanced:Placeholder" xmi:id="_apZW8Jk3Eeq4XZHOBbu_SQ" elementId="org.eclipse.ui.views.PropertySheet" ref="_apYv4Jk3Eeq4XZHOBbu_SQ" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:General</tags>
                 </children>
@@ -264,6 +286,7 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <sharedElements xsi:type="advanced:Area" xmi:id="_gBX99KXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.editorss" selectedElement="_gBX99aXlEeqKz4TYlUWWGQ">
       <children xsi:type="basic:PartStack" xmi:id="_gBX99aXlEeqKz4TYlUWWGQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_gBX99qXlEeqKz4TYlUWWGQ">
         <tags>org.eclipse.e4.primaryDataStack</tags>
@@ -273,6 +296,8 @@
         <children xsi:type="basic:Part" xmi:id="_gBX99qXlEeqKz4TYlUWWGQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="proposals" iconURI="platform:/plugin/org.eclipse.bpmn2.modeler.ui/icons/bpmn2_editor_16.png" closeable="true">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <sharedElements xsi:type="advanced:Area" xmi:id="_mAlhkaEjEeqUS4kViZ_gnA" elementId="org.eclipse.ui.editorss" selectedElement="_mAlhkqEjEeqUS4kViZ_gnA">
       <children xsi:type="basic:PartStack" xmi:id="_mAlhkqEjEeqUS4kViZ_gnA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_mAlhk6EjEeqUS4kViZ_gnA">
         <tags>org.eclipse.e4.primaryDataStack</tags>
@@ -285,16 +310,22 @@
         <tags>EditorStack</tags>
         <children xsi:type="basic:Part" xmi:id="_KS3MYJlCEeqzVZ_b17yfXQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="proposals" iconURI="platform:/plugin/org.eclipse.bpmn2.modeler.ui/icons/bpmn2_editor_16.png" closeable="true">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.bpmn2.modeler.ui.bpmn2editor&quot; name=&quot;proposals.bpmn&quot; partName=&quot;proposals&quot; title=&quot;proposals&quot; tooltip=&quot;workflow/proposals.bpmn&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/workflow/proposals.bpmn&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.bpmn2.modeler.ui.bpmn2editor</tags>
           <tags>removeOnHide</tags>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <tags>active</tags>
           <menus xsi:type="menu:PopupMenu" xmi:id="_gBX996XlEeqKz4TYlUWWGQ" elementId="org.eclipse.bpmn2.modeler.ui.bpmn2editor">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
           <menus xsi:type="menu:PopupMenu" xmi:id="_mAlhlKEjEeqUS4kViZ_gnA" elementId="org.eclipse.bpmn2.modeler.ui.bpmn2editor">
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
             <tags>menuContribution:popup</tags>
@@ -308,10 +339,13 @@
             <tags>menuContribution:popup</tags>
             <tags>popup:org.eclipse.bpmn2.modeler.ui.bpmn2editor</tags>
           </menus>
+<<<<<<< HEAD
           <menus xsi:type="menu:PopupMenu" xmi:id="_gBX9-qXlEeqKz4TYlUWWGQ" elementId="org.eclipse.bpmn2.modeler.ui.bpmn2editor">
             <tags>menuContribution:popup</tags>
             <tags>popup:org.eclipse.bpmn2.modeler.ui.bpmn2editor</tags>
           </menus>
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
 =======
 >>>>>>> my_master_backup
         </children>
@@ -526,13 +560,19 @@
       <tags>categoryTag:Ant</tags>
     </sharedElements>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <sharedElements xsi:type="basic:Part" xmi:id="_gBYkcKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.views.PropertySheet" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Properties" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.png" tooltip="" closeable="true">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <sharedElements xsi:type="basic:Part" xmi:id="_mAmHjqEjEeqUS4kViZ_gnA" elementId="org.eclipse.ui.views.PropertySheet" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Properties" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.png" tooltip="" closeable="true">
 =======
     <sharedElements xsi:type="basic:Part" xmi:id="_apYv4Jk3Eeq4XZHOBbu_SQ" elementId="org.eclipse.ui.views.PropertySheet" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Properties" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.png" tooltip="" closeable="true">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views"/>
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.views.properties.PropertySheet"/>
@@ -540,9 +580,12 @@
       <tags>View</tags>
       <tags>categoryTag:General</tags>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <menus xmi:id="_gBYkcaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.views.PropertySheet">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>active</tags>
       <menus xmi:id="_mAmHj6EjEeqUS4kViZ_gnA" elementId="org.eclipse.ui.views.PropertySheet">
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
@@ -567,6 +610,9 @@
     <trimBars xmi:id="_kFcJMDPiEeqwqonKmxy2Gw" elementId="org.eclipse.ui.main.toolbar">
       <children xsi:type="menu:ToolBar" xmi:id="_kGocADPiEeqwqonKmxy2Gw" elementId="group.file" toBeRendered="false">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
         <tags>toolbarSeparator</tags>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_gBYkgKXlEeqKz4TYlUWWGQ" elementId="group.file" toBeRendered="false"/>
@@ -574,9 +620,12 @@
       <children xsi:type="menu:ToolBar" xmi:id="_gBYkgaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <children xsi:type="menu:DirectToolItem" xmi:id="_gBYkgqXlEeqKz4TYlUWWGQ" elementId="new.group">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
         <children xsi:type="menu:DirectToolItem" xmi:id="_mAmHoKEjEeqUS4kViZ_gnA" elementId="new.group">
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
           <tags>Opaque</tags>
@@ -724,9 +773,12 @@
       <children xsi:type="menu:ToolBar" xmi:id="_gBYk2qXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <children xsi:type="menu:DirectToolItem" xmi:id="_gBYk26XlEeqKz4TYlUWWGQ" elementId="history.group">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
         <children xsi:type="menu:DirectToolItem" xmi:id="_mAmH7aEjEeqUS4kViZ_gnA" elementId="history.group">
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
           <tags>Opaque</tags>
@@ -837,6 +889,7 @@
         <children xsi:type="menu:DirectToolItem" xmi:id="_gBYk_6XlEeqKz4TYlUWWGQ" elementId="copy">
           <tags>Opaque</tags>
         </children>
+<<<<<<< HEAD
         <children xsi:type="menu:DirectToolItem" xmi:id="_gBYlAKXlEeqKz4TYlUWWGQ" elementId="paste">
           <tags>Opaque</tags>
         </children>
@@ -895,6 +948,8 @@
           <tags>Opaque</tags>
         </children>
 =======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
         <children xsi:type="menu:HandledToolItem" xmi:id="__D_gMJlBEeqzVZ_b17yfXQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_jyRVxzPiEeqwqonKmxy2Gw"/>
 >>>>>>> my_master_backup
       </children>
@@ -945,6 +1000,7 @@
     </trimBars>
   </children>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <handlers xmi:id="_gBYlNqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.ArrangeWindowHandler" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.cocoa.ArrangeWindowHandler" command="_gBdf7KXlEeqKz4TYlUWWGQ"/>
   <handlers xmi:id="_gBYlN6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.MinimizeWindowHandler" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.cocoa.MinimizeWindowHandler" command="_gBdf7aXlEeqKz4TYlUWWGQ"/>
   <handlers xmi:id="_gBYlOKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.FullscreenWindowHandler" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.cocoa.FullscreenWindowHandler" command="_gBdf7qXlEeqKz4TYlUWWGQ"/>
@@ -953,6 +1009,8 @@
   <handlers xmi:id="_gBYlO6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.e4.tools.emf.ui.handler.mark_duplicate_ids" contributorURI="platform:/plugin/org.eclipse.e4.tools.emf.ui" contributionURI="bundleclass://org.eclipse.e4.tools.emf.ui/org.eclipse.e4.tools.emf.ui.internal.handlers.MarkDuplicateElementIdsHandler">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <handlers xmi:id="_mAmIMaEjEeqUS4kViZ_gnA" elementId="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.ArrangeWindowHandler" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.cocoa.ArrangeWindowHandler" command="_mAol_KEjEeqUS4kViZ_gnA"/>
   <handlers xmi:id="_mAmIMqEjEeqUS4kViZ_gnA" elementId="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.MinimizeWindowHandler" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.cocoa.MinimizeWindowHandler" command="_mAol_aEjEeqUS4kViZ_gnA"/>
   <handlers xmi:id="_mAmIM6EjEeqUS4kViZ_gnA" elementId="org.eclipse.e4.ui.workbench.renderers.swt.cocoa.FullscreenWindowHandler" contributorURI="platform:/fragment/org.eclipse.e4.ui.workbench.renderers.swt.cocoa" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.cocoa.FullscreenWindowHandler" command="_mAol_qEjEeqUS4kViZ_gnA"/>
@@ -1050,6 +1108,9 @@
   <bindingTables xmi:id="_jxf5gzPiEeqwqonKmxy2Gw" contributorURI="platform:/plugin/org.eclipse.platform" bindingContext="_jxf5hDPiEeqwqonKmxy2Gw">
     <bindings xmi:id="_jy2kcDPiEeqwqonKmxy2Gw" keySequence="SHIFT+F10" command="_jyMdEzPiEeqwqonKmxy2Gw">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
     </bindings>
@@ -1068,9 +1129,12 @@
       <tags>platform:cocoa</tags>
     </bindings>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bindings xmi:id="_gBYlZKXlEeqKz4TYlUWWGQ" keySequence="SHIFT+END" command="_gBdeCaXlEeqKz4TYlUWWGQ">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <bindings xmi:id="_mAmIX6EjEeqUS4kViZ_gnA" keySequence="SHIFT+END" command="_mAokGaEjEeqUS4kViZ_gnA">
 =======
     <bindings xmi:id="_jzDYtjPiEeqwqonKmxy2Gw" keySequence="ALT+SHIFT+F3" command="_jySjzzPiEeqwqonKmxy2Gw"/>
@@ -1082,6 +1146,9 @@
     <bindings xmi:id="_jy1WQDPiEeqwqonKmxy2Gw" keySequence="COMMAND+END" command="_jyRVnzPiEeqwqonKmxy2Gw"/>
     <bindings xmi:id="_jy19UDPiEeqwqonKmxy2Gw" keySequence="END" command="_jyRVnzPiEeqwqonKmxy2Gw">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
     </bindings>
@@ -1215,9 +1282,12 @@
       <tags>platform:cocoa</tags>
     </bindings>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bindings xmi:id="_gBYlt6XlEeqKz4TYlUWWGQ" keySequence="ALT+COMMAND+Z" command="_gBdeAKXlEeqKz4TYlUWWGQ">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <bindings xmi:id="_mAmIsqEjEeqUS4kViZ_gnA" keySequence="ALT+COMMAND+Z" command="_mAokEKEjEeqUS4kViZ_gnA">
 =======
     <bindings xmi:id="_jy3LcTPiEeqwqonKmxy2Gw" keySequence="COMMAND+SHIFT+F12" command="_jyJZyzPiEeqwqonKmxy2Gw"/>
@@ -1229,6 +1299,9 @@
     <bindings xmi:id="_jy4ZkDPiEeqwqonKmxy2Gw" keySequence="COMMAND+F9" command="_jyLPEzPiEeqwqonKmxy2Gw"/>
     <bindings xmi:id="_jy4ZljPiEeqwqonKmxy2Gw" keySequence="ALT+COMMAND+ARROW_LEFT" command="_jyKn4DPiEeqwqonKmxy2Gw">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
     </bindings>
@@ -1244,14 +1317,20 @@
       <tags>platform:cocoa</tags>
     </bindings>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bindings xmi:id="_gBYlvaXlEeqKz4TYlUWWGQ" keySequence="ALT+COMMAND+T" command="_gBdeMqXlEeqKz4TYlUWWGQ">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <bindings xmi:id="_mAmIuKEjEeqUS4kViZ_gnA" keySequence="ALT+COMMAND+T" command="_mAokQqEjEeqUS4kViZ_gnA">
 =======
     <bindings xmi:id="_jy5AozPiEeqwqonKmxy2Gw" keySequence="DEL" command="_jyLO9zPiEeqwqonKmxy2Gw"/>
     <bindings xmi:id="_jy5AqzPiEeqwqonKmxy2Gw" keySequence="COMMAND+I" command="_jyR8rDPiEeqwqonKmxy2Gw">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
     </bindings>
@@ -1304,9 +1383,12 @@
       <tags>platform:cocoa</tags>
     </bindings>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bindings xmi:id="_gBYl2qXlEeqKz4TYlUWWGQ" keySequence="ALT+COMMAND+L" command="_gBddDaXlEeqKz4TYlUWWGQ">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <bindings xmi:id="_mAmI1aEjEeqUS4kViZ_gnA" keySequence="ALT+COMMAND+L" command="_mAn-K6EjEeqUS4kViZ_gnA">
 =======
     <bindings xmi:id="_jy8D-jPiEeqwqonKmxy2Gw" keySequence="COMMAND+SHIFT+R" command="_jyUZCDPiEeqwqonKmxy2Gw"/>
@@ -1316,6 +1398,9 @@
     <bindings xmi:id="_jy8rAjPiEeqwqonKmxy2Gw" keySequence="COMMAND+SHIFT+U" command="_jyLPFTPiEeqwqonKmxy2Gw"/>
     <bindings xmi:id="_jy8rBDPiEeqwqonKmxy2Gw" keySequence="ALT+COMMAND+X J" command="_jyRVlDPiEeqwqonKmxy2Gw">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
     </bindings>
@@ -1374,26 +1459,38 @@
       <parameters xmi:id="_gBYl9qXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.ui.views.ProblemView"/>
     </bindings>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bindings xmi:id="_gBYl96XlEeqKz4TYlUWWGQ" keySequence="ALT+COMMAND+Q Z" command="_gBdelaXlEeqKz4TYlUWWGQ">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <bindings xmi:id="_mAmI8qEjEeqUS4kViZ_gnA" keySequence="ALT+COMMAND+Q Z" command="_mAokpaEjEeqUS4kViZ_gnA">
 =======
     <bindings xmi:id="_jy_uYTPiEeqwqonKmxy2Gw" keySequence="ALT+SHIFT+H" command="_jyNEKjPiEeqwqonKmxy2Gw"/>
     <bindings xmi:id="_jzAVYTPiEeqwqonKmxy2Gw" keySequence="ALT+COMMAND+CTRL+D A" command="_jyR82TPiEeqwqonKmxy2Gw">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
       <parameters xmi:id="_gBYl-KXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.team.ui.GenericHistoryView"/>
     </bindings>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bindings xmi:id="_gBYl-aXlEeqKz4TYlUWWGQ" keySequence="ALT+COMMAND+Q Y" command="_gBdelaXlEeqKz4TYlUWWGQ">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <bindings xmi:id="_mAmI9KEjEeqUS4kViZ_gnA" keySequence="ALT+COMMAND+Q Y" command="_mAokpaEjEeqUS4kViZ_gnA">
 =======
     <bindings xmi:id="_jzAVaTPiEeqwqonKmxy2Gw" keySequence="ALT+COMMAND+CTRL+D J" command="_jyRVwDPiEeqwqonKmxy2Gw">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
       <parameters xmi:id="_gBYl-qXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.team.sync.views.SynchronizeView"/>
@@ -1403,9 +1500,12 @@
       <parameters xmi:id="_gBYl_KXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.jdt.ui.PackageExplorer"/>
     </bindings>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bindings xmi:id="_gBYl_aXlEeqKz4TYlUWWGQ" keySequence="ALT+COMMAND+Q O" command="_gBdelaXlEeqKz4TYlUWWGQ">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <bindings xmi:id="_mAmI-KEjEeqUS4kViZ_gnA" keySequence="ALT+COMMAND+Q O" command="_mAokpaEjEeqUS4kViZ_gnA">
 =======
     <bindings xmi:id="_jzBjgDPiEeqwqonKmxy2Gw" keySequence="ALT+CTRL+H" command="_jyKA7jPiEeqwqonKmxy2Gw"/>
@@ -1414,18 +1514,27 @@
     <bindings xmi:id="_jzBjhzPiEeqwqonKmxy2Gw" keySequence="ALT+CTRL+B" command="_jyQuuDPiEeqwqonKmxy2Gw"/>
     <bindings xmi:id="_jzBjiDPiEeqwqonKmxy2Gw" keySequence="ALT+COMMAND+CTRL+D T" command="_jyIyxTPiEeqwqonKmxy2Gw">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
       <parameters xmi:id="_gBYl_qXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.ui.views.ContentOutline"/>
     </bindings>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bindings xmi:id="_gBYl_6XlEeqKz4TYlUWWGQ" keySequence="ALT+COMMAND+Q Q" command="_gBdelaXlEeqKz4TYlUWWGQ">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <bindings xmi:id="_mAmI-qEjEeqUS4kViZ_gnA" keySequence="ALT+COMMAND+Q Q" command="_mAokpaEjEeqUS4kViZ_gnA">
 =======
     <bindings xmi:id="_jzCKlzPiEeqwqonKmxy2Gw" keySequence="ALT+COMMAND+Q X" command="_jyQusDPiEeqwqonKmxy2Gw">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
     </bindings>
@@ -1467,9 +1576,12 @@
       <parameters xmi:id="_gBZLZKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.debug.ui.BreakpointView"/>
     </bindings>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bindings xmi:id="_gBZLZaXlEeqKz4TYlUWWGQ" keySequence="ALT+COMMAND+Q D" command="_gBdelaXlEeqKz4TYlUWWGQ">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <bindings xmi:id="_mAmJEKEjEeqUS4kViZ_gnA" keySequence="ALT+COMMAND+Q D" command="_mAokpaEjEeqUS4kViZ_gnA">
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
@@ -1487,6 +1599,9 @@
     <bindings xmi:id="_jzD_xDPiEeqwqonKmxy2Gw" keySequence="ALT+COMMAND+SHIFT+F12" command="_jyTx8DPiEeqwqonKmxy2Gw"/>
     <bindings xmi:id="_jzD_yDPiEeqwqonKmxy2Gw" keySequence="ALT+COMMAND+Q H" command="_jyQusDPiEeqwqonKmxy2Gw">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
       <parameters xmi:id="_gBZLaKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.ui.views.showView.viewId" name="org.eclipse.ui.views.showView.viewId" value="org.eclipse.ui.console.ConsoleView"/>
@@ -1548,9 +1663,12 @@
       <tags>platform:cocoa</tags>
     </bindings>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bindings xmi:id="_gBZLjKXlEeqKz4TYlUWWGQ" keySequence="COMMAND+CTRL+F" command="_gBdf7qXlEeqKz4TYlUWWGQ"/>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <bindings xmi:id="_mAmJN6EjEeqUS4kViZ_gnA" keySequence="COMMAND+CTRL+F" command="_mAol_qEjEeqUS4kViZ_gnA"/>
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   </bindingTables>
@@ -1687,6 +1805,74 @@
     </bindings>
     <bindings xmi:id="_n77FVZkpEeq4XZHOBbu_SQ" keySequence="ALT+DEL" command="_n7VPdpkpEeq4XZHOBbu_SQ"/>
     <bindings xmi:id="_n78TcJkpEeq4XZHOBbu_SQ" keySequence="ALT+COMMAND+X E" command="_n7Wdk5kpEeq4XZHOBbu_SQ">
+<<<<<<< HEAD
+=======
+      <tags>platform:cocoa</tags>
+    </bindings>
+    <bindings xmi:id="_n78TepkpEeq4XZHOBbu_SQ" keySequence="ALT+P" command="_n7UBX5kpEeq4XZHOBbu_SQ"/>
+    <bindings xmi:id="_n786gZkpEeq4XZHOBbu_SQ" keySequence="COMMAND+D" command="_n7V2m5kpEeq4XZHOBbu_SQ">
+      <parameters xmi:id="_n786gpkpEeq4XZHOBbu_SQ" elementId="org.eclipse.graphiti.ui.featureHint" name="org.eclipse.graphiti.ui.featureHint" value="duplicate"/>
+    </bindings>
+    <bindings xmi:id="_n786hZkpEeq4XZHOBbu_SQ" keySequence="ALT+COMMAND+X O" command="_n7V2qZkpEeq4XZHOBbu_SQ">
+      <tags>platform:cocoa</tags>
+    </bindings>
+    <bindings xmi:id="_n79hkZkpEeq4XZHOBbu_SQ" keySequence="ALT+COMMAND+X P" command="_n7XEspkpEeq4XZHOBbu_SQ">
+      <tags>platform:cocoa</tags>
+    </bindings>
+    <bindings xmi:id="_n7-IoJkpEeq4XZHOBbu_SQ" keySequence="COMMAND+6" command="_n7UBY5kpEeq4XZHOBbu_SQ"/>
+    <bindings xmi:id="_n7-vsZkpEeq4XZHOBbu_SQ" keySequence="COMMAND+SHIFT+A" command="_n7WdlpkpEeq4XZHOBbu_SQ"/>
+    <bindings xmi:id="_n7_90JkpEeq4XZHOBbu_SQ" keySequence="ALT+C" command="_n7XEpJkpEeq4XZHOBbu_SQ"/>
+    <bindings xmi:id="_n7_90pkpEeq4XZHOBbu_SQ" keySequence="ALT+E" command="_n7V2rpkpEeq4XZHOBbu_SQ"/>
+    <bindings xmi:id="_n8Ak4ZkpEeq4XZHOBbu_SQ" keySequence="ALT+COMMAND+SHIFT+M" command="_n7XErpkpEeq4XZHOBbu_SQ"/>
+    <bindings xmi:id="_n8Ak4pkpEeq4XZHOBbu_SQ" keySequence="ALT+COMMAND+SHIFT+A" command="_n7WdmZkpEeq4XZHOBbu_SQ"/>
+    <bindings xmi:id="_n8Ak45kpEeq4XZHOBbu_SQ" keySequence="ALT+COMMAND+SHIFT+F" command="_n7UBdZkpEeq4XZHOBbu_SQ"/>
+    <bindings xmi:id="_n8Ak5JkpEeq4XZHOBbu_SQ" keySequence="ALT+SHIFT+G" command="_n7V2qpkpEeq4XZHOBbu_SQ"/>
+    <bindings xmi:id="_n8BL8JkpEeq4XZHOBbu_SQ" keySequence="ALT+COMMAND+CTRL+D O" command="_n7V2kpkpEeq4XZHOBbu_SQ">
+      <tags>platform:cocoa</tags>
+    </bindings>
+    <bindings xmi:id="_n8BzApkpEeq4XZHOBbu_SQ" keySequence="ALT+COMMAND+CTRL+D P" command="_n7Wdu5kpEeq4XZHOBbu_SQ">
+      <tags>platform:cocoa</tags>
+    </bindings>
+    <bindings xmi:id="_n8BzA5kpEeq4XZHOBbu_SQ" keySequence="ALT+COMMAND+CTRL+D E" command="_n7XEvJkpEeq4XZHOBbu_SQ">
+      <tags>platform:cocoa</tags>
+    </bindings>
+    <bindings xmi:id="_-s9gQJlBEeqzVZ_b17yfXQ" keySequence="COMMAND+CTRL+F" command="_jz0NszPiEeqwqonKmxy2Gw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_jy19WTPiEeqwqonKmxy2Gw" elementId="org.eclipse.debug.ui.debugging" bindingContext="_jyZRfjPiEeqwqonKmxy2Gw">
+    <bindings xmi:id="_jy19WjPiEeqwqonKmxy2Gw" keySequence="COMMAND+F2" command="_jyR8yzPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy2kYTPiEeqwqonKmxy2Gw" keySequence="F5" command="_jyKA6jPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy2kYzPiEeqwqonKmxy2Gw" keySequence="F6" command="_jyOSQzPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy3ygzPiEeqwqonKmxy2Gw" keySequence="ALT+F5" command="_jyTx3TPiEeqwqonKmxy2Gw">
+      <tags>platform:cocoa</tags>
+    </bindings>
+    <bindings xmi:id="_jy3yhDPiEeqwqonKmxy2Gw" keySequence="F7" command="_jyTyCTPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy3yhjPiEeqwqonKmxy2Gw" keySequence="F8" command="_jyQHiTPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy_HQjPiEeqwqonKmxy2Gw" keySequence="COMMAND+R" command="_jyPgfTPiEeqwqonKmxy2Gw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_jy19XTPiEeqwqonKmxy2Gw" elementId="org.eclipse.ant.ui.AntEditorScope" bindingContext="_jyZRcjPiEeqwqonKmxy2Gw">
+    <bindings xmi:id="_jy19XjPiEeqwqonKmxy2Gw" keySequence="F3" command="_jyJZwjPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy3LdjPiEeqwqonKmxy2Gw" keySequence="SHIFT+F2" command="_jyQHgjPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy6OxjPiEeqwqonKmxy2Gw" keySequence="ALT+COMMAND+R" command="_jyKA5DPiEeqwqonKmxy2Gw">
+      <tags>platform:cocoa</tags>
+    </bindings>
+    <bindings xmi:id="_jy95JTPiEeqwqonKmxy2Gw" keySequence="COMMAND+SHIFT+F" command="_jyTK4jPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy-gPjPiEeqwqonKmxy2Gw" keySequence="ALT+COMMAND+O" command="_jyIywjPiEeqwqonKmxy2Gw">
+      <tags>platform:cocoa</tags>
+    </bindings>
+  </bindingTables>
+  <bindingTables xmi:id="_jy19YDPiEeqwqonKmxy2Gw" elementId="org.eclipse.ui.genericeditor.genericEditorContext" bindingContext="_jyZRfDPiEeqwqonKmxy2Gw">
+    <bindings xmi:id="_jy19YTPiEeqwqonKmxy2Gw" keySequence="F3" command="_jySj1zPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy95KjPiEeqwqonKmxy2Gw" keySequence="COMMAND+SHIFT+G" command="_jySj6jPiEeqwqonKmxy2Gw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_jy19YjPiEeqwqonKmxy2Gw" elementId="org.eclipse.wst.jsdt.ui.javascriptViewScope" bindingContext="_jyZRiTPiEeqwqonKmxy2Gw"/>
+  <bindingTables xmi:id="_jy19ZDPiEeqwqonKmxy2Gw" elementId="org.eclipse.wst.sse.ui.structuredTextEditorScope" bindingContext="_jyZRaTPiEeqwqonKmxy2Gw">
+    <bindings xmi:id="_jy19ZTPiEeqwqonKmxy2Gw" keySequence="F3" command="_jyPgljPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy3LfjPiEeqwqonKmxy2Gw" keySequence="COMMAND+SHIFT+ARROW_UP" command="_jyL2CzPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy3LfzPiEeqwqonKmxy2Gw" keySequence="COMMAND+SHIFT+ARROW_DOWN" command="_jyO5UjPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy5AqjPiEeqwqonKmxy2Gw" keySequence="COMMAND+I" command="_jySjyDPiEeqwqonKmxy2Gw"/>
+    <bindings xmi:id="_jy5nujPiEeqwqonKmxy2Gw" keySequence="CTRL+SHIFT+." command="_jySjsDPiEeqwqonKmxy2Gw">
+>>>>>>> my_master_backup
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <tags>platform:cocoa</tags>
     </bindings>
     <bindings xmi:id="_n78TepkpEeq4XZHOBbu_SQ" keySequence="ALT+P" command="_n7UBX5kpEeq4XZHOBbu_SQ"/>
@@ -1934,11 +2120,14 @@
       <tags>platform:cocoa</tags>
     </bindings>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <bindings xmi:id="_gBZMT6XlEeqKz4TYlUWWGQ" keySequence="SHIFT+CR" command="_gBdfeqXlEeqKz4TYlUWWGQ"/>
     <bindings xmi:id="_gBZMUKXlEeqKz4TYlUWWGQ" keySequence="COMMAND+SHIFT+CR" command="_gBdfOKXlEeqKz4TYlUWWGQ"/>
     <bindings xmi:id="_gBZMUaXlEeqKz4TYlUWWGQ" keySequence="ALT+BS" command="_gBc186XlEeqKz4TYlUWWGQ">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <bindings xmi:id="_mAmJ-qEjEeqUS4kViZ_gnA" keySequence="SHIFT+CR" command="_mAoliqEjEeqUS4kViZ_gnA"/>
     <bindings xmi:id="_mAmJ-6EjEeqUS4kViZ_gnA" keySequence="COMMAND+SHIFT+CR" command="_mAolSKEjEeqUS4kViZ_gnA"/>
     <bindings xmi:id="_mAmJ_KEjEeqUS4kViZ_gnA" keySequence="ALT+BS" command="_mAn9RKEjEeqUS4kViZ_gnA">
@@ -2023,6 +2212,13 @@
   <bindingTables xmi:id="_jy6OyTPiEeqwqonKmxy2Gw" elementId="org.eclipse.egit.ui.RepositoriesView" bindingContext="_jyZRjjPiEeqwqonKmxy2Gw">
     <bindings xmi:id="_jy6OyjPiEeqwqonKmxy2Gw" keySequence="COMMAND+C" command="_jyMdLTPiEeqwqonKmxy2Gw"/>
     <bindings xmi:id="_jy_HTzPiEeqwqonKmxy2Gw" keySequence="COMMAND+V" command="_jyPgfzPiEeqwqonKmxy2Gw"/>
+<<<<<<< HEAD
+=======
+  </bindingTables>
+  <bindingTables xmi:id="_jy6OyzPiEeqwqonKmxy2Gw" elementId="org.eclipse.egit.ui.ReflogView" bindingContext="_jyZRgTPiEeqwqonKmxy2Gw">
+    <bindings xmi:id="_jy6OzDPiEeqwqonKmxy2Gw" keySequence="COMMAND+C" command="_jyLO8TPiEeqwqonKmxy2Gw"/>
+>>>>>>> my_master_backup
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   </bindingTables>
   <bindingTables xmi:id="_jy6OyzPiEeqwqonKmxy2Gw" elementId="org.eclipse.egit.ui.ReflogView" bindingContext="_jyZRgTPiEeqwqonKmxy2Gw">
     <bindings xmi:id="_jy6OzDPiEeqwqonKmxy2Gw" keySequence="COMMAND+C" command="_jyLO8TPiEeqwqonKmxy2Gw"/>
@@ -2045,6 +2241,7 @@
     <bindings xmi:id="_gBZMeaXlEeqKz4TYlUWWGQ" keySequence="F5" command="_gBeEiKXlEeqKz4TYlUWWGQ"/>
     <bindings xmi:id="_gBZMeqXlEeqKz4TYlUWWGQ" keySequence="COMMAND+O" command="_gBeEgqXlEeqKz4TYlUWWGQ"/>
   </bindingTables>
+<<<<<<< HEAD
   <bindingTables xmi:id="_gBZMe6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.sirius.tree.ui.EditorID.treeContext" bindingContext="_gBZMx6XlEeqKz4TYlUWWGQ">
     <bindings xmi:id="_gBZMfKXlEeqKz4TYlUWWGQ" keySequence="F5" command="_gBeFSqXlEeqKz4TYlUWWGQ"/>
     <bindings xmi:id="_gBZMfaXlEeqKz4TYlUWWGQ" keySequence="COMMAND+O" command="_gBeE7KXlEeqKz4TYlUWWGQ"/>
@@ -2059,6 +2256,8 @@
     <bindings xmi:id="_gBZMg6XlEeqKz4TYlUWWGQ" keySequence="CTRL+N" command="_gBeFOKXlEeqKz4TYlUWWGQ"/>
     <bindings xmi:id="_gBZMhKXlEeqKz4TYlUWWGQ" keySequence="CTRL+SHIFT+N" command="_gBeEbaXlEeqKz4TYlUWWGQ"/>
 =======
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
 <<<<<<< HEAD
   <bindingTables xmi:id="_mAmuaaEjEeqUS4kViZ_gnA" elementId="org.eclipse.compare.compareEditorScope" bindingContext="_mAmuo6EjEeqUS4kViZ_gnA">
     <bindings xmi:id="_mAmuaqEjEeqUS4kViZ_gnA" keySequence="COMMAND+SHIFT+ARROW_UP" command="_mAonZ6EjEeqUS4kViZ_gnA"/>
@@ -2073,6 +2272,9 @@
   <bindingTables xmi:id="_jy9SGTPiEeqwqonKmxy2Gw" elementId="org.eclipse.mylyn.wikitext.tasks.ui.markupSourceContext" bindingContext="_jyZRizPiEeqwqonKmxy2Gw">
     <bindings xmi:id="_jy9SGjPiEeqwqonKmxy2Gw" keySequence="COMMAND+SHIFT+O" command="_jyJZ4jPiEeqwqonKmxy2Gw"/>
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   </bindingTables>
   <bindingTables xmi:id="_gBZMhaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emfforms.editor.ecore.context" bindingContext="_gBZMyqXlEeqKz4TYlUWWGQ">
@@ -2081,11 +2283,14 @@
     <bindings xmi:id="_gBZMiKXlEeqKz4TYlUWWGQ" keySequence="CTRL+SHIFT+N" command="_gBeEXqXlEeqKz4TYlUWWGQ"/>
   </bindingTables>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <bindingTables xmi:id="_gBZMiaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.pde.ui.pdeEditorContext" bindingContext="_gBZMt6XlEeqKz4TYlUWWGQ">
     <bindings xmi:id="_gBZMiqXlEeqKz4TYlUWWGQ" keySequence="COMMAND+O" command="_gBeEdKXlEeqKz4TYlUWWGQ"/>
     <bindings xmi:id="_gBZMi6XlEeqKz4TYlUWWGQ" keySequence="COMMAND+SHIFT+F" command="_gBeEcKXlEeqKz4TYlUWWGQ"/>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <bindingTables xmi:id="_mAmudKEjEeqUS4kViZ_gnA" elementId="org.eclipse.pde.ui.pdeEditorContext" bindingContext="_mAmuoqEjEeqUS4kViZ_gnA">
     <bindings xmi:id="_mAmudaEjEeqUS4kViZ_gnA" keySequence="COMMAND+O" command="_mAomrKEjEeqUS4kViZ_gnA"/>
     <bindings xmi:id="_mAmudqEjEeqUS4kViZ_gnA" keySequence="COMMAND+SHIFT+F" command="_mAomqKEjEeqUS4kViZ_gnA"/>
@@ -2093,16 +2298,22 @@
   <bindingTables xmi:id="_jy_uVjPiEeqwqonKmxy2Gw" elementId="org.eclipse.debug.ui.BreakpointView" bindingContext="_jyZRYDPiEeqwqonKmxy2Gw">
     <bindings xmi:id="_jzBjhDPiEeqwqonKmxy2Gw" keySequence="ALT+CR" command="_jyPgbTPiEeqwqonKmxy2Gw"/>
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   </bindingTables>
   <bindingTables xmi:id="_gBZMjKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.sirius.editor.siriusEditorContext" bindingContext="_gBZMxKXlEeqKz4TYlUWWGQ">
     <bindings xmi:id="_gBZMjaXlEeqKz4TYlUWWGQ" keySequence="COMMAND+O" command="_gBeEjKXlEeqKz4TYlUWWGQ"/>
   </bindingTables>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <bindingTables xmi:id="_gBZMjqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.acceleo.ui.interpreter.interpreterview" bindingContext="_gBZMzqXlEeqKz4TYlUWWGQ">
     <bindings xmi:id="_gBZMj6XlEeqKz4TYlUWWGQ" keySequence="COMMAND+SHIFT+D" command="_gBeFSaXlEeqKz4TYlUWWGQ"/>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <bindingTables xmi:id="_mAmueaEjEeqUS4kViZ_gnA" elementId="org.eclipse.acceleo.ui.interpreter.interpreterview" bindingContext="_mAmuuaEjEeqUS4kViZ_gnA">
     <bindings xmi:id="_mAmueqEjEeqUS4kViZ_gnA" keySequence="COMMAND+SHIFT+D" command="_mAongaEjEeqUS4kViZ_gnA"/>
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
@@ -2422,6 +2633,9 @@
         <children xmi:id="_n7avApkpEeq4XZHOBbu_SQ" elementId="org.eclipse.xtext.ui.XtextEditorScope" name="Editing Xtext Source" description="Editing Xtext Source Context"/>
         <children xmi:id="_n7avBJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.pde.ui.pdeEditorContext" name="PDE editor" description="The context used by PDE editors"/>
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       </children>
       <children xmi:id="_gBZMwKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.egit.ui.ReflogView" name="In Git Reflog View"/>
@@ -2433,6 +2647,7 @@
         <children xmi:id="_gBZMxqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.sirius.diagram.ui.diagramContext" name="In Sirius Diagram Editor" description="Sirius Diagram Editing"/>
       </children>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <children xmi:id="_gBZMx6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.sirius.tree.ui.EditorID.treeContext" name="DTree Editing" description="Sirius DTree Editing"/>
       <children xmi:id="_gBZMyKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emfforms.editor.context" name="Generic Editor"/>
       <children xmi:id="_gBZMyaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.sirius.table.ui.EditorID.tableContext" name="DTable Editing" description="Sirius DTable Editing"/>
@@ -2440,6 +2655,8 @@
       <children xmi:id="_gBZMy6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.graphiti.ui.diagramEditor" name="Graphiti Diagram"/>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
       <children xmi:id="_mAmusqEjEeqUS4kViZ_gnA" elementId="org.eclipse.sirius.tree.ui.EditorID.treeContext" name="DTree Editing" description="Sirius DTree Editing"/>
       <children xmi:id="_mAmus6EjEeqUS4kViZ_gnA" elementId="org.eclipse.emfforms.editor.context" name="Generic Editor"/>
       <children xmi:id="_mAmutKEjEeqUS4kViZ_gnA" elementId="org.eclipse.sirius.table.ui.EditorID.tableContext" name="DTable Editing" description="Sirius DTable Editing"/>
@@ -2646,6 +2863,9 @@
   <rootContext xmi:id="_oPsV4JkpEeq4XZHOBbu_SQ" elementId="org.tigris.subversion.subclipse.actionSet" name="Auto::org.tigris.subversion.subclipse.actionSet"/>
   <descriptors xmi:id="_j3Du8DPiEeqwqonKmxy2Gw" elementId="org.eclipse.e4.ui.compatibility.editor" allowMultiple="true" category="org.eclipse.e4.primaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <tags>Editor</tags>
   </descriptors>
@@ -2656,13 +2876,19 @@
     <tags>categoryTag:Ant</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZydKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.debug.ui.DebugView" label="Debug" iconURI="platform:/plugin/org.eclipse.debug.ui/icons/full/eview16/debug_view.png" tooltip="" category="Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmu9aEjEeqUS4kViZ_gnA" elementId="org.eclipse.debug.ui.DebugView" label="Debug" iconURI="platform:/plugin/org.eclipse.debug.ui/icons/full/eview16/debug_view.png" tooltip="" category="Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_kEnp0DPiEeqwqonKmxy2Gw" elementId="org.eclipse.debug.ui.DebugView" label="Debug" iconURI="platform:/plugin/org.eclipse.debug.ui/icons/full/eview16/debug_view.png" tooltip="" category="Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.debug.internal.ui.views.launch.LaunchView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.debug.ui"/>
@@ -2706,13 +2932,19 @@
     <tags>categoryTag:Debug</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZye6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.egit.ui.RepositoriesView" label="Git Repositories" iconURI="platform:/plugin/org.eclipse.egit.ui/icons/eview16/repo_rep.png" tooltip="" category="Git" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmu_KEjEeqUS4kViZ_gnA" elementId="org.eclipse.egit.ui.RepositoriesView" label="Git Repositories" iconURI="platform:/plugin/org.eclipse.egit.ui/icons/eview16/repo_rep.png" tooltip="" category="Git" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_kEtwcDPiEeqwqonKmxy2Gw" elementId="org.eclipse.egit.ui.RepositoriesView" label="Git Repositories" iconURI="platform:/plugin/org.eclipse.egit.ui/icons/eview16/repo_rep.png" tooltip="" category="Git" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.egit.ui.internal.repository.RepositoriesView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.egit.ui"/>
@@ -2829,13 +3061,19 @@
     <tags>categoryTag:Java</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyjqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.mylyn.commons.repositories.ui.navigator.Repositories" label="Team Repositories" iconURI="platform:/plugin/org.eclipse.mylyn.commons.repositories.ui/icons/eview16/repositories.gif" tooltip="" category="Mylyn" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvD6EjEeqUS4kViZ_gnA" elementId="org.eclipse.mylyn.commons.repositories.ui.navigator.Repositories" label="Team Repositories" iconURI="platform:/plugin/org.eclipse.mylyn.commons.repositories.ui/icons/eview16/repositories.gif" tooltip="" category="Mylyn" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_kE7L0DPiEeqwqonKmxy2Gw" elementId="org.eclipse.mylyn.commons.repositories.ui.navigator.Repositories" label="Team Repositories" iconURI="platform:/plugin/org.eclipse.mylyn.commons.repositories.ui/icons/eview16/repositories.gif" tooltip="" category="Mylyn" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.mylyn.internal.commons.repositories.ui.RepositoriesView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.mylyn.commons.repositories.ui"/>
@@ -2979,13 +3217,19 @@
     <tags>categoryTag:General</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZypqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.wst.xml.ui.views.annotations.XMLAnnotationsView" label="Documentation" iconURI="platform:/plugin/org.eclipse.wst.xml.ui/icons/full/obj16/comment_obj.gif" tooltip="" category="XML" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvJ6EjEeqUS4kViZ_gnA" elementId="org.eclipse.wst.xml.ui.views.annotations.XMLAnnotationsView" label="Documentation" iconURI="platform:/plugin/org.eclipse.wst.xml.ui/icons/full/obj16/comment_obj.gif" tooltip="" category="XML" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_kFOGwDPiEeqwqonKmxy2Gw" elementId="org.eclipse.wst.xml.ui.views.annotations.XMLAnnotationsView" label="Documentation" iconURI="platform:/plugin/org.eclipse.wst.xml.ui/icons/full/obj16/comment_obj.gif" tooltip="" category="XML" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.wst.xml.ui.internal.views.annotations.XMLAnnotationsView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.wst.xml.ui"/>
@@ -2993,13 +3237,19 @@
     <tags>categoryTag:XML</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyp6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.wst.xml.ui.contentmodel.view" label="Content Model" iconURI="platform:/plugin/org.eclipse.wst.xml.ui/icons/full/view16/hierarchy.gif" tooltip="" category="XML" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvKKEjEeqUS4kViZ_gnA" elementId="org.eclipse.wst.xml.ui.contentmodel.view" label="Content Model" iconURI="platform:/plugin/org.eclipse.wst.xml.ui/icons/full/view16/hierarchy.gif" tooltip="" category="XML" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_kFOt0DPiEeqwqonKmxy2Gw" elementId="org.eclipse.wst.xml.ui.contentmodel.view" label="Content Model" iconURI="platform:/plugin/org.eclipse.wst.xml.ui/icons/full/view16/hierarchy.gif" tooltip="" category="XML" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.wst.xml.ui.internal.views.contentmodel.ContentModelView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.wst.xml.ui"/>
@@ -3007,13 +3257,19 @@
     <tags>categoryTag:XML</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyqKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.acceleo.ui.interpreter.view" label="Interpreter" iconURI="platform:/plugin/org.eclipse.acceleo.ui.interpreter/icons/view_icon.gif" tooltip="The Interpreter view will allow users to enter expressions according to any syntax and see the result of their evaluation against a given model element." category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvKaEjEeqUS4kViZ_gnA" elementId="org.eclipse.acceleo.ui.interpreter.view" label="Interpreter" iconURI="platform:/plugin/org.eclipse.acceleo.ui.interpreter/icons/view_icon.gif" tooltip="The Interpreter view will allow users to enter expressions according to any syntax and see the result of their evaluation against a given model element." category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPAZYJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.acceleo.ui.interpreter.view" label="Interpreter" iconURI="platform:/plugin/org.eclipse.acceleo.ui.interpreter/icons/view_icon.gif" tooltip="The Interpreter view will allow users to enter expressions according to any syntax and see the result of their evaluation against a given model element." category="Other" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.acceleo.ui.interpreter.view.InterpreterView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.acceleo.ui.interpreter"/>
@@ -3021,13 +3277,19 @@
     <tags>categoryTag:Other</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyqaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.cdo.explorer.ui.CDORepositoriesView" label="CDO Repositories" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/locations.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvKqEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.cdo.explorer.ui.CDORepositoriesView" label="CDO Repositories" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/locations.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPDcsJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.cdo.explorer.ui.CDORepositoriesView" label="CDO Repositories" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/locations.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.cdo.explorer.ui.repositories.CDORepositoriesView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.cdo.explorer.ui"/>
@@ -3035,13 +3297,19 @@
     <tags>categoryTag:CDO</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyqqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.cdo.ui.CDOSessionsView" label="CDO Sessions" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_sessions.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvK6EjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.cdo.ui.CDOSessionsView" label="CDO Sessions" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_sessions.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPEq0JkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.cdo.ui.CDOSessionsView" label="CDO Sessions" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_sessions.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.cdo.internal.ui.views.CDOSessionsView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.cdo.ui"/>
@@ -3049,13 +3317,19 @@
     <tags>categoryTag:CDO</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyq6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.cdo.ui.CDOWatchListView" label="CDO Watch List" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/watch_list.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvLKEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.cdo.ui.CDOWatchListView" label="CDO Watch List" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/watch_list.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPFR4JkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.cdo.ui.CDOWatchListView" label="CDO Watch List" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/watch_list.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.cdo.internal.ui.views.CDOWatchListView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.cdo.ui"/>
@@ -3063,13 +3337,19 @@
     <tags>categoryTag:CDO</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyrKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.cdo.ui.CDORemoteSessionsView" label="CDO Collaboration" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_remote_sessions.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvLaEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.cdo.ui.CDORemoteSessionsView" label="CDO Collaboration" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_remote_sessions.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPF48JkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.cdo.ui.CDORemoteSessionsView" label="CDO Collaboration" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_remote_sessions.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.cdo.internal.ui.views.CDORemoteSessionsView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.cdo.ui"/>
@@ -3077,13 +3357,19 @@
     <tags>categoryTag:CDO</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyraXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.cdo.ui.CDOTimeMachineView" label="CDO Time Machine" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_time_machine.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvLqEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.cdo.ui.CDOTimeMachineView" label="CDO Time Machine" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_time_machine.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPGgAJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.cdo.ui.CDOTimeMachineView" label="CDO Time Machine" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.shared/icons/full/view16/cdo_time_machine.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.cdo.internal.ui.views.CDOTimeMachineView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.cdo.ui"/>
@@ -3091,13 +3377,19 @@
     <tags>categoryTag:CDO</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyrqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.cdo.ui.admin.CDOAdminView" label="CDO Administration" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.admin/icons/full/view16/admin_view.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvL6EjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.cdo.ui.admin.CDOAdminView" label="CDO Administration" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.admin/icons/full/view16/admin_view.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPHuIJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.cdo.ui.admin.CDOAdminView" label="CDO Administration" iconURI="platform:/plugin/org.eclipse.emf.cdo.ui.admin/icons/full/view16/admin_view.gif" tooltip="" category="CDO" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.cdo.ui.internal.admin.CDOAdminView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.cdo.ui.admin"/>
@@ -3105,13 +3397,19 @@
     <tags>categoryTag:CDO</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyr6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.compare.ide.ui.logicalmodel.view" label="Logical Model View" iconURI="platform:/plugin/org.eclipse.emf.compare.ide.ui/icons/full/eobj16/emfcompare-icon.gif" tooltip="" category="EMF Compare" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvMKEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.compare.ide.ui.logicalmodel.view" label="Logical Model View" iconURI="platform:/plugin/org.eclipse.emf.compare.ide.ui/icons/full/eobj16/emfcompare-icon.gif" tooltip="" category="EMF Compare" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPIVMJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.compare.ide.ui.logicalmodel.view" label="Logical Model View" iconURI="platform:/plugin/org.eclipse.emf.compare.ide.ui/icons/full/eobj16/emfcompare-icon.gif" tooltip="" category="EMF Compare" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.compare.ide.ui.internal.logical.view.LogicalModelView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.compare.ide.ui"/>
@@ -3119,13 +3417,19 @@
     <tags>categoryTag:EMF Compare</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZysKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.ecoretools.internal.views.EClassHierarchyView" label="EClass Information" iconURI="platform:/plugin/org.eclipse.emf.ecoretools.ui/icons/eview16/eclass_hi_nav.gif" tooltip="" category="Ecore Tools" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvMaEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.ecoretools.internal.views.EClassHierarchyView" label="EClass Information" iconURI="platform:/plugin/org.eclipse.emf.ecoretools.ui/icons/eview16/eclass_hi_nav.gif" tooltip="" category="Ecore Tools" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPKxcJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.ecoretools.internal.views.EClassHierarchyView" label="EClass Information" iconURI="platform:/plugin/org.eclipse.emf.ecoretools.ui/icons/eview16/eclass_hi_nav.gif" tooltip="" category="Ecore Tools" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.ecoretools.ui.views.EClassHierarchyView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.ecoretools.ui"/>
@@ -3133,13 +3437,19 @@
     <tags>categoryTag:Ecore Tools</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZysaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.ecoretools.internal.views.EReferencesView" label="References" iconURI="platform:/plugin/org.eclipse.emf.ecoretools.ui/icons/eview16/eref_nav.gif" tooltip="" category="Ecore Tools" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvMqEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.ecoretools.internal.views.EReferencesView" label="References" iconURI="platform:/plugin/org.eclipse.emf.ecoretools.ui/icons/eview16/eref_nav.gif" tooltip="" category="Ecore Tools" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPLYgJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.ecoretools.internal.views.EReferencesView" label="References" iconURI="platform:/plugin/org.eclipse.emf.ecoretools.ui/icons/eview16/eref_nav.gif" tooltip="" category="Ecore Tools" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.ecoretools.ui.views.EReferencesView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.ecoretools.ui"/>
@@ -3147,13 +3457,19 @@
     <tags>categoryTag:Ecore Tools</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZysqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.ecp.ui.ModelExplorerView" label="Model Explorer" iconURI="platform:/plugin/org.eclipse.emf.ecp.ui.e3/icons/folder_brick.png" tooltip="" category="ECP Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvM6EjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.ecp.ui.ModelExplorerView" label="Model Explorer" iconURI="platform:/plugin/org.eclipse.emf.ecp.ui.e3/icons/folder_brick.png" tooltip="" category="ECP Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPL_kJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.ecp.ui.ModelExplorerView" label="Model Explorer" iconURI="platform:/plugin/org.eclipse.emf.ecp.ui.e3/icons/folder_brick.png" tooltip="" category="ECP Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.ecp.ui.views.ModelExplorerView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.ecp.ui.e3"/>
@@ -3161,13 +3477,19 @@
     <tags>categoryTag:ECP Views</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZys6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.ecp.ui.ModelRepositoriesView" label="Model Repositories" iconURI="platform:/plugin/org.eclipse.emf.ecp.ui.e3/icons/repositories.gif" tooltip="" category="ECP Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvNKEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.ecp.ui.ModelRepositoriesView" label="Model Repositories" iconURI="platform:/plugin/org.eclipse.emf.ecp.ui.e3/icons/repositories.gif" tooltip="" category="ECP Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPMmoJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.ecp.ui.ModelRepositoriesView" label="Model Repositories" iconURI="platform:/plugin/org.eclipse.emf.ecp.ui.e3/icons/repositories.gif" tooltip="" category="ECP Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.ecp.ui.views.ModelRepositoriesView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.ecp.ui.e3"/>
@@ -3175,13 +3497,19 @@
     <tags>categoryTag:ECP Views</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZytKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.ecp.ui.ECPProvidersView" label="ECP Providers" iconURI="platform:/plugin/org.eclipse.emf.ecp.ui.e3/icons/providers.gif" tooltip="" category="ECP Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvNaEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.ecp.ui.ECPProvidersView" label="ECP Providers" iconURI="platform:/plugin/org.eclipse.emf.ecp.ui.e3/icons/providers.gif" tooltip="" category="ECP Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPNNsJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.ecp.ui.ECPProvidersView" label="ECP Providers" iconURI="platform:/plugin/org.eclipse.emf.ecp.ui.e3/icons/providers.gif" tooltip="" category="ECP Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.ecp.ui.views.ECPProvidersView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.ecp.ui.e3"/>
@@ -3189,13 +3517,19 @@
     <tags>categoryTag:ECP Views</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZytaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.ecp.view.model.preview.e3.views.PreviewView" label="EMF Forms Preview" iconURI="platform:/plugin/org.eclipse.emf.ecp.view.model.preview.e3/icons/preview.png" tooltip="" category="EMF Forms" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvNqEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.ecp.view.model.preview.e3.views.PreviewView" label="EMF Forms Preview" iconURI="platform:/plugin/org.eclipse.emf.ecp.view.model.preview.e3/icons/preview.png" tooltip="" category="EMF Forms" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPN0wJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.ecp.view.model.preview.e3.views.PreviewView" label="EMF Forms Preview" iconURI="platform:/plugin/org.eclipse.emf.ecp.view.model.preview.e3/icons/preview.png" tooltip="" category="EMF Forms" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.ecp.view.model.internal.preview.e3.views.PreviewView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.ecp.view.model.preview.e3"/>
@@ -3203,13 +3537,19 @@
     <tags>categoryTag:EMF Forms</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZytqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.emfstore.client.ui.views.historybrowserview.HistoryBrowserView" label="History Browser" iconURI="platform:/plugin/org.eclipse.emf.emfstore.client.ui/icons/historyview.png" tooltip="" category="EMFStore Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvN6EjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.emfstore.client.ui.views.historybrowserview.HistoryBrowserView" label="History Browser" iconURI="platform:/plugin/org.eclipse.emf.emfstore.client.ui/icons/historyview.png" tooltip="" category="EMFStore Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPOb0JkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.emfstore.client.ui.views.historybrowserview.HistoryBrowserView" label="History Browser" iconURI="platform:/plugin/org.eclipse.emf.emfstore.client.ui/icons/historyview.png" tooltip="" category="EMFStore Views" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.emf.emfstore.internal.client.ui.views.historybrowserview.HistoryBrowserView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.emf.emfstore.client.ui"/>
@@ -3218,13 +3558,19 @@
     <tags>NoRestore</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyt6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.graphiti.ui.internal.editor.thumbnailview" label="Miniature View" iconURI="platform:/plugin/org.eclipse.graphiti.ui/icons/outline/thumbnail.gif" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvOKEjEeqUS4kViZ_gnA" elementId="org.eclipse.graphiti.ui.internal.editor.thumbnailview" label="Miniature View" iconURI="platform:/plugin/org.eclipse.graphiti.ui/icons/outline/thumbnail.gif" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPPC4JkpEeq4XZHOBbu_SQ" elementId="org.eclipse.graphiti.ui.internal.editor.thumbnailview" label="Miniature View" iconURI="platform:/plugin/org.eclipse.graphiti.ui/icons/outline/thumbnail.gif" tooltip="" category="General" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.graphiti.ui.internal.editor.ThumbNailView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.graphiti.ui"/>
@@ -3232,13 +3578,19 @@
     <tags>categoryTag:General</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyuKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.net4j.debug.RemoteTraceView" label="Remote Traces" iconURI="platform:/plugin/org.eclipse.net4j.debug/icons/text.gif" tooltip="" category="Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvOaEjEeqUS4kViZ_gnA" elementId="org.eclipse.net4j.debug.RemoteTraceView" label="Remote Traces" iconURI="platform:/plugin/org.eclipse.net4j.debug/icons/text.gif" tooltip="" category="Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPStQJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.net4j.debug.RemoteTraceView" label="Remote Traces" iconURI="platform:/plugin/org.eclipse.net4j.debug/icons/text.gif" tooltip="" category="Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.net4j.internal.debug.views.RemoteTraceView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.net4j.debug"/>
@@ -3246,13 +3598,19 @@
     <tags>categoryTag:Debug</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyuaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.net4j.AcceptorsView" label="Acceptors" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/acceptors.gif" tooltip="" category="Net4j" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvOqEjEeqUS4kViZ_gnA" elementId="org.eclipse.net4j.AcceptorsView" label="Acceptors" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/acceptors.gif" tooltip="" category="Net4j" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPTUUJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.net4j.AcceptorsView" label="Acceptors" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/acceptors.gif" tooltip="" category="Net4j" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.net4j.internal.ui.views.AcceptorsView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.net4j.ui"/>
@@ -3260,13 +3618,19 @@
     <tags>categoryTag:Net4j</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyuqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.net4j.ConnectorsView" label="Connectors" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/connectors.gif" tooltip="" category="Net4j" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvO6EjEeqUS4kViZ_gnA" elementId="org.eclipse.net4j.ConnectorsView" label="Connectors" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/connectors.gif" tooltip="" category="Net4j" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPT7YJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.net4j.ConnectorsView" label="Connectors" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/connectors.gif" tooltip="" category="Net4j" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.net4j.internal.ui.views.ConnectorsView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.net4j.ui"/>
@@ -3274,13 +3638,19 @@
     <tags>categoryTag:Net4j</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyu6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.net4j.util.Net4jContainerView" label="Container" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/container.gif" tooltip="" category="Net4j Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvPKEjEeqUS4kViZ_gnA" elementId="org.eclipse.net4j.util.Net4jContainerView" label="Container" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/container.gif" tooltip="" category="Net4j Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPUicJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.net4j.util.Net4jContainerView" label="Container" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/container.gif" tooltip="" category="Net4j Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.net4j.util.internal.ui.views.Net4jContainerView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.net4j.util.ui"/>
@@ -3288,13 +3658,19 @@
     <tags>categoryTag:Net4j Debug</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyvKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.net4j.util.Net4jIntrospectorView" label="Introspector" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/javabean.gif" tooltip="" category="Net4j Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvPaEjEeqUS4kViZ_gnA" elementId="org.eclipse.net4j.util.Net4jIntrospectorView" label="Introspector" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/javabean.gif" tooltip="" category="Net4j Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPUicZkpEeq4XZHOBbu_SQ" elementId="org.eclipse.net4j.util.Net4jIntrospectorView" label="Introspector" iconURI="platform:/plugin/org.eclipse.net4j.ui.shared/icons/full/view16/javabean.gif" tooltip="" category="Net4j Debug" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.net4j.util.internal.ui.views.Net4jIntrospectorView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.net4j.util.ui"/>
@@ -3302,13 +3678,19 @@
     <tags>categoryTag:Net4j Debug</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyvaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.pde.api.tools.ui.views.apitooling.views.apitoolingview" label="API Tools" iconURI="platform:/plugin/org.eclipse.pde.api.tools.ui/icons/full/obj16/api_tools.gif" tooltip="" category="API Tools" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvPqEjEeqUS4kViZ_gnA" elementId="org.eclipse.pde.api.tools.ui.views.apitooling.views.apitoolingview" label="API Tools" iconURI="platform:/plugin/org.eclipse.pde.api.tools.ui/icons/full/obj16/api_tools.gif" tooltip="" category="API Tools" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPVJgJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.pde.api.tools.ui.views.apitooling.views.apitoolingview" label="API Tools" iconURI="platform:/plugin/org.eclipse.pde.api.tools.ui/icons/full/obj16/api_tools.gif" tooltip="" category="API Tools" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.pde.api.tools.ui.internal.views.APIToolingView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.pde.api.tools.ui"/>
@@ -3316,13 +3698,19 @@
     <tags>categoryTag:API Tools</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyvqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.pde.runtime.RegistryBrowser" label="Plug-in Registry" iconURI="platform:/plugin/org.eclipse.pde.runtime/icons/eview16/registry.png" tooltip="" category="Plug-in Development" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvP6EjEeqUS4kViZ_gnA" elementId="org.eclipse.pde.runtime.RegistryBrowser" label="Plug-in Registry" iconURI="platform:/plugin/org.eclipse.pde.runtime/icons/eview16/registry.png" tooltip="" category="Plug-in Development" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPVwkJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.pde.runtime.RegistryBrowser" label="Plug-in Registry" iconURI="platform:/plugin/org.eclipse.pde.runtime/icons/eview16/registry.png" tooltip="" category="Plug-in Development" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.pde.internal.runtime.registry.RegistryBrowser"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.pde.runtime"/>
@@ -3330,13 +3718,19 @@
     <tags>categoryTag:Plug-in Development</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZyv6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.pde.ui.PluginsView" label="Plug-ins" iconURI="platform:/plugin/org.eclipse.pde.ui/icons/eview16/plugin_depend.png" tooltip="" category="Plug-in Development" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvQKEjEeqUS4kViZ_gnA" elementId="org.eclipse.pde.ui.PluginsView" label="Plug-ins" iconURI="platform:/plugin/org.eclipse.pde.ui/icons/eview16/plugin_depend.png" tooltip="" category="Plug-in Development" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPWXoJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.pde.ui.PluginsView" label="Plug-ins" iconURI="platform:/plugin/org.eclipse.pde.ui/icons/eview16/plugin_depend.png" tooltip="" category="Plug-in Development" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.pde.internal.ui.views.plugins.PluginsView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.pde.ui"/>
@@ -3344,13 +3738,19 @@
     <tags>categoryTag:Plug-in Development</tags>
   </descriptors>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <descriptors xmi:id="_gBZywKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.pde.ui.DependenciesView" label="Plug-in Dependencies" iconURI="platform:/plugin/org.eclipse.pde.ui/icons/obj16/req_plugins_obj.png" tooltip="" category="Plug-in Development" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <descriptors xmi:id="_mAmvQaEjEeqUS4kViZ_gnA" elementId="org.eclipse.pde.ui.DependenciesView" label="Plug-in Dependencies" iconURI="platform:/plugin/org.eclipse.pde.ui/icons/obj16/req_plugins_obj.png" tooltip="" category="Plug-in Development" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 =======
   <descriptors xmi:id="_oPW-sJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.pde.ui.DependenciesView" label="Plug-in Dependencies" iconURI="platform:/plugin/org.eclipse.pde.ui/icons/obj16/req_plugins_obj.png" tooltip="" category="Plug-in Development" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
     <persistedState key="originalCompatibilityViewClass" value="org.eclipse.pde.internal.ui.views.dependencies.DependenciesView"/>
     <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.pde.ui"/>
@@ -3394,6 +3794,34 @@
     <persistedState key="originalCompatibilityViewBundle" value="org.tigris.subversion.subclipse.ui"/>
     <tags>View</tags>
     <tags>categoryTag:SVN</tags>
+<<<<<<< HEAD
+=======
+  </descriptors>
+  <descriptors xmi:id="_oPe6gJkpEeq4XZHOBbu_SQ" elementId="org.tigris.subversion.subclipse.ui.svnproperties.SvnPropertiesView" label="SVN Properties" iconURI="platform:/plugin/org.tigris.subversion.subclipse.ui/icons/full/cview16/props_view.gif" tooltip="" category="SVN" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.tigris.subversion.subclipse.ui.svnproperties.SvnPropertiesView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.tigris.subversion.subclipse.ui"/>
+    <tags>View</tags>
+    <tags>categoryTag:SVN</tags>
+  </descriptors>
+  <descriptors xmi:id="_oPfhkJkpEeq4XZHOBbu_SQ" elementId="org.tigris.subversion.subclipse.ui.svnproperties.SvnRevPropertiesView" label="SVN Rev Properties" iconURI="platform:/plugin/org.tigris.subversion.subclipse.ui/icons/full/cview16/props_view.gif" tooltip="" category="SVN" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.tigris.subversion.subclipse.ui.svnproperties.SvnRevPropertiesView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.tigris.subversion.subclipse.ui"/>
+    <tags>View</tags>
+    <tags>categoryTag:SVN</tags>
+  </descriptors>
+  <descriptors xmi:id="_oPgIoJkpEeq4XZHOBbu_SQ" elementId="org.tigris.subversion.subclipse.ui.annotations.AnnotateView" label="SVN Annotate" iconURI="platform:/plugin/org.tigris.subversion.subclipse.ui/icons/full/cview16/annotate_view.gif" tooltip="" category="SVN" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.tigris.subversion.subclipse.ui.annotations.AnnotateView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.tigris.subversion.subclipse.ui"/>
+    <tags>View</tags>
+    <tags>categoryTag:SVN</tags>
+  </descriptors>
+  <descriptors xmi:id="_oPgvsJkpEeq4XZHOBbu_SQ" elementId="org.tigris.subversion.subclipse.ui.conflicts.TreeConflictsView" label="SVN Tree Conflicts" iconURI="platform:/plugin/org.tigris.subversion.subclipse.ui/icons/full/cview16/tree_conflicts_view.gif" tooltip="" category="SVN" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <persistedState key="originalCompatibilityViewClass" value="org.tigris.subversion.subclipse.ui.conflicts.TreeConflictsView"/>
+    <persistedState key="originalCompatibilityViewBundle" value="org.tigris.subversion.subclipse.ui"/>
+    <tags>View</tags>
+    <tags>categoryTag:SVN</tags>
+>>>>>>> my_master_backup
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   </descriptors>
   <descriptors xmi:id="_oPe6gJkpEeq4XZHOBbu_SQ" elementId="org.tigris.subversion.subclipse.ui.svnproperties.SvnPropertiesView" label="SVN Properties" iconURI="platform:/plugin/org.tigris.subversion.subclipse.ui/icons/full/cview16/props_view.gif" tooltip="" category="SVN" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
     <persistedState key="originalCompatibilityViewClass" value="org.tigris.subversion.subclipse.ui.svnproperties.SvnPropertiesView"/>
@@ -4825,6 +5253,7 @@
     <parameters xmi:id="_gBeFAKXlEeqKz4TYlUWWGQ" elementId="org.eclipse.pde.ui.searchTargetRepositories.term" name="The initial search pattern for the artifact search dialog"/>
   </commands>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <commands xmi:id="_gBeFAaXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.emfstore.client.ui.createBranch" commandName="create branch" category="_gBeFz6XlEeqKz4TYlUWWGQ"/>
   <commands xmi:id="_gBeFAqXlEeqKz4TYlUWWGQ" elementId="org.eclipse.emf.ecp.emfstore.ui.update" commandName="update" category="_gBeFvqXlEeqKz4TYlUWWGQ"/>
   <commands xmi:id="_gBeFA6XlEeqKz4TYlUWWGQ" elementId="org.eclipse.pde.ui.updateClasspath" commandName="Update Classpath" description="Updates the plug-in classpath from latest settings" category="_gBeFvqXlEeqKz4TYlUWWGQ"/>
@@ -5035,6 +5464,8 @@
   <categories xmi:id="_gBeF0KXlEeqKz4TYlUWWGQ" elementId="org.eclipse.xtext.ui.category.refactoring" name="Refactoring" description="Refactoring Commands"/>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
   <commands xmi:id="_mAonOaEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.emfstore.client.ui.createBranch" commandName="create branch" category="_mAooB6EjEeqUS4kViZ_gnA"/>
   <commands xmi:id="_mAonOqEjEeqUS4kViZ_gnA" elementId="org.eclipse.emf.ecp.emfstore.ui.update" commandName="update" category="_mAon9qEjEeqUS4kViZ_gnA"/>
   <commands xmi:id="_mAonO6EjEeqUS4kViZ_gnA" elementId="org.eclipse.pde.ui.updateClasspath" commandName="Update Classpath" description="Updates the plug-in classpath from latest settings" category="_mAon9qEjEeqUS4kViZ_gnA"/>
@@ -5776,5 +6207,8 @@
   <categories xmi:id="_n7SMMJkpEeq4XZHOBbu_SQ" elementId="org.eclipse.emf.emfstore.client.ui.project" name="ECP"/>
   <categories xmi:id="_n7SMMZkpEeq4XZHOBbu_SQ" elementId="org.eclipse.xtext.ui.category.refactoring" name="Refactoring" description="Refactoring Commands"/>
 >>>>>>> my_master_backup
+<<<<<<< HEAD
+>>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
+=======
 >>>>>>> b58e17408b5229525c6432c13aa5217280ab06d5
 </application:Application>
