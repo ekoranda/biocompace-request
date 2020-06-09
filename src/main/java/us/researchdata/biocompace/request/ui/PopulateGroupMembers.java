@@ -15,11 +15,19 @@ import javax.enterprise.event.Observes;
 
 import org.imixs.workflow.engine.UserGroupEvent;
 import org.ldaptive.BindConnectionInitializer;
+import org.ldaptive.BindOperation;
+import org.ldaptive.BindResponse;
 import org.ldaptive.ConnectionConfig;
 import org.ldaptive.DefaultConnectionFactory;
+import org.ldaptive.LdapAttribute;
+import org.ldaptive.LdapEntry;
 import org.ldaptive.LdapException;
+import org.ldaptive.PooledConnectionFactory;
 import org.ldaptive.SearchOperation;
 import org.ldaptive.SearchResponse;
+import org.ldaptive.SimpleBindRequest;
+import org.ldaptive.SingleConnectionFactory;
+
 
 
 
@@ -40,7 +48,14 @@ public class PopulateGroupMembers {
 	@Resource SessionContext ctx;
     public List<String> onUserGroupEvent(@Observes UserGroupEvent userGroupEvent) {
     	
-    	SearchOperation search = new SearchOperation(
+    	// list that contains new groups for the current user
+        List<String> customGroups = new ArrayList<String>();
+     // get the name of the current user
+	    Principal principal = ctx.getCallerPrincipal();
+	    String name = principal.getName();
+	    String uid = "(uid=" + name + ")";
+    	
+    	/**SearchOperation search = new SearchOperation(
     			  DefaultConnectionFactory.builder()
     			    .config(ConnectionConfig.builder()
     			      .url("ldap://imixs.emilykoranda.com:389")
@@ -54,28 +69,83 @@ public class PopulateGroupMembers {
     			    .build(),
     			  "ou=people,o=CO,dc=emilykoranda,dc=com");
     			try {
-    			SearchResponse response = search.execute("(uid=proposer1)", "isMemberOf", "sn");
-    			System.out.println(response.toString());
+    				
+    				SearchResponse response = search.execute(uid, "isMemberOf");
+    				for (LdapEntry entry : response.getEntries()) {
+    					System.out.println(entry.getAttribute("isMemberOf"));
+    					LdapAttribute attribute = entry.getAttribute("isMemberOf");
+    					String roleName;
+    					roleName = "group.";
+    					roleName = roleName.concat(attribute.getStringValue());
+    					roleName = roleName.replace(" ", "");
+    					customGroups.add(roleName);
+    				}
     			}catch(LdapException e) {
-    				System.out.println("Error from search response");
-    				e.printStackTrace();
+    				
     			}
     			
-    
     	
+	    */
+	    	
+    			/**PooledConnectionFactory cf = PooledConnectionFactory.builder()
+    					  .config(ConnectionConfig.builder()
+    					    .url("ldap://imixs.emilykoranda.com:389")
+    					    .connectionInitializers(BindConnectionInitializer.builder()
+    					      .dn("uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com")
+    					      .credential("YA8Ry29MgF1p8VpUhgap")
+    					      .build())
+    					    .build())
+    					  .min(1)
+    					  .max(10)
+    					  .build();
+    					cf.initialize();
+    					
+    					try {
+    					SearchOperation search = new SearchOperation(cf, "ou=people,o=CO,dc=emilykoranda,dc=com");
+    					SearchResponse response = search.execute(uid, "isMemberOf");
+    					LdapEntry entry = response.getEntry();
+    					LdapAttribute attribute = entry.getAttribute("isMemberOf");
+    					String roleName;
+    					roleName = "group.";
+    					roleName = roleName.concat(attribute.getStringValue());
+    					roleName = roleName.replace(" ", "");
+    					customGroups.add(roleName);
+    					System.out.println(roleName);
+    					
+    					}catch (LdapException e){
+    						cf.close();
+    					}
+    					
+    					*/
+    			
+	    PooledConnectionFactory cf = setUp.cf;
     	
+	    
+	    try {
+			SearchOperation search = new SearchOperation(cf, "ou=people,o=CO,dc=emilykoranda,dc=com");
+			SearchResponse response = search.execute(uid, "isMemberOf");
+			LdapEntry entry = response.getEntry();
+			LdapAttribute attribute = entry.getAttribute("isMemberOf");
+			String roleName;
+			roleName = "group.";
+			roleName = roleName.concat(attribute.getStringValue());
+			roleName = roleName.replace(" ", "");
+			System.out.println(roleName);
+			
+			}catch (LdapException e){
+				cf.close();
+			}
+			
+			
 		
     	
     	
     	
-        // list that contains new groups for the current user
-        List<String> customGroups = new ArrayList<String>();
+        
         
        
 	    
-	    // get the name of the current user
-	    Principal principal = ctx.getCallerPrincipal();
-	    String name = principal.getName();
+	    
 	    
 	    // hardcode into ldap directory to do a search for users
 	    
@@ -108,37 +178,6 @@ public class PopulateGroupMembers {
             e.printStackTrace();
         }
         
-      
-        
-      /**SearchOperation search = new SearchOperation(
-    		  DefaultConnectionFactory.builder()
-        		    .config(ConnectionConfig.builder()
-        		      .url("ldap://imixs.emilykoranda.com")
-        		      .useStartTLS(true)
-        		      .connectionInitializers(BindConnectionInitializer.builder()
-        		        .dn("uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com")
-        		        .credential("YA8Ry29MgF1p8VpUhgap")
-        		        .build())
-        		      .build())
-        		    .build(),
-        		  "dc=emilykoranda,dc=com");
-        		try {
-					SearchResult response = search.execute("(uid=*proposer1)");
-					LdapEntry entry = response.getEntry();
-					LdapAttribute role = entry.getAttribute("isMemberOf");
-					String group = role.getStringValue();
-					System.out.println(group);
-				} catch (LdapException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-					System.out.println("EXCEPTION FAILED");
-				}
-   
-        
-        */
-        
-        
-
         
         // add the customGroup to the user's group event
 	    userGroupEvent.setGroups(customGroups);
