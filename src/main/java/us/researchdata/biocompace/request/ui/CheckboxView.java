@@ -8,6 +8,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.model.SelectItem;
 import javax.faces.model.SelectItemGroup;
 
+
 @ManagedBean
 public class CheckboxView {
  

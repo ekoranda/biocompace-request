@@ -14,6 +14,7 @@ import org.imixs.workflow.faces.data.ViewController;
  * 
  * @author rsoika
  */
+
 @Named
 @ViewScoped
 public class ProposalController extends ViewController implements Serializable {
@@ -33,3 +34,5 @@ public class ProposalController extends ViewController implements Serializable {
 	}
 
 }
+
+

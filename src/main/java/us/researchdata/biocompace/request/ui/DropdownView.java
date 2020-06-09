@@ -10,6 +10,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 
+
 @ManagedBean
 @ViewScoped
 public class DropdownView implements Serializable {
@@ -62,4 +63,4 @@ public class DropdownView implements Serializable {
         return countries;
     }
 }
- 
+

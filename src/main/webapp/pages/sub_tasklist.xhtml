@@ -166,12 +166,12 @@
 				disabled="#{proposalController.endOfList}" 
 				value="#{global.next} &gt;&gt;">
 			</h:commandButton>
-			<ui:fragment
-				rendered="#{loginController.getUserNameList().contains('group.proposer')}" >
+			<!--  <ui:fragment
+				rendered="#{loginController.getUserNameList().contains('group.proposer')}" > -->
 				<h:commandButton actionListener="#{workflowController.create('1.1.0',1000,'')}"
 					action="/pages/workflow/workitem" value="Create New Request">
 				</h:commandButton>
-			</ui:fragment>
+			<!--  </ui:fragment> -->
 		</h:form>
 	</f:view>
 </f:subview>

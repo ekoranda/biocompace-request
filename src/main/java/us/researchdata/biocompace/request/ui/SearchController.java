@@ -15,6 +15,9 @@ import org.imixs.workflow.faces.data.ViewController;
  * 
  * @author rsoika
  */
+
+
+
 @Named
 @SessionScoped
 public class SearchController extends ViewController implements Serializable {

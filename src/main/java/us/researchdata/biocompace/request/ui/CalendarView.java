@@ -13,6 +13,7 @@ import javax.faces.context.FacesContext;
 import org.primefaces.PrimeFaces;
 import org.primefaces.event.SelectEvent;
 
+
 @ManagedBean
 public class CalendarView {
  
@@ -37,6 +38,7 @@ public class CalendarView {
  
         invalidDays = new ArrayList<>();
         invalidDays.add(0); /* the first day of week is disabled */
+
         invalidDays.add(3);
  
         minDate = new Date(today.getTime() - (365 * oneDay));

@@ -14,7 +14,9 @@ import javax.faces.model.SelectItemGroup;
  * 
  *@author ekoranda1
  */
+
 @ManagedBean
+
 public class TypeView {
 	
 	
@@ -26,7 +28,10 @@ public class TypeView {
     /**
      * Adds the different types to the array List
      */
+
     @PostConstruct
+    
+    
     public void init() {
         types = new ArrayList<String>();
         types.add("Data Presentation");
@@ -55,3 +60,5 @@ public class TypeView {
 
  
 }
+    
+   

@@ -49,7 +49,6 @@
 			<role-name>org.imixs.ACCESSLEVEL.AUTHORACCESS</role-name>
 			<role-name>org.imixs.ACCESSLEVEL.EDITORACCESS</role-name>
 			<role-name>org.imixs.ACCESSLEVEL.MANAGERACCESS</role-name>
-			<role-name>test</role-name>
 		</auth-constraint>
 	</security-constraint>
 
@@ -69,9 +68,7 @@
 	<security-role>
 		<role-name>org.imixs.ACCESSLEVEL.MANAGERACCESS</role-name>
 	</security-role>
-	<security-role>
-		<role-name>test</role-name>
-	</security-role>
+
 	
 
 	

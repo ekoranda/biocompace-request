@@ -1,6 +1,7 @@
 package us.researchdata.biocompace.request.ui;
 
 import java.io.Serializable;
+
 import java.util.logging.Logger;
 
 import javax.annotation.PostConstruct;
@@ -10,10 +11,14 @@ import javax.inject.Named;
 import org.imixs.workflow.faces.data.ViewController;
 
 /**
+ * 
  * Select the list of teams sorted by name
  * 
  * @author rsoika
  */
+
+
+
 @Named
 @ViewScoped
 public class TeamlistController extends ViewController implements Serializable {
@@ -33,3 +38,6 @@ public class TeamlistController extends ViewController implements Serializable {
 	}
 
 }
+
+
+

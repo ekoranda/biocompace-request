@@ -59,6 +59,8 @@ import org.imixs.workflow.exceptions.ProcessingErrorException;
  * @author rsoika
  * 
  */
+
+/**
 @Path("/")
 @Produces({ "text/html", "application/xml", "application/json" })
 @Stateless
@@ -78,6 +80,8 @@ public class LoadRestService {
 	 * @param requestBodyStream
 	 * @return
 	 */
+
+/**
 	@GET
 	@Path("/load")
 	public String getLoadTest(InputStream requestBodyStream, @QueryParam("modelversion") String modelversion,
@@ -111,3 +115,4 @@ public class LoadRestService {
 	}
 
 }
+*/

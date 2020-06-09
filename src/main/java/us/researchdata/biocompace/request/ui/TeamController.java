@@ -53,6 +53,8 @@ import org.imixs.workflow.faces.data.WorkflowEvent;
  * @author rsoika
  * 
  */
+
+
 @Named
 @SessionScoped
 public class TeamController implements Serializable {
@@ -70,6 +72,8 @@ public class TeamController implements Serializable {
 	 * @param workflowEvent
 	 * @throws AccessDeniedException
 	 */
+
+
 	public void onWorkflowEvent(@Observes WorkflowEvent workflowEvent) throws AccessDeniedException {
 		if (workflowEvent.getEventType() == WorkflowEvent.WORKITEM_BEFORE_PROCESS) {
 			String ref = workflowEvent.getWorkitem().getItemValueString("team");
@@ -87,6 +91,8 @@ public class TeamController implements Serializable {
 	 * 
 	 * @return
 	 */
+
+
 	public ArrayList<SelectItem> getTeamSelection() {
 
 		teamSelection = new ArrayList<SelectItem>();
@@ -104,3 +110,5 @@ public class TeamController implements Serializable {
 	}
 
 }
+
+

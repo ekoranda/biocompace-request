@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.security.Principal;
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,22 +15,12 @@ import javax.enterprise.event.Observes;
 
 import org.imixs.workflow.engine.UserGroupEvent;
 import org.ldaptive.BindConnectionInitializer;
-import org.ldaptive.BindOperation;
-import org.ldaptive.BindResponse;
 import org.ldaptive.ConnectionConfig;
-import org.ldaptive.ConnectionFactory;
-import org.ldaptive.Credential;
 import org.ldaptive.DefaultConnectionFactory;
 import org.ldaptive.LdapException;
 import org.ldaptive.SearchOperation;
 import org.ldaptive.SearchResponse;
-import org.ldaptive.SimpleBindRequest;
-import org.ldaptive.SingleConnectionFactory;
-import org.ldaptive.auth.AuthenticationRequest;
-import org.ldaptive.auth.AuthenticationResponse;
-import org.ldaptive.auth.Authenticator;
-import org.ldaptive.auth.SearchDnResolver;
-import org.ldaptive.auth.SimpleBindAuthenticationHandler;
+
 
 
 
@@ -43,44 +32,38 @@ import org.ldaptive.auth.SimpleBindAuthenticationHandler;
  * @author ekoranda1
  *
  */
+
+
 @Stateless()
 @DeclareRoles( "test")
 public class PopulateGroupMembers {
 	@Resource SessionContext ctx;
     public List<String> onUserGroupEvent(@Observes UserGroupEvent userGroupEvent) {
     	
-    	
+    	SearchOperation search = new SearchOperation(
+    			  DefaultConnectionFactory.builder()
+    			    .config(ConnectionConfig.builder()
+    			      .url("ldap://imixs.emilykoranda.com:389")
+    			      //.useStartTLS(true) later
+    			      .useStartTLS(false)
+    			      .connectionInitializers(BindConnectionInitializer.builder()
+    			        .dn("uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com")
+    			        .credential("YA8Ry29MgF1p8VpUhgap")
+    			        .build())
+    			      .build())
+    			    .build(),
+    			  "ou=people,o=CO,dc=emilykoranda,dc=com");
+    			try {
+    			SearchResponse response = search.execute("(uid=proposer1)", "isMemberOf", "sn");
+    			System.out.println(response.toString());
+    			}catch(LdapException e) {
+    				System.out.println("Error from search response");
+    				e.printStackTrace();
+    			}
     			
+    
     	
     	
-    	/**try {
-    	SingleConnectionFactory cf = new SingleConnectionFactory("ldap://imixs.emilykoranda.com:389/dc=emilykoranda,dc=com");
-    	cf.initialize();
-    	BindOperation bind = new BindOperation(cf);
-    	BindResponse res = bind.execute(SimpleBindRequest.builder()
-    			
-    	  .dn("uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com")
-    	  .password(new Credential("YA8Ry29MgF1p8VpUhgap"))   
-    	  
-    	  .build());
-
-    	if (res.isSuccess()) {
-    	  // bind succeeded
-    		System.out.println("res is successful");
-    	} else {
-    		System.out.println("res is not successful");
-    	  // bind failed
-    	}
-    	// use the connection factory to perform operations as uid=dfisher
-    	cf.close();
-    	}catch(LdapException e) {
-    		
-    		System.out.println("ERROR MADE IT HERE");
-    		e.printStackTrace();
-    	}
-    	
-    	
-    	*/
 		
     	
     	
@@ -155,6 +138,7 @@ public class PopulateGroupMembers {
         */
         
         
+
         
         // add the customGroup to the user's group event
 	    userGroupEvent.setGroups(customGroups);
@@ -162,3 +146,5 @@ public class PopulateGroupMembers {
 	    return customGroups;
 	}
 }
+
+
