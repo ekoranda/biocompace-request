@@ -12,14 +12,14 @@
 			<div style="display: inline-block; float: left; width: 40%; margin-right: 10px; ">
 			<!-- Biocompace requests header and link -->
 			<h2>
-				<h:link outcome="/pages/requests">
+				<h:link outcome="/pages/tasklist">
 					<h:outputText value="BioCompACE Requests" />
 				</h:link>
 			</h2> 
 			
 			<!-- Data table with condensed biocompace requests -->
 			<h:dataTable class="imixsdatatable" 
-				value="#{viewHandler.getData(proposalController)}" var="workitem">
+				value="#{viewHandler.getData(tasklistController)}" var="workitem">
 				
 				<!-- Requester's Name -->
 				<h:column>
@@ -27,7 +27,7 @@
 						<h:outputText value="Requester Name" />
 					</f:facet>
 					<h:link outcome="/pages/workflow/workitem">
-						<h:outputText value="#{workitem.item['name']}" />
+						<h:outputText value="#{workitem.item['subject']}" />
 						<f:param name="id" value="#{workitem.item['$uniqueid']}" />
 					</h:link>
 				</h:column>	
@@ -50,19 +50,19 @@
 			</h:dataTable>
 			
 			<!-- Command Buttons -->
-			<h:commandButton actionListener="#{viewHandler.back(proposalController)}"
-				disabled="#{!(proposalController.pageIndex>0)}"
+			<h:commandButton actionListener="#{viewHandler.back(TasklistController)}"
+				disabled="#{!(TasklistController.pageIndex>0)}"
 				value="&lt;&lt; #{global.prev}">
 			</h:commandButton>
-			<h:commandButton actionListener="#{viewHandler.forward(proposalController)}"
-				disabled="#{proposalController.endOfList}" 
+			<h:commandButton actionListener="#{viewHandler.forward(TasklistController)}"
+				disabled="#{TasklistController.endOfList}" 
 				value="#{global.next} &gt;&gt;">
 			</h:commandButton>
 			
 			<div style = "margin-right: 10px;">
 			<!-- Reviewers header and link -->
 			<h2>
-				<h:link outcome="/pages/config/reviewerslist">
+				<h:link outcome="/pages/config/teamlist">
 					<h:outputText value="List of Reviewers" />
 				</h:link>
 			</h2> 
@@ -70,6 +70,7 @@
 			<!-- Data table listing name of reviewers -->
 			<h:dataTable id="datatable_id" columns="7" class="imixsdatatable"
 					value="#{viewHandler.getData(teamlistController)}" var="record">
+
 					
 					<!-- Reviewer Name -->
 					<h:column>
@@ -134,8 +135,8 @@
 			
 			<!-- Data Table with technical review -->
 			
-			<h:dataTable class="imixsdatatable" 
-				value="#{viewHandler.getData(proposalController)}" var="workitem">
+			<h:dataTable class="imixsdatatable" style="width:50%"
+				value="#{viewHandler.getData(tasklistController)}" var="workitem">
 				
 				<!-- Requester's Name -->
 				<h:column>
@@ -143,7 +144,7 @@
 						<h:outputText value="Requester Name" />
 					</f:facet>
 					<h:link outcome="/pages/workflow/workitem">
-						<h:outputText value="#{workitem.item['name']}" />
+						<h:outputText value="#{workitem.item['subject']}" />
 						<f:param name="id" value="#{workitem.item['$uniqueid']}" />
 					</h:link>
 				</h:column>
@@ -205,12 +206,12 @@
 				</h:column>	
 			</h:dataTable>
 			<!-- Command Buttons -->
-			<h:commandButton actionListener="#{viewHandler.back(proposalController)}"
-				disabled="#{!(proposalController.pageIndex>0)}"
+			<h:commandButton actionListener="#{viewHandler.back(TasklistController)}"
+				disabled="#{!(TasklistController.pageIndex>0)}"
 				value="&lt;&lt; #{global.prev}">
 			</h:commandButton>
-			<h:commandButton actionListener="#{viewHandler.forward(proposalController)}"
-				disabled="#{proposalController.endOfList}" 
+			<h:commandButton actionListener="#{viewHandler.forward(TasklistController)}"
+				disabled="#{TasklistController.endOfList}" 
 				value="#{global.next} &gt;&gt;">
 			</h:commandButton>
 			</div>

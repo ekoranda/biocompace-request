@@ -6,19 +6,31 @@
 	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs"
 	template="/layout/template.xhtml">
 
-<!-- Workitem -->
-<!-- Controls the tabs when clicked on a workitem -->
+
+
 
 	<f:metadata>
 		<f:viewAction action="#{workflowController.onLoad()}" />
 	</f:metadata>
+
+
+
 	<ui:define name="content">
 		<f:view>
+
+
+
 			<h:form id="workitem_form_id">
+
+				<h1>#{workflowController.workitem.item['txtWorkflowGroup']}</h1>
+				<h2>#{workflowController.workitem.item['txtWorkflowStatus']}</h2>
+
+				<!-- Error  -->
+				<ui:include src="error.xhtml" />
+
+
 				<div class="imixs-tabs">
 					<ul>
-					
-						
 						<!-- Show Completed propsoals when user has turned in their proposal-->
 						<ui:fragment
 							rendered="#{(workflowController.workitem.item['$TaskID']>=1100 )}">
@@ -69,13 +81,8 @@
 							rendered="#{workflowController.workitem.item['$TaskID']>1500 }">
 								<li><a href="#tab-9">Review 3</a></li>
 						</ui:fragment>
-						
-
-					<!-- the pages to go along with the tabs -->
 					</ul>
-	
-					
-				  	<div id="tab-1">
+					<div id="tab-1">
 						<ui:include src="/pages/workflow/proposal.xhtml"/>
 					</div>
 					<div id="tab-2">
@@ -106,9 +113,11 @@
 					</div>
 				</div>
 
-				<!-- **** Workflow Actions & History ***** -->
+				<!-- **** Workflow Actions & History  ***** -->
 				<ui:include src="/pages/workflow/sub_workflowtoolbar.xhtml" />
+
 			</h:form>
 		</f:view>
 	</ui:define>
+
 </ui:composition>

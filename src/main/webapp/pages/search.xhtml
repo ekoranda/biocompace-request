@@ -25,10 +25,10 @@
 
 				<h:column>
 					<f:facet name="header">
-						<h:outputText value="#{workitem.item['name']}" />
+						<h:outputText value="#{global.summary}" />
 					</f:facet>
 						<h:link outcome="/pages/workflow/workitem">
-							<h:outputText value="#{workitem.item['name']}" />
+							<h:outputText value="#{workitem.item['$workflowSummary']}" />
 							<f:param name="id" value="#{workitem.item['$uniqueid']}" />
 					</h:link>
 

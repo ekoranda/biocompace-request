@@ -3,23 +3,18 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs"
 	xmlns:p="http://primefaces.org/ui"
-	xmlns:marty="http://java.sun.com/jsf/composite/marty" >
-	
-	<!-- The form that proposer's fill out -->
-	
-	<h:outputLabel value="#{workflowController.workitem.item['$TaskID']}" />
-	<ui:fragment 
-		rendered="#{workflowController.workitem.item['$TaskID'] == 1000 }" >
+	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs">
 
-			
-			<!-- Prroposer's name -->
+<ui:fragment 
+		rendered="#{workflowController.workitem.item['$TaskID'] == 1000 }" >
+	<!-- **** General info ***** -->
+	<!-- Prroposer's name -->
 			<dt style="clear: left; width: 400px;">Requester Name</dt>
 			<dd style="width: 600px;">
 				<h:inputText style="width: 20em;" required="true" 
-					value="#{workflowController.workitem.item['name']}"
-					id="name_id">
+					value="#{workflowController.workitem.item['subject']}"
+				id="subject_id">
 				</h:inputText>
 			</dd>
 			
@@ -141,9 +136,7 @@
             		</h:outputText>
     			</p:dialog>
     		</dd>
-		
-	</ui:fragment>
+</ui:fragment>
+
 </f:subview>
-
-
 

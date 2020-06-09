@@ -5,38 +5,82 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:i="http://xmlns.jcp.org/jsf/composite/imixs">
 
-	<h:form>
-		<ul>
+	<nav>
+		<h:form>
+			<!-- Sidebar -->
+			<div class="nav-sidebar">
 
-			<li><h:commandLink action="/pages/welcome?faces-redirect=true">Home</h:commandLink></li>
-			<c:if test="#{!loginController.authenticated}">
-				<li><h:commandLink action="home">Home</h:commandLink></li>
-			</c:if>
 
-			<li><h:commandLink action="/pages/requests?faces-redirect=true">BioCompACE Requests</h:commandLink></li>
-			<c:if test="#{!loginController.authenticated}">
-				<li><h:commandLink action="requests">BioCompACE Requests</h:commandLink></li>
-			</c:if>
-			
-			<ui:fragment
+				<div class="nav-title">
+					<h4>
+						<a href="#{facesContext.externalContext.requestContextPath}/">
+							<label>BiocompACE</label>
+						</a> <span class="pull-right typcn typcn-th-menu-outline"
+							style="margin-right: 10px; cursor: pointer; margin-bottom: 20px;"
+							onclick="togglemenu();"></span>
+					</h4>
+
+					<small><label>v5.2.0</label></small>
+
+
+				</div>
+				<hr />
+				<ul>
+					<li class="nav-item"><a
+						href="#{facesContext.externalContext.requestContextPath}/"><span
+							class="typcn typcn-home"></span><label>Home</label></a></li>
+
+
+					<ui:fragment
 				rendered="#{loginController.getUserNameList().contains('group.proposer')}" >
-				<li><h:commandLink action="/pages/sub_newRequest.xhtml">New BioCompACE Request</h:commandLink></li>
-			</ui:fragment>
-			
-			<ui:fragment
-				rendered="#{(loginController.getUserNameList().contains('group.reviewer') or loginController.getUserNameList().contains('group.manager'))}" >
-				<li><h:commandLink action="/pages/sub_admin?faces-redirect=true">BioCompACE Admin Dashboard</h:commandLink></li>
-			</ui:fragment>
-			
-			<ui:fragment
+					<li class="nav-item"><h:commandLink
+							actionListener="#{workflowController.create('1.1',1000,'')}"
+							action="/pages/workflow/workitem" ><span class="typcn typcn-document"></span><label>New request</label>
+							
+						</h:commandLink></li>
+						</ui:fragment>
+
+
+
+					
+					<li class="nav-item"><a
+						href="#{facesContext.externalContext.requestContextPath}/pages/tasklist.jsf"><span
+							class="typcn typcn-th-list"></span><label>Requests</label></a></li>
+
+				</ul>
+				<hr />
+				<ul>	
+					<ui:fragment
 				rendered="#{loginController.getUserNameList().contains('group.manager')}" >
-					<li><h:commandLink action="/pages/config/reviewerslist?faces-redirect=true">Reviewers</h:commandLink></li>
-			</ui:fragment>	
-			
-			
-				
-		</ul>
-	</h:form>
+					<li class="nav-item"><h:commandLink
+							action="/pages/config/teamlist?faces-redirect=true">
+							<span class="typcn typcn-group"></span>
+							<label>Reviewers</label>
+						</h:commandLink></li>
+					</ui:fragment>
+
+					<li class="nav-item"><a target="_blank"
+						href="#{facesContext.externalContext.requestContextPath}/api/model">
+							<span class="typcn typcn-flow-merge"></span><label>Models</label>
+					</a></li>
+
+					<hr />
+					<ui:fragment
+				rendered="#{(loginController.getUserNameList().contains('group.reviewer') or loginController.getUserNameList().contains('group.manager'))}" >
+					<li class="nav-item"><h:commandLink target="admin"
+						action="/pages/sub_admin?faces-redirect=true"> <span
+							class="typcn typcn-spanner"></span>
+							<label>Admin Dashboard</label>
+					</h:commandLink></li>
+					</ui:fragment>
+				</ul>
+
+
+
+			</div>
+		</h:form>
+	</nav>
+
 </ui:composition>
 
 

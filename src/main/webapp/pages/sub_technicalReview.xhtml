@@ -18,17 +18,15 @@
 
 			
 			
-			<h:dataTable class="imixsdatatable" style="width:50%"
-				value="#{viewHandler.getData(proposalController)}" var="workitem">
-			
+			<h:dataTable class="imixsdatatable" style="width:100%"
+				value="#{viewHandler.getData(tasklistController)}" var="workitem">
 				<h:column>
 					<f:facet name="header">
 						<h:outputText value="Requester Name" />
 					</f:facet>
 						<h:link outcome="/pages/workflow/workitem">
-							 <h:outputText value="#{workitem.item['name']}" />
-							<!--  <h:outputText value="#{workitem.item['subject']} "/> -->
-							<f:param name="id" value="#{workitem.item['$uniqueid']}" />
+						<h:outputText value="#{workitem.item['subject']}" /> 
+						<f:param name="id" value="#{workitem.item['$uniqueid']}" />
 					</h:link>
 				</h:column>
 				

@@ -1,3 +1,4 @@
+  
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- origin at X=0.0 Y=0.0 -->
 <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:imixs="http://www.imixs.org/bpmn2" xmlns:tl="http://www.w3.org/2001/XMLSchema" id="Definitions_1" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.5.0.Final-v20180515-1642-B1" targetNamespace="http://www.imixs.org/bpmn2">
@@ -57,7 +58,7 @@
           <imixs:value><![CDATA[<itemvalue>subject</itemvalue> ]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
-          <imixs:value>false</imixs:value>
+          <imixs:value>true</imixs:value>
         </imixs:item>
         <imixs:item name="keyownershipfields" type="xs:string"/>
         <imixs:item name="keyaddwritefields" type="xs:string">
@@ -96,7 +97,6 @@
           <imixs:value><![CDATA[<item name="approved_reviewer1" type="boolean">false</item>
 <item name="decision1">Declined</item>
 <item name="action">worklist</item>
-
 ]]></imixs:value>
         </imixs:item>
         <imixs:item name="txtmailsubject" type="xs:string">
@@ -300,8 +300,6 @@
           <imixs:value><![CDATA[<item name="approved_reviewer3" type="boolean">false</item>
 <item name="decision3">Declined</item>
 <item name="action">worklist</item>
-
-
 ]]></imixs:value>
         </imixs:item>
         <imixs:item name="rtfresultlog" type="CDATA">
@@ -368,7 +366,6 @@
           <imixs:value><![CDATA[<item name="approved_reviewer3" type="boolean">true</item>
 <item name="decision3">Approved</item>
 <item name="action">worklist</item>
-
 ]]></imixs:value>
         </imixs:item>
         <imixs:item name="rtfresultlog" type="CDATA">
@@ -542,7 +539,6 @@
           <imixs:value><![CDATA[<item name="approved_reviewer2" type="boolean">false</item>
 <item name="decision2">Declined</item>
 <item name="action">worklist</item>
-
 ]]></imixs:value>
         </imixs:item>
         <imixs:item name="txtmailsubject" type="xs:string">
@@ -599,7 +595,6 @@
           <imixs:value><![CDATA[<item name="approved_reviewer2" type="boolean">true</item>
 <item name="decision2">Approved</item>
 <item name="action">worklist</item>
-
 ]]></imixs:value>
         </imixs:item>
         <imixs:item name="txtmailsubject" type="xs:string">
