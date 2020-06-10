@@ -54,69 +54,8 @@ public class PopulateGroupMembers {
 	    Principal principal = ctx.getCallerPrincipal();
 	    String name = principal.getName();
 	    String uid = "(uid=" + name + ")";
-    	
-    	/**SearchOperation search = new SearchOperation(
-    			  DefaultConnectionFactory.builder()
-    			    .config(ConnectionConfig.builder()
-    			      .url("ldap://imixs.emilykoranda.com:389")
-    			      //.useStartTLS(true) later
-    			      .useStartTLS(false)
-    			      .connectionInitializers(BindConnectionInitializer.builder()
-    			        .dn("uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com")
-    			        .credential("YA8Ry29MgF1p8VpUhgap")
-    			        .build())
-    			      .build())
-    			    .build(),
-    			  "ou=people,o=CO,dc=emilykoranda,dc=com");
-    			try {
-    				
-    				SearchResponse response = search.execute(uid, "isMemberOf");
-    				for (LdapEntry entry : response.getEntries()) {
-    					System.out.println(entry.getAttribute("isMemberOf"));
-    					LdapAttribute attribute = entry.getAttribute("isMemberOf");
-    					String roleName;
-    					roleName = "group.";
-    					roleName = roleName.concat(attribute.getStringValue());
-    					roleName = roleName.replace(" ", "");
-    					customGroups.add(roleName);
-    				}
-    			}catch(LdapException e) {
-    				
-    			}
-    			
-    	
-	    */
-	    	
-    			/**PooledConnectionFactory cf = PooledConnectionFactory.builder()
-    					  .config(ConnectionConfig.builder()
-    					    .url("ldap://imixs.emilykoranda.com:389")
-    					    .connectionInitializers(BindConnectionInitializer.builder()
-    					      .dn("uid=imixs_user,ou=system,o=CO,dc=emilykoranda,dc=com")
-    					      .credential("YA8Ry29MgF1p8VpUhgap")
-    					      .build())
-    					    .build())
-    					  .min(1)
-    					  .max(10)
-    					  .build();
-    					cf.initialize();
-    					
-    					try {
-    					SearchOperation search = new SearchOperation(cf, "ou=people,o=CO,dc=emilykoranda,dc=com");
-    					SearchResponse response = search.execute(uid, "isMemberOf");
-    					LdapEntry entry = response.getEntry();
-    					LdapAttribute attribute = entry.getAttribute("isMemberOf");
-    					String roleName;
-    					roleName = "group.";
-    					roleName = roleName.concat(attribute.getStringValue());
-    					roleName = roleName.replace(" ", "");
-    					customGroups.add(roleName);
-    					System.out.println(roleName);
-    					
-    					}catch (LdapException e){
-    						cf.close();
-    					}
-    					
-    					*/
+    
+	    
     			
 	    PooledConnectionFactory cf = setUp.cf;
     	
@@ -130,7 +69,6 @@ public class PopulateGroupMembers {
 			roleName = "group.";
 			roleName = roleName.concat(attribute.getStringValue());
 			roleName = roleName.replace(" ", "");
-			System.out.println(roleName);
 			
 			}catch (LdapException e){
 				cf.close();

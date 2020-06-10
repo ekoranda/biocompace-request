@@ -8,6 +8,7 @@ import org.ldaptive.BindConnectionInitializer;
 import org.ldaptive.ConnectionConfig;
 import org.ldaptive.PooledConnectionFactory;
 
+
 @Startup
 @Singleton
 public class setUp {
@@ -22,9 +23,10 @@ public class setUp {
 				      .credential("YA8Ry29MgF1p8VpUhgap")
 				      .build())
 				    .build())
-				  .min(1)
+				  .min(5)
 				  .max(10)
 				  .build();
 				cf.initialize();
     }
 }
+

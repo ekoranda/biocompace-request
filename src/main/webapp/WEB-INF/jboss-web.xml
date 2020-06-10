@@ -9,7 +9,7 @@
 	</resource-ref>
 
 	<default-encoding>UTF-8</default-encoding>
-	<context-root>/biocompace-request</context-root>
+	<context-root>/biocompace</context-root>
 	<security-domain>imixsrealm</security-domain>
 
 </jboss-web>
