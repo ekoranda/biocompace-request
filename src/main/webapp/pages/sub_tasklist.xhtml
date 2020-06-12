@@ -13,6 +13,9 @@
 		<h:form>
 			<h2>#{global.worklist}</h2>
 
+			
+			
+
 			<h:dataTable class="imixsdatatable" style="width:100%"
 				value="#{viewHandler.getData(tasklistController)}" var="workitem">
 				
@@ -25,7 +28,7 @@
 					<!-- Only the creator of the proposal can open up the proposal to edit it -->
 					<!-- A reviewer can open the proposal, but workflow does not let them edit it -->
 					<ui:fragment 
-							rendered="#{(loginController.userPrincipal == workitem.item['$creator'] or (loginController.getUserNameList().contains('group.reviewer') or loginController.getUserNameList().contains('group.manager')))}">
+							rendered="#{loginController.userPrincipal == workitem.item['$creator'] or loginController.getUserNameList().contains(userGroupNames.reviewerName) or loginController.getUserNameList().contains(userGroupNames.managerName)}">
 						<h:link outcome="/pages/workflow/workitem">
 						<h:outputText value="#{workitem.item['subject']}" /> 
 						<f:param name="id" value="#{workitem.item['$uniqueid']}" />
@@ -33,7 +36,7 @@
 					</ui:fragment>
 					<!-- If a user is not the creator or a reviewer, they can no open up the link -->
 					<ui:fragment
-						rendered="#{!(loginController.userPrincipal == workitem.item['$creator'] or (loginController.getUserNameList().contains('group.reviewer') or loginController.getUserNameList().contains('group.manager')))}">
+						rendered="#{!(loginController.userPrincipal == workitem.item['$creator'] or loginController.getUserNameList().contains(userGroupNames.reviewerName) or loginController.getUserNameList().contains(userGroupNames.managerName))}">
 						<h:outputText value="#{workitem.item['subject']}" />
 					</ui:fragment>
 				</h:column>	
@@ -148,7 +151,7 @@
 				<!-- WorkFlow Status -->
 				<!-- Proposers can not see workflow Status -->
 				<ui:fragment
-					rendered="{! loginController.getUserNameList().contains('group.proposer')}" >
+					rendered="{! loginController.getUserNameList().contains(userGroupNames.proposerName)}" >
 					<h:column>
 						<f:facet name="header">
 							<h:outputText value="Workflow Status" />

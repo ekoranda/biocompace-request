@@ -1,19 +1,29 @@
 package us.researchdata.biocompace.request.ui;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.security.Identity;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.annotation.security.DeclareRoles;
 import javax.ejb.SessionContext;
 import javax.ejb.Stateless;
 import javax.enterprise.event.Observes;
+import javax.faces.bean.ManagedBean;
+
+import java.util.Properties;
+
 
 import org.imixs.workflow.engine.UserGroupEvent;
+import org.imixs.workflow.faces.util.LoginController;
 import org.ldaptive.BindConnectionInitializer;
 import org.ldaptive.BindOperation;
 import org.ldaptive.BindResponse;
@@ -41,50 +51,55 @@ import org.ldaptive.SingleConnectionFactory;
  *
  */
 
-
+@ManagedBean
 @Stateless()
-@DeclareRoles( "test")
 public class PopulateGroupMembers {
+	
+
 	@Resource SessionContext ctx;
     public List<String> onUserGroupEvent(@Observes UserGroupEvent userGroupEvent) {
+    	
+    	
     	
     	// list that contains new groups for the current user
         List<String> customGroups = new ArrayList<String>();
      // get the name of the current user
 	    Principal principal = ctx.getCallerPrincipal();
 	    String name = principal.getName();
-	    String uid = "(uid=" + name + ")";
+	    String ldapFilter = "(uid=" + name + ")";
     
 	    
     			
 	    PooledConnectionFactory cf = setUp.cf;
     	
 	    
-	    try {
-			SearchOperation search = new SearchOperation(cf, "ou=people,o=CO,dc=emilykoranda,dc=com");
-			SearchResponse response = search.execute(uid, "isMemberOf");
+	    try {	
+	    	
+	    	Properties prop = new Properties();
+	    	prop.load(new FileInputStream("standalone/configuration/config.properties"));
+	    	String bindDN = prop.getProperty("Base_DN");
+	    	String filter = prop.getProperty("filter");
+	    	
+			SearchOperation search = new SearchOperation(cf, bindDN);
+			SearchResponse response = search.execute(ldapFilter, filter);
 			LdapEntry entry = response.getEntry();
-			LdapAttribute attribute = entry.getAttribute("isMemberOf");
+			// make multiple groups or if there are no groups
+			LdapAttribute attribute = entry.getAttribute(filter);
 			String roleName;
 			roleName = "group.";
 			roleName = roleName.concat(attribute.getStringValue());
 			roleName = roleName.replace(" ", "");
-			
-			}catch (LdapException e){
+			customGroups.add(roleName);
+		}catch (LdapException e){
 				cf.close();
-			}
+		}catch(Exception e){
+				e.printStackTrace();
+		}
 			
 			
 		
-    	
-    	
-    	
-        
-        
-       
-	    
-	    
-	    
+
+	    /**
 	    // hardcode into ldap directory to do a search for users
 	    
     	// create buffer for csvFile
@@ -116,12 +131,17 @@ public class PopulateGroupMembers {
             e.printStackTrace();
         }
         
+        */
+	    
         
         // add the customGroup to the user's group event
 	    userGroupEvent.setGroups(customGroups);
-
 	    return customGroups;
 	}
+    
+    
+    
+    
 }
 
 

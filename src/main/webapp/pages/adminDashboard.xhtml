@@ -90,7 +90,7 @@
 					
 					<!-- Only manager can edit and delete reviewers -->
 					<ui:fragment
-						rendered="#{loginController.getUserNameList().contains('group.manager')}" >
+						rendered="#{loginController.getUserNameList().contains(userGroupNames.managerName)}" >
 						
 						<!-- edit -->
 						<h:column>

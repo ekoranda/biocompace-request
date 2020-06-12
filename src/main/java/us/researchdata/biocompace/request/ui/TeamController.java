@@ -37,6 +37,7 @@ import org.imixs.workflow.ItemCollection;
 import org.imixs.workflow.engine.DocumentService;
 import org.imixs.workflow.exceptions.AccessDeniedException;
 import org.imixs.workflow.faces.data.WorkflowEvent;
+import org.imixs.workflow.faces.util.LoginController;
 
 /**
  * This backing bean is an example how to interact with the EntityService to
@@ -83,6 +84,7 @@ public class TeamController implements Serializable {
 				workflowEvent.getWorkitem().setItemValue("_teamName", team.getItemValueString("txtname"));
 			}
 		}
+		
 
 	}
 

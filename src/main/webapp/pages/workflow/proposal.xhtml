@@ -12,6 +12,7 @@
 	<!-- Only visible when proposer has submitted their proposal -->
 	<ui:fragment 
 		rendered="#{(workflowController.workitem.item['$TaskID']>=1100 )  }">
+		
 		<table class="imixsdatatable" >
 		
 			<!-- Requester's name -->
@@ -21,8 +22,9 @@
 					<h:outputText style="witdh: 20em;" required="true" 
 						value="#{workflowController.workitem.item['subject']}"
 						id="subject_id">
+						</h:outputText>
 						
-					</h:outputText>
+					
 				</td>
 			</tr>
 		

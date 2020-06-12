@@ -12,6 +12,7 @@
 			<base-name>bundle.global</base-name>
 			<var>global</var>
 		</resource-bundle>
+			  
 	</application>
 
 

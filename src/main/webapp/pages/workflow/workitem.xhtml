@@ -46,9 +46,9 @@
 						<!-- Always show Files page-->
 						<li><a href="#tab-3">Files</a></li>
 						
-						<!--  Show reviewer 1 page when user has submitted their finished proposal, and only a revier can see it-->
+						<!--  Show reviewer 1 page when user has submitted their finished proposal, and only a reviewer can see it-->
 						<ui:fragment 
-							rendered="#{(workflowController.workitem.item['$TaskID']==1100 and loginController.getUserNameList().contains('group.reviewer'))}">
+							rendered="#{(workflowController.workitem.item['$TaskID']==1100 and loginController.getUserNameList().contains(userGroupNames.reviewerName))}">
 								<li><a href="#tab-4">Reviewer 1</a></li>
 						</ui:fragment>
 						
@@ -60,7 +60,7 @@
 						
 						<!-- Show reviewer 2 tab when review 1 is finished -->
 						<ui:fragment 
-							rendered="#{(workflowController.workitem.item['$TaskID']==1300 and loginController.getUserNameList().contains('group.reviewer')) }">
+							rendered="#{(workflowController.workitem.item['$TaskID']==1300 and loginController.getUserNameList().contains(userGroupNames.reviewerName)) }">
 								<li><a href="#tab-6">Reviewer 2</a></li>
 						</ui:fragment>
 						
@@ -72,7 +72,7 @@
 						
 						<!-- Show reviewer 3 tab when review 2 is finished -->
 						<ui:fragment 
-							rendered="#{(workflowController.workitem.item['$TaskID']==1500 and loginController.getUserNameList().contains('group.reviewer'))}">
+							rendered="#{(workflowController.workitem.item['$TaskID']==1500 and loginController.getUserNameList().contains(userGroupNames.reviewerName))}">
 								<li><a href="#tab-8">Reviewer 3</a></li>
 						</ui:fragment>
 						
