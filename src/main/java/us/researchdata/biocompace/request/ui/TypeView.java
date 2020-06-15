@@ -33,7 +33,6 @@ public class TypeView {
     
     
     public void init() {
-    	System.out.println("MADE IT HERE to type views");
         types = new ArrayList<String>();
         types.add("Data Presentation");
         types.add("Next Gen Sequencing");

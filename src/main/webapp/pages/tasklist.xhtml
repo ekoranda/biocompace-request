@@ -9,10 +9,20 @@
 	<ui:define name="content">
 		<h1>BiocompACE Requests</h1>
 		
+		
+		<ui:fragment
+			rendered="#{! (loginController.getUserNameList().contains(userGroupNames.proposerName))}">
 		<!-- Show task list -->
 		<c:if test="#{loginController.authenticated}">
 			<ui:include src="/pages/sub_tasklist.xhtml" />
 		</c:if>
+		</ui:fragment>
+		
+		<ui:fragment
+			rendered="#{loginController.getUserNameList().contains(userGroupNames.proposerName)}">
+			
+			<ui:include src = "/pages/thankyou.xhtml" />
+		</ui:fragment>
 		
 	</ui:define>
 </ui:composition>

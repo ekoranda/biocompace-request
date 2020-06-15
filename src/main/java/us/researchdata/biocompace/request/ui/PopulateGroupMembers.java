@@ -81,15 +81,27 @@ public class PopulateGroupMembers {
 	    	String filter = prop.getProperty("filter");
 	    	
 			SearchOperation search = new SearchOperation(cf, bindDN);
+			try {
 			SearchResponse response = search.execute(ldapFilter, filter);
 			LdapEntry entry = response.getEntry();
 			// make multiple groups or if there are no groups
+			
 			LdapAttribute attribute = entry.getAttribute(filter);
-			String roleName;
-			roleName = "group.";
-			roleName = roleName.concat(attribute.getStringValue());
-			roleName = roleName.replace(" ", "");
-			customGroups.add(roleName);
+			ArrayList<String> roleNames = new ArrayList<String>();
+			if ( ! attribute.getStringValues().isEmpty()) {
+				roleNames.addAll(attribute.getStringValues());
+				
+				for (String role: roleNames) {
+					String roleName;
+					roleName = "group.";
+					roleName = roleName.concat(role);
+					roleName = roleName.replace(" ", "");
+					customGroups.add(roleName);
+				}
+			}
+		}catch(NullPointerException e) {
+		}
+			
 		}catch (LdapException e){
 				cf.close();
 		}catch(Exception e){

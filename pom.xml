@@ -184,7 +184,7 @@
 
 									<target>
 										<exec executable="docker">
-											<arg value="build" />
+											<arg value="build"/>
 											<arg value="-f" />
 											<arg value="Dockerfile-TomEE" />
 											<arg value="-t" />
