@@ -50,12 +50,12 @@
 			</h:dataTable>
 			
 			<!-- Command Buttons -->
-			<h:commandButton actionListener="#{viewHandler.back(TasklistController)}"
-				disabled="#{!(TasklistController.pageIndex>0)}"
+			<h:commandButton actionListener="#{viewHandler.back(tasklistController)}"
+				disabled="#{!(tasklistController.pageIndex>0)}"
 				value="&lt;&lt; #{global.prev}">
 			</h:commandButton>
-			<h:commandButton actionListener="#{viewHandler.forward(TasklistController)}"
-				disabled="#{TasklistController.endOfList}" 
+			<h:commandButton actionListener="#{viewHandler.forward(tasklistController)}"
+				disabled="#{tasklistController.endOfList}" 
 				value="#{global.next} &gt;&gt;">
 			</h:commandButton>
 			
@@ -206,12 +206,12 @@
 				</h:column>	
 			</h:dataTable>
 			<!-- Command Buttons -->
-			<h:commandButton actionListener="#{viewHandler.back(TasklistController)}"
-				disabled="#{!(TasklistController.pageIndex>0)}"
+			<h:commandButton actionListener="#{viewHandler.back(tasklistController)}"
+				disabled="#{!(tasklistController.pageIndex>0)}"
 				value="&lt;&lt; #{global.prev}">
 			</h:commandButton>
-			<h:commandButton actionListener="#{viewHandler.forward(TasklistController)}"
-				disabled="#{TasklistController.endOfList}" 
+			<h:commandButton actionListener="#{viewHandler.forward(tasklistController)}"
+				disabled="#{tasklistController.endOfList}" 
 				value="#{global.next} &gt;&gt;">
 			</h:commandButton>
 			</div>

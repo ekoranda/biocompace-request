@@ -425,7 +425,7 @@
       <bpmn2:messageEventDefinition id="MessageEventDefinition_7"/>
     </bpmn2:intermediateCatchEvent>
     <bpmn2:sequenceFlow id="SequenceFlow_20" sourceRef="EventBasedGateway_2" targetRef="IntermediateCatchEvent_11"/>
-    <bpmn2:task id="Task_6" imixs:processid="1700" name="System administrator reviewing approved project">
+    <bpmn2:task id="Task_6" imixs:processid="1700" name="Proposal Approved">
       <bpmn2:extensionElements>
         <imixs:item name="txtworkflowsummary" type="xs:string">
           <imixs:value><![CDATA[<itemvalue>subject</itemvalue> ]]></imixs:value>
@@ -507,7 +507,7 @@
     </bpmn2:endEvent>
     <bpmn2:sequenceFlow id="SequenceFlow_27" sourceRef="Task_8" targetRef="EndEvent_4"/>
     <bpmn2:sequenceFlow id="SequenceFlow_7" sourceRef="IntermediateCatchEvent_4" targetRef="Task_4"/>
-    <bpmn2:task id="Task_8" imixs:processid="1800" name="Proposal solved by system administrator">
+    <bpmn2:task id="Task_8" imixs:processid="1800" name="Proposal Closed">
       <bpmn2:extensionElements>
         <imixs:item name="txtworkflowsummary" type="xs:string">
           <imixs:value><![CDATA[<itemvalue>subject</itemvalue> ]]></imixs:value>
@@ -660,7 +660,7 @@
     <bpmn2:sequenceFlow id="SequenceFlow_29" sourceRef="IntermediateCatchEvent_8" targetRef="Task_5"/>
     <bpmn2:sequenceFlow id="SequenceFlow_31" sourceRef="IntermediateCatchEvent_3" targetRef="Task_4"/>
     <bpmn2:sequenceFlow id="SequenceFlow_32" sourceRef="IntermediateCatchEvent_6" targetRef="Task_5"/>
-    <bpmn2:task id="Task_10" imixs:processid="1900" name="Proposal Declined">
+    <bpmn2:task id="Task_10" imixs:processid="1900" name="Proposal Closed">
       <bpmn2:extensionElements>
         <imixs:item name="keyupdateacl" type="xs:boolean">
           <imixs:value>true</imixs:value>
@@ -693,7 +693,7 @@
     <bpmn2:sequenceFlow id="SequenceFlow_6" sourceRef="ExclusiveGateway_4" targetRef="Task_6">
       <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_5">((workitem.approved_reviewer1 &amp;&amp; workitem.approved_reviewer1[0]==true) &amp;&amp; (workitem.approved_reviewer2 &amp;&amp; workitem.approved_reviewer2[0]==true)) || ((workitem.approved_reviewer1 &amp;&amp; workitem.approved_reviewer1[0]==true) &amp;&amp; (workitem.approved_reviewer3 &amp;&amp; workitem.approved_reviewer3[0]==true)) || ((workitem.approved_reviewer2 &amp;&amp; workitem.approved_reviewer2[0]==true)&amp;&amp;(workitem.approved_reviewer3 &amp;&amp; workitem.approved_reviewer3[0]==true))</bpmn2:conditionExpression>
     </bpmn2:sequenceFlow>
-    <bpmn2:task id="Task_3" imixs:processid="2000" name="System Administrator reviwing Declined Project">
+    <bpmn2:task id="Task_3" imixs:processid="2000" name="Proposal Declined">
       <bpmn2:extensionElements>
         <imixs:item name="keyupdateacl" type="xs:boolean">
           <imixs:value>true</imixs:value>
@@ -882,7 +882,7 @@
       <bpmndi:BPMNShape id="BPMNShape_Task_6" bpmnElement="Task_6" isExpanded="true">
         <dc:Bounds height="50.0" width="110.0" x="1308.0" y="134.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_40">
-          <dc:Bounds height="33.0" width="88.0" x="1319.0" y="142.0"/>
+          <dc:Bounds height="11.0" width="77.0" x="1324.0" y="153.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_IntermediateCatchEvent_13" bpmnElement="IntermediateCatchEvent_13">
@@ -900,7 +900,7 @@
       <bpmndi:BPMNShape id="BPMNShape_Task_8" bpmnElement="Task_8" isExpanded="true">
         <dc:Bounds height="50.0" width="110.0" x="1550.0" y="134.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_19">
-          <dc:Bounds height="22.0" width="86.0" x="1562.0" y="148.0"/>
+          <dc:Bounds height="11.0" width="67.0" x="1571.0" y="153.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_EventBasedGateway_3" bpmnElement="EventBasedGateway_3" isMarkerVisible="true">
@@ -924,7 +924,7 @@
       <bpmndi:BPMNShape id="BPMNShape_Task_10" bpmnElement="Task_10" isExpanded="true">
         <dc:Bounds height="50.0" width="110.0" x="1453.0" y="47.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_68">
-          <dc:Bounds height="11.0" width="74.0" x="1471.0" y="66.0"/>
+          <dc:Bounds height="11.0" width="67.0" x="1474.0" y="66.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_EndEvent_5" bpmnElement="EndEvent_2">
@@ -942,7 +942,7 @@
       <bpmndi:BPMNShape id="BPMNShape_Task_3" bpmnElement="Task_3" isExpanded="true">
         <dc:Bounds height="50.0" width="110.0" x="1240.0" y="63.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_9">
-          <dc:Bounds height="22.0" width="110.0" x="1240.0" y="77.0"/>
+          <dc:Bounds height="11.0" width="74.0" x="1258.0" y="82.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_IntermediateCatchEvent_2" bpmnElement="IntermediateCatchEvent_2">

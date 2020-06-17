@@ -21,6 +21,10 @@ body, html {
 	display: block;
 }
 
+.myFileUpload .imixsFileUpload_control, .imixsFileUpload_delete {
+  display:none;
+}
+
 .loading {
 	background: rgba(255, 255, 255, .8) url(../icons/ajax-loader.gif) 50%
 		50% no-repeat;

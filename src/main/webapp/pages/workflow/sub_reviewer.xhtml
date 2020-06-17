@@ -34,6 +34,12 @@
 				<h:inputTextarea class="imixs-editor"
 					value="#{workflowController.workitem.item['reviewOne']}" />
 			</dd>
+			
+			<dd>
+			<h:link outcome="#{facesContext.externalContext.requestContextPath}/api/workflow/workitem/#{workflowController.workitem.item['$uniqueid']}">
+    			<h:outputText value="FILE" /> 
+    		</h:link>
+			</dd>
 		</ui:fragment>
 
 </f:subview>
