@@ -7,8 +7,24 @@
 
 
 
-	<f:view>
+	<f:view >
 	<h3>​Thank you for submitting your request to BioCompACE applications!  </h3>
+	
+
+ 
+	  <h:form id="form" action="#{editController.setInput(LoginController.getUserPrincipal())}">
+		<c:set var="workitem" value="#{viewHandler.getData(editController).get('0')}"  />
+    	<h:link outcome="/pages/workflow/workitem">
+    		<h:outputText value="Edit Your Proposal" /> 
+    		<f:param name="id" value="#{workitem.item['$uniqueid']}" />
+    	</h:link>
+    	
+	</h:form>	
+	
+
+	
+	
+			
 	</f:view>
 
 

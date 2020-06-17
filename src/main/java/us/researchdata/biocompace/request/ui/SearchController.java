@@ -49,8 +49,10 @@ public class SearchController extends ViewController implements Serializable {
 
 	public void search() {
 		this.setQuery("(type:\"workitem\" OR type:\"workitemarchive\") AND ("+input+"*)");
-
 		logger.info("serach query=" + this.getQuery());
+		
 	}
+	
+	
 
 }
