@@ -23,66 +23,157 @@
 			<h:dataTable class="imixsdatatable" style="width:100%"
 				value="#{viewHandler.getData(searchController)}" var="workitem">
 
+				<!-- Requester's Name -->
 				<h:column>
 					<f:facet name="header">
-						<h:outputText value="#{global.summary}" />
+						<h:outputText value="Requester Name" />
 					</f:facet>
+					<!-- Only the creator of the proposal can open up the proposal to edit it -->
+					<!-- A reviewer can open the proposal, but workflow does not let them edit it -->
+					<ui:fragment 
+							rendered="#{loginControllere.userPrincipal == workitem.item['$creator'] or loginController.getUserNameList().contains(userGroupNames.reviewerName) or loginController.getUserNameList().contains(userGroupNames.managerName)}">
 						<h:link outcome="/pages/workflow/workitem">
-							<h:outputText value="#{workitem.item['$workflowSummary']}" />
-							<f:param name="id" value="#{workitem.item['$uniqueid']}" />
-					</h:link>
-
-				</h:column>
-
+						<h:outputText value="#{workitem.item['subject']}" /> 
+						<f:param name="id" value="#{workitem.item['$uniqueid']}" />
+						</h:link>
+					</ui:fragment>
+					<!-- If a user is not the creator or a reviewer, they can no open up the link -->
+					<ui:fragment
+						rendered="#{!(loginController.userPrincipal == workitem.item['$creator'] or loginController.getUserNameList().contains(userGroupNames.reviewerName) or loginController.getUserNameList().contains(userGroupNames.managerName))}">
+						<h:outputText value="#{workitem.item['subject']}" />
+					</ui:fragment>
+				</h:column>	
+				
+				
+				<!-- Requester's Email -->
 				<h:column>
 					<f:facet name="header">
-						<h:outputText value="#{global.owner}" />
+						<h:outputText value="Requester Email" />
 					</f:facet>
-					<ui:repeat var="owner" value="#{workitem.itemList['namOwner']}">
-						<h:outputText value="#{owner}" />
-						<br />
-					</ui:repeat>
+						<h:outputText value="#{workitem.item['email']}" />
 				</h:column>
-
+				
+				
+				<!-- Mobile Number -->
 				<h:column>
 					<f:facet name="header">
-						<h:outputText value="#{global.created}" />
+						<h:outputText value="Mobile Number" />
 					</f:facet>
-					<h:outputText value="#{workitem.item['$created']}">
-						<f:convertDateTime timeZone="CET" type="date" dateStyle="medium" />
+						<h:outputText value="#{workitem.item['phone']}" />
+				</h:column>
+				
+				
+				<!-- Country Code -->
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Country Code" />
+					</f:facet>
+						<h:outputText value="#{workitem.item['countryCode']}" />
+				</h:column>
+				
+				
+				<!-- Requester's Institution -->
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Requester's Institution" />
+					</f:facet>
+						<h:outputText value="#{workitem.item['institution']}" />
+				</h:column>
+				
+				
+				<!-- Additional Team Members -->
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Name of Additional Team Members Requiring Access" />
+					</f:facet>
+					<!-- Only list members if there are additional members that exist -->
+					<ui:fragment 
+						rendered="#{!empty workitem.itemListArray['members']}">
+						<!-- Creates a data table to list out the members -->
+						<h:dataTable var="log"
+						value="#{workitem.itemListArray['members']}">
+							<h:column>
+								<h:outputText value="#{log}"/>
+							</h:column>
+						</h:dataTable>
+					</ui:fragment>
+				</h:column>
+				
+				
+				<!-- Research Title -->
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Research Title" />
+					</f:facet>
+						<h:outputText value="#{workitem.item['title']}" />
+				</h:column>
+				
+				
+				<!-- Start Date -->
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Proposed Start Date" />
+					</f:facet>
+			 		<h:outputText value="#{workitem.item['startDate']}">
+						<f:convertDateTime type="date" dateStyle="full"/>  
 					</h:outputText>
-					<h:outputText value=" #{global.by} #{workitem.item['$creator']}" />
 				</h:column>
+					
 
-
+				<!-- End Date -->
 				<h:column>
 					<f:facet name="header">
-						<h:outputText value="#{global.modified}" />
+						<h:outputText value="Proposed End Date" />
 					</f:facet>
-					<h:outputText value="#{workitem.item['$modified']}">
-						<f:convertDateTime timeZone="CET" type="both" dateStyle="medium" />
+					<h:outputText value="#{workitem.item['endDate']}">
+						<f:convertDateTime type="date" dateStyle="full"/>  
 					</h:outputText>
-
-					<h:outputText
-						value=" #{global.by} #{workitem.item['$editor']}" />
 				</h:column>
-
-
+				
+				
+				<!-- Additional Tools-->
 				<h:column>
 					<f:facet name="header">
-						<h:outputText value="#{global.status}" />
+						<h:outputText value="Request for Additional Tools" />
 					</f:facet>
-					<h:outputText value="#{workitem.item['$workflowstatus']}" />
+					<!-- Only if there exists tools -->
+					<ui:fragment 
+						rendered="#{!empty workitem.itemList['tools']}">
+						<!-- DataTable to show all of the tools -->
+						<h:dataTable var="log"
+							value="#{workitem.itemListArray['tools']}">
+							<h:column>
+								<h:outputText value="#{log}"/>
+							</h:column>
+					
+						</h:dataTable>			
+					</ui:fragment>
 				</h:column>
-
-				<h:column>
-					<h:commandLink value="#{global.delete}"
-						action="#{workflowController.delete(workitem.item['$uniqueid'],'worklist')}"
-						rendered="#{workitem.item['$isAuthor']}">
-					</h:commandLink>
-				</h:column>
+				
+				
+				<!-- WorkFlow Status -->
+				<!-- Proposers can not see workflow Status -->
+				<ui:fragment
+					rendered="{! loginController.getUserNameList().contains(userGroupNames.proposerName)}" >
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Workflow Status" />
+						</f:facet>
+						<h:outputText value="#{workitem.item['txtworkflowstatus']}" />
+					</h:column>
+				</ui:fragment>
 
 			</h:dataTable>
+			
+			<h:commandButton actionListener="#{viewHandler.back(searchController)}"
+				disabled="#{!(tasklistController.pageIndex>0)}"
+				value="&lt;&lt; #{global.prev}">
+			</h:commandButton>
+			<h:commandButton actionListener="#{viewHandler.forward(searchController)}"
+				disabled="#{tasklistController.endOfList}" 
+				value="#{global.next} &gt;&gt;">
+			</h:commandButton>
+
 
 
 		

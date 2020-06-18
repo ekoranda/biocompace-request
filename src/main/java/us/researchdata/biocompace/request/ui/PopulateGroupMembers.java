@@ -66,6 +66,7 @@ public class PopulateGroupMembers {
      // get the name of the current user
 	    Principal principal = ctx.getCallerPrincipal();
 	    String name = principal.getName();
+	    //make configurable 
 	    String ldapFilter = "(uid=" + name + ")";
     
 	    
@@ -78,6 +79,7 @@ public class PopulateGroupMembers {
 	    	Properties prop = new Properties();
 	    	prop.load(new FileInputStream("standalone/configuration/config.properties"));
 	    	String bindDN = prop.getProperty("Base_DN");
+	    	//group attribute
 	    	String filter = prop.getProperty("filter");
 	    	
 			SearchOperation search = new SearchOperation(cf, bindDN);
