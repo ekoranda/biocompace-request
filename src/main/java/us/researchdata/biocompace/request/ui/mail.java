@@ -66,26 +66,31 @@ public class mail implements Serializable {
 	@EJB
 	DocumentService documentSerivce;
 
-	/**
-	 * Translate team ref into the team name (_teamName)
-	 * 
-	 * @param workflowEvent
-	 * @throws AccessDeniedException
-	 */
+
+
 
 
 	public void onWorkflowEvent(@Observes WorkflowEvent workflowEvent) throws AccessDeniedException {
-		if (workflowEvent.getEventType() == WorkflowEvent.WORKITEM_BEFORE_PROCESS) {
-			ArrayList<String> emailRecipients = new ArrayList<String>();
-			emailRecipients.add("ekoranda@researchdata.us");
-			
-			String testEmail = "ekoranda@researchdata.us";
-
-			
-		}
-		System.out.println("HERE");
 		
-		workflowEvent.getWorkitem().setItemValue("mailRecipients", "ekoranda@researchdata.us");
+		
+		
+		
+		List<String> reviewerEmail = new ArrayList<String>();
+		reviewerEmail.add("imixs.reviewer@gmail.com");
+		workflowEvent.getWorkitem().setItemValue("group.reviewerEmail", reviewerEmail);
+		
+		
+		
+		List<String> userEmail = workflowEvent.getWorkitem().getItemValue("email");
+		workflowEvent.getWorkitem().setItemValue("group.proposerEmail", userEmail);
+		
+		
+		List<String> managerEmail = new ArrayList<String>();
+      	managerEmail.add("imixs.manager@gmail.com");
+      	workflowEvent.getWorkitem().setItemValue("group.managerEmail", managerEmail);
+
+		
+		
 		
 
 	}

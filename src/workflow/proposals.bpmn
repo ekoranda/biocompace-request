@@ -12,12 +12,17 @@
       <imixs:value><![CDATA[org.imixs.workflow.engine.plugins.MailPlugin]]></imixs:value>
       <imixs:value><![CDATA[org.imixs.workflow.engine.plugins.RulePlugin]]></imixs:value>
     </imixs:item>
-    <imixs:item name="txtfieldmapping" type="xs:string"/>
+    <imixs:item name="txtfieldmapping" type="xs:string">
+      <imixs:value><![CDATA[reviewEmail | group.reviewerEmail ]]></imixs:value>
+      <imixs:value><![CDATA[managerEmail | group.managerEmail]]></imixs:value>
+      <imixs:value><![CDATA[proposerEmail | group.proposerEmail]]></imixs:value>
+    </imixs:item>
     <imixs:item name="txtworkflowmodelversion" type="xs:string">
       <imixs:value><![CDATA[1.1.0]]></imixs:value>
     </imixs:item>
   </bpmn2:extensionElements>
   <bpmn2:process id="proposals" name="Proposals" isExecutable="false">
+    <bpmn2:documentation id="Documentation_50"><![CDATA[<itemvalue >mailRecipients</itemvalue>]]></bpmn2:documentation>
     <bpmn2:startEvent id="StartEvent_1" name="Start ">
       <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
     </bpmn2:startEvent>
@@ -99,13 +104,14 @@
 ]]></imixs:value>
         </imixs:item>
         <imixs:item name="txtmailsubject" type="xs:string">
-          <imixs:value><![CDATA[]]></imixs:value>
+          <imixs:value><![CDATA[to manager]]></imixs:value>
         </imixs:item>
         <imixs:item name="rtfresultlog" type="CDATA">
           <imixs:value><![CDATA[proposal declined by <itemvalue>namcurrentEditor</itemvalue>]]></imixs:value>
         </imixs:item>
         <imixs:item name="keymailreceiverfields" type="xs:string">
           <imixs:value><![CDATA[namUser]]></imixs:value>
+          <imixs:value><![CDATA[group.managerEmail]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyupdateacl" type="xs:boolean">
           <imixs:value>true</imixs:value>
@@ -536,13 +542,14 @@
 ]]></imixs:value>
         </imixs:item>
         <imixs:item name="txtmailsubject" type="xs:string">
-          <imixs:value><![CDATA[Proposal declined]]></imixs:value>
+          <imixs:value><![CDATA[to proposer]]></imixs:value>
         </imixs:item>
         <imixs:item name="rtfresultlog" type="CDATA">
           <imixs:value><![CDATA[proposal declined by <itemvalue>namcurrentEditor</itemvalue>]]></imixs:value>
         </imixs:item>
         <imixs:item name="keymailreceiverfields" type="xs:string">
           <imixs:value><![CDATA[namUser]]></imixs:value>
+          <imixs:value><![CDATA[group.proposerEmail]]></imixs:value>
         </imixs:item>
         <imixs:item name="keypublicresult" type="xs:string">
           <imixs:value><![CDATA[1]]></imixs:value>
@@ -741,7 +748,9 @@
     <bpmn2:intermediateCatchEvent id="IntermediateCatchEvent_5" imixs:activityid="10" name="Submit">
       <bpmn2:extensionElements>
         <imixs:item name="txtactivityresult" type="CDATA">
-          <imixs:value><![CDATA[<item name="action">worklist</item>]]></imixs:value>
+          <imixs:value><![CDATA[<item name="action">worklist</item>
+
+]]></imixs:value>
         </imixs:item>
         <imixs:item name="keyrestrictedvisibility" type="xs:string">
           <imixs:value><![CDATA[{imixs}]]></imixs:value>
@@ -763,20 +772,20 @@
           <imixs:value><![CDATA[ticket submitted by <itemvalue>namcurrentEditor</itemvalue>]]></imixs:value>
         </imixs:item>
         <imixs:item name="txtmailsubject" type="xs:string">
-          <imixs:value><![CDATA[testing again]]></imixs:value>
+          <imixs:value><![CDATA[to reviewer]]></imixs:value>
         </imixs:item>
         <imixs:item name="rtfmailbody" type="CDATA">
-          <imixs:value><![CDATA[testing]]></imixs:value>
+          <imixs:value><![CDATA[]]></imixs:value>
         </imixs:item>
-        <imixs:item name="nammailreceiver" type="xs:string">
-          <imixs:value><![CDATA[group.reviewer]]></imixs:value>
-        </imixs:item>
-        <imixs:item name="keymailreceiverfields" type="xs:string"/>
+        <imixs:item name="nammailreceiver" type="xs:string"/>
         <imixs:item name="$readaccess" type="xs:string">
           <imixs:value><![CDATA[group.proposer]]></imixs:value>
         </imixs:item>
         <imixs:item name="namaddreadaccess" type="xs:string"/>
         <imixs:item name="namaddwriteaccess" type="xs:string"/>
+        <imixs:item name="keymailreceiverfields" type="xs:string">
+          <imixs:value><![CDATA[group.reviewerEmail]]></imixs:value>
+        </imixs:item>
       </bpmn2:extensionElements>
       <bpmn2:incoming>SequenceFlow_14</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_36</bpmn2:outgoing>

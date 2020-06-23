@@ -67,7 +67,7 @@ public class PopulateGroupMembers {
 	    Principal principal = ctx.getCallerPrincipal();
 	    String name = principal.getName();
 	    //make configurable 
-	    String ldapFilter = "(uid=" + name + ")";
+	    
     
 	    
     			
@@ -80,15 +80,16 @@ public class PopulateGroupMembers {
 	    	prop.load(new FileInputStream("standalone/configuration/config.properties"));
 	    	String bindDN = prop.getProperty("Base_DN");
 	    	//group attribute
-	    	String filter = prop.getProperty("filter");
-	    	
+	    	String groupAttribute = prop.getProperty("groupAttribute");
+	    	String ldapFilter = prop.getProperty("ldapFilter");
+	    	 ldapFilter = "(" + ldapFilter + "=" + name + ")";
 			SearchOperation search = new SearchOperation(cf, bindDN);
 			try {
-			SearchResponse response = search.execute(ldapFilter, filter);
+			SearchResponse response = search.execute(ldapFilter, groupAttribute);
 			LdapEntry entry = response.getEntry();
 			// make multiple groups or if there are no groups
 			
-			LdapAttribute attribute = entry.getAttribute(filter);
+			LdapAttribute attribute = entry.getAttribute(groupAttribute);
 			ArrayList<String> roleNames = new ArrayList<String>();
 			if ( ! attribute.getStringValues().isEmpty()) {
 				roleNames.addAll(attribute.getStringValues());

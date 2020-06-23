@@ -26,6 +26,9 @@ public class setUp {
 	        String bindDN = prop.getProperty("Bind_DN");
 	        String password = prop.getProperty("Password");
 	        String URL = prop.getProperty("URL");
+	        int maxSize = Integer.valueOf(prop.getProperty("maxSize"));
+	        int minSize = Integer.valueOf(prop.getProperty("minSize"));
+
 	        cf = PooledConnectionFactory.builder()
 					  .config(ConnectionConfig.builder()
 					    .url(URL)
@@ -34,8 +37,8 @@ public class setUp {
 					      .credential(password)
 					      .build())
 					    .build())
-					  .min(5)
-					  .max(10)
+					  .min(minSize)
+					  .max(maxSize)
 					  .build();
 					cf.initialize();
 	    } catch (IOException e) {

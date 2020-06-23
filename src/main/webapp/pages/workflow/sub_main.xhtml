@@ -8,6 +8,12 @@
 
 <ui:fragment 
 		rendered="#{workflowController.workitem.item['$TaskID'] == 1000 }" >
+		
+		
+		
+		<h1>#{workflowController.getEvents().get(0).getAllItems()}</h1>
+		
+		
 	<!-- **** General info ***** -->
 	<!-- Prroposer's name -->
 			<dt style="clear: left; width: 400px;">Requester Name</dt>
