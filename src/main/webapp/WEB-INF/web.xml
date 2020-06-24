@@ -19,21 +19,21 @@
 
 
 
-
+<!--  
 	<login-config>
 		<auth-method>BASIC</auth-method>
 		<realm-name>ApplicationRealm</realm-name>
 	</login-config>
 
 
+-->
 
-<!-- 
 
 	<login-config>
 		<auth-method>KEYCLOAK-SAML</auth-method>
 	</login-config>
 	
--->
+
 
 
 

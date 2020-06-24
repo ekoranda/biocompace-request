@@ -63,48 +63,51 @@ public class PopulateGroupMembers {
     	
     	// list that contains new groups for the current user
         List<String> customGroups = new ArrayList<String>();
-     // get the name of the current user
+        // get the name of the current user
 	    Principal principal = ctx.getCallerPrincipal();
 	    String name = principal.getName();
-	    //make configurable 
 	    
-    
-	    
-    			
+	    // uses pooled connection from set up
 	    PooledConnectionFactory cf = setUp.cf;
     	
 	    
 	    try {	
-	    	
+	    	// read ldap configuration from .properties file
 	    	Properties prop = new Properties();
 	    	prop.load(new FileInputStream("standalone/configuration/config.properties"));
 	    	String bindDN = prop.getProperty("Base_DN");
-	    	//group attribute
 	    	String groupAttribute = prop.getProperty("groupAttribute");
 	    	String ldapFilter = prop.getProperty("ldapFilter");
-	    	 ldapFilter = "(" + ldapFilter + "=" + name + ")";
+	    	String proposerName =prop.getProperty("Proposer_Group");
+	    	String reviewerName = prop.getProperty("Reviewer_Group");
+	    	String managerName = prop.getProperty("Manager_Group");
+	        managerName = managerName.replace(" ", "");
+	    	// ldap filter to query through the ldap with
+	    	ldapFilter = "(" + ldapFilter + "=" + name + ")";
 			SearchOperation search = new SearchOperation(cf, bindDN);
 			try {
-			SearchResponse response = search.execute(ldapFilter, groupAttribute);
-			LdapEntry entry = response.getEntry();
-			// make multiple groups or if there are no groups
+				SearchResponse response = search.execute(ldapFilter, groupAttribute);
+				LdapEntry entry = response.getEntry();
+				// make multiple groups or if there are no groups
 			
-			LdapAttribute attribute = entry.getAttribute(groupAttribute);
-			ArrayList<String> roleNames = new ArrayList<String>();
-			if ( ! attribute.getStringValues().isEmpty()) {
-				roleNames.addAll(attribute.getStringValues());
-				
-				for (String role: roleNames) {
-					String roleName;
-					roleName = "group.";
-					roleName = roleName.concat(role);
-					roleName = roleName.replace(" ", "");
-					customGroups.add(roleName);
+				LdapAttribute attribute = entry.getAttribute(groupAttribute);
+				ArrayList<String> roleNames = new ArrayList<String>();
+				if ( ! attribute.getStringValues().isEmpty()) {
+					roleNames.addAll(attribute.getStringValues());
+					for (String role: roleNames) {
+						
+						// use this if model should have configured names
+						
+						String roleName;
+						roleName = "group.";
+						roleName = roleName.concat(role);
+						roleName = roleName.replace(" ", "");
+						customGroups.add(roleName);
+						
+					}
 				}
+			}catch(NullPointerException e) {
 			}
-		}catch(NullPointerException e) {
-		}
-			
 		}catch (LdapException e){
 				cf.close();
 		}catch(Exception e){
@@ -112,41 +115,7 @@ public class PopulateGroupMembers {
 		}
 			
 			
-		
-
-	    /**
-	    // hardcode into ldap directory to do a search for users
-	    
-    	// create buffer for csvFile
-    	String csvFile = "users.txt";
-        String line = "";
-        String csvSplitBy = ",";
-	   
-	    // buffer through the csv file line by line to iterate over each user
-        try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
-
-            while ((line = br.readLine()) != null) {
-
-                // use comma as separator
-                String[] users = line.split(csvSplitBy);
-                String roleName;
-                
-                // find the role of the current user and add it to their groups list
-                if(users[0].equals(name)){
-                	roleName = "group.";
-                	roleName = roleName.concat(users[1]);
-                	roleName = roleName.replace(" ", "");
-                	customGroups.add(roleName);
-                }
-                
-                
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        
-        */
+	
 	    
         
         // add the customGroup to the user's group event
