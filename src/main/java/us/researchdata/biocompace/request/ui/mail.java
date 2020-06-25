@@ -118,9 +118,12 @@ public class mail implements Serializable {
 	    	
 	    }catch(LdapException e) {
 	    	e.printStackTrace();
+	    }catch(NullPointerException e) {
+	    	System.out.println("null pointer exception");
 	    }catch(Exception e) {
 	    	e.printStackTrace();
 	    }
+	   
 		
 		
 		
