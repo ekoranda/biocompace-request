@@ -6,6 +6,7 @@ do.core.validation=true
 eclipse.preferences.version=1
 list.SequenceFlow.expanded=true
 section.IntermediateCatchEvent.Attributes..expanded=true
+section.IntermediateCatchEvent.BCC..expanded=true
 section.IntermediateCatchEvent.CC..expanded=true
 section.IntermediateCatchEvent.Documentation..expanded=true
 section.IntermediateCatchEvent.To..expanded=true

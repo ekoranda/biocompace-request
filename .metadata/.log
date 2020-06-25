@@ -5805,3 +5805,146 @@ org.eclipse.swt.SWTException: Widget is disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:661)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1476)
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2020-06-24 17:06:32.868
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2020-06-24 17:06:32.868
+!MESSAGE session context was:(profile=_Users_ekoranda1_eclipse_modeling-2019-032_Eclipse.app_Contents_Eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-06-24 17:06:32.868
+!MESSAGE No repository found containing: osgi.bundle,org.imixs.eclipse.bpmn2.plugin,1.4.8.201909052108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-06-24 17:06:32.868
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.imixs.eclipse.bpmn2.feature,1.4.8.201909052108
+
+!ENTRY org.eclipse.epp.mpc.ui 1 0 2020-06-24 17:09:13.888
+!MESSAGE Performing Marketplace install request from http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2309267
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2020-06-24 17:09:38.173
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2020-06-24 17:09:38.173
+!MESSAGE session context was:(profile=_Users_ekoranda1_eclipse_modeling-2019-032_Eclipse.app_Contents_Eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-06-24 17:09:38.173
+!MESSAGE No repository found containing: osgi.bundle,org.imixs.eclipse.bpmn2.plugin,1.4.8.201909052108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-06-24 17:09:38.173
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.imixs.eclipse.bpmn2.feature,1.4.8.201909052108
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2020-06-24 17:20:23.795
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2020-06-24 17:20:23.795
+!MESSAGE session context was:(profile=_Users_ekoranda1_eclipse_modeling-2019-032_Eclipse.app_Contents_Eclipse, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-06-24 17:20:23.795
+!MESSAGE No repository found containing: osgi.bundle,org.imixs.eclipse.bpmn2.plugin,1.4.8.201909052108
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2020-06-24 17:20:23.795
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.imixs.eclipse.bpmn2.feature,1.4.8.201909052108
+
+!ENTRY org.eclipse.equinox.p2.engine 2 0 2020-06-24 17:20:57.831
+!MESSAGE 
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.831
+!MESSAGE Failed to find a configured bundleInfo for: [R]javax.wsdl 1.6.2.v201012040545.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.bpmn2 1.5.0.Final-v20180515-1526.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.bpmn2.edit 1.5.0.Final-v20180515-1526.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.bpmn2.editor 1.5.0.Final-v20180515-1526.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.bpmn2.modeler.core 1.5.0.Final-v20180515-1642-B1.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.bpmn2.modeler.help 1.5.0.Final-v20180515-1642-B1.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.bpmn2.modeler.ui 1.5.0.Final-v20180515-1642-B1.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.graphiti 0.15.0.201806050830.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.graphiti.mm 0.15.0.201806050830.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.graphiti.ui 0.15.0.201806050830.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.common.core 1.3.0.v201811122154.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.common.environment 1.0.400.v201810290944.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.common.frameworks 1.2.201.v201707201954.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.common.frameworks.ui 1.2.400.v201802151734.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.common.project.facet.core 1.4.400.v201808012032.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.common.ui 1.1.600.v201811161824.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.common.uriresolver 1.2.300.v201802151734.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.sse.core 1.2.100.v201901310548.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.sse.ui 1.5.100.v201903050402.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.validation 1.2.701.v201810290944.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.validation.ui 1.2.600.v201811122154.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.wsdl 1.2.500.v201903050508.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.xml.core 1.2.200.v201901071922.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.xml.ui 1.2.200.v201901071922.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.xsd.core 1.2.0.v201901071922.
+!SUBENTRY 1 org.eclipse.equinox.p2.touchpoint.eclipse 2 0 2020-06-24 17:20:57.832
+!MESSAGE Failed to find a configured bundleInfo for: [R]org.eclipse.wst.xsd.ui 1.3.200.v201901071922.
+!SUBENTRY 1 unknown 0 0 2020-06-24 17:20:57.832
+!MESSAGE OK
+
+!ENTRY org.eclipse.core.jobs 4 2 2020-06-24 17:21:02.481
+!MESSAGE An internal error occurred during: "Update validate job".
+!STACK 0
+org.eclipse.swt.SWTException: Device is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4699)
+	at org.eclipse.swt.SWT.error(SWT.java:4614)
+	at org.eclipse.swt.SWT.error(SWT.java:4585)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1113)
+	at org.eclipse.swt.widgets.Display.asyncExec(Display.java:606)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater.updatesAvailable(AutomaticUpdater.java:141)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater.updatesAvailable(AutomaticUpdater.java:91)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater$2.run(AutomaticUpdater.java:339)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2020-06-24 17:21:03.394 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -data file:/Users/ekoranda1/biocompace/biocompace-request/ -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-06-24 17:21:10.494
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-06-24 17:21:10.590
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.epp.mpc.ui 1 0 2020-06-24 17:21:34.230
+!MESSAGE Performing Marketplace install request from http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=2309267
+!SESSION 2020-06-24 17:22:41.860 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -data file:/Users/ekoranda1/biocompace/biocompace-request/ -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-06-24 17:22:48.873
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-06-24 17:22:49.008
+!MESSAGE Using Apache MINA sshd as ssh client.
+!SESSION 2020-06-24 17:26:24.627 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -product org.eclipse.epp.package.modeling.product -data file:/Users/ekoranda1/biocompace/biocompace-request/ -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-06-24 17:26:29.851
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-06-24 17:26:29.939
+!MESSAGE Using Apache MINA sshd as ssh client.

@@ -82,11 +82,12 @@ public class mail implements Serializable {
 	    	String proposerName =prop.getProperty("Proposer_Group");
 	    	String reviewerName = prop.getProperty("Reviewer_Group");
 	    	String managerName = prop.getProperty("Manager_Group");
+	    	String filter = prop.getProperty("ldapFilter");
+
 	    	
 	    	// set the filters for finding reviewer email addresses and manager email addresses
 	    	String ldapFilter = "(|(isMemberOf=" + reviewerName + ")(isMemberOf=" + managerName + "))";
-	    	//TODO: make this configurable
-	    	String proposerFilter = "(uid=" + workflowEvent.getWorkitem().getItemValue("$creator").get(0) + ")";
+	    	String proposerFilter = "(" + filter + "=" + workflowEvent.getWorkitem().getItemValue("$creator").get(0) + ")";
 	    	
 	    	// ldap query
 	    	SearchOperation search = new SearchOperation(cf, bindDN);
@@ -96,7 +97,6 @@ public class mail implements Serializable {
 	    	Collection<LdapEntry> entries = response.getEntries();
 	    	LdapEntry proposerEntry = proposerResponse.getEntry();
 	    	proposerEmail = proposerEntry.getAttribute("mail").getStringValue();
-	    	System.out.println(proposerEmail);
 	    	
 			//LdapEntry entry = response.getEntry();
 	    	for (LdapEntry user: entries) {
