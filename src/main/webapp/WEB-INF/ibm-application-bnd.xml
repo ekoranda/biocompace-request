@@ -11,5 +11,17 @@ version="1.2">
 	            <run-as userid="workflow-service"/>
 	        </security-role>
 	        
+	        
+	        <security-role name="org.imixs.ACCESSLEVEL.MANAGERACCESS" >
+	            <user name="Emily" password="password" />
+	            <run-as userid="Emily"/>
+	        </security-role>
+	        
+	        
+	        <security-role-mapping>
+        <role-name>org.imixs.ACCESSLEVEL.MANAGERACCESS</role-name>
+        <principal-name>Emily</principal-name>
+    </security-role-mapping>
+	        
 	      
      </application-bnd>   

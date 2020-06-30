@@ -171,10 +171,13 @@
 				disabled="#{tasklistController.endOfList}" 
 				value="#{global.next} &gt;&gt;">
 			</h:commandButton>
-
-			<h:commandButton actionListener="#{workflowController.create('1.1',1000,'')}"
-				action="/pages/workflow/workitem" value="Create New Ticket">
-			</h:commandButton>
+	
+			<ui:fragment 
+				rendered="#{loginController.getUserNameList().contains(userGroupNames.proposerName)}">
+				<h:commandButton actionListener="#{workflowController.create('1.1',1000,'')}"
+					action="/pages/workflow/workitem" value="Create New Ticket">
+				</h:commandButton>
+			</ui:fragment>
 
 
 		</h:form>

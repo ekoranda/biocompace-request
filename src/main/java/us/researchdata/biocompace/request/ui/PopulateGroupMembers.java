@@ -51,6 +51,8 @@ import org.ldaptive.SingleConnectionFactory;
  *
  */
 
+
+
 @ManagedBean
 @Stateless()
 public class PopulateGroupMembers {
@@ -75,34 +77,36 @@ public class PopulateGroupMembers {
 	    	// read ldap configuration from .properties file
 	    	Properties prop = new Properties();
 	    	prop.load(new FileInputStream("standalone/configuration/config.properties"));
+	    	// get ldap properties
 	    	String bindDN = prop.getProperty("Base_DN");
 	    	String groupAttribute = prop.getProperty("groupAttribute");
 	    	String ldapFilter = prop.getProperty("ldapFilter");
+	    	// get group name information
 	    	String proposerName =prop.getProperty("Proposer_Group");
 	    	String reviewerName = prop.getProperty("Reviewer_Group");
 	    	String managerName = prop.getProperty("Manager_Group");
 	        managerName = managerName.replace(" ", "");
+	        
 	    	// ldap filter to query through the ldap with
 	    	ldapFilter = "(" + ldapFilter + "=" + name + ")";
+	    	// create a new ldap search
 			SearchOperation search = new SearchOperation(cf, bindDN);
 			try {
 				SearchResponse response = search.execute(ldapFilter, groupAttribute);
-				LdapEntry entry = response.getEntry();
-				// make multiple groups or if there are no groups
-			
+				LdapEntry entry = response.getEntry();		
+				// get the group attribute from the search
 				LdapAttribute attribute = entry.getAttribute(groupAttribute);
 				ArrayList<String> roleNames = new ArrayList<String>();
 				if ( ! attribute.getStringValues().isEmpty()) {
 					roleNames.addAll(attribute.getStringValues());
 					for (String role: roleNames) {
-						
-						// use this if model should have configured names
-						
+						// add the groups from the group attribute to the custom groups list 						
 						String roleName;
 						roleName = "group.";
 						roleName = roleName.concat(role);
 						roleName = roleName.replace(" ", "");
 						customGroups.add(roleName);
+						
 						
 					}
 				}
@@ -113,12 +117,9 @@ public class PopulateGroupMembers {
 		}catch(Exception e){
 				e.printStackTrace();
 		}
-			
-			
-	
-	    
-        
+ 
         // add the customGroup to the user's group event
+	   
 	    userGroupEvent.setGroups(customGroups);
 	    return customGroups;
 	}
@@ -127,5 +128,6 @@ public class PopulateGroupMembers {
     
     
 }
+
 
 

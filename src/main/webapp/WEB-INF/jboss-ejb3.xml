@@ -13,5 +13,7 @@
 			<s:missing-method-permissions-deny-access>false</s:missing-method-permissions-deny-access>
 		</s:security>
 	</assembly-descriptor>
+	
+	 
 
 </jboss:ejb-jar>

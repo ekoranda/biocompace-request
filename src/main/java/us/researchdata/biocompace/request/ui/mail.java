@@ -1,26 +1,4 @@
-/*******************************************************************************
- *  Imixs Workflow Technology
- *  Copyright (C) 2003, 2008 Imixs Software Solutions GmbH,  
- *  http://www.imixs.com
- *  
- *  This program is free software; you can redistribute it and/or 
- *  modify it under the terms of the GNU General Public License 
- *  as published by the Free Software Foundation; either version 2 
- *  of the License, or (at your option) any later version.
- *  
- *  This program is distributed in the hope that it will be useful, 
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of 
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU 
- *  General Public License for more details.
- *  
- *  You can receive a copy of the GNU General Public
- *  License at http://www.gnu.org/licenses/gpl.html
- *  
- *  Contributors:  
- *  	Imixs Software Solutions GmbH - initial API and implementation
- *  	Ralph Soika
- *  
- *******************************************************************************/
+
 package us.researchdata.biocompace.request.ui;
 
 import java.io.FileInputStream;
@@ -34,7 +12,6 @@ import javax.enterprise.context.SessionScoped;
 import javax.enterprise.event.Observes;
 import javax.inject.Named;
 
-
 import org.imixs.workflow.exceptions.AccessDeniedException;
 import org.imixs.workflow.faces.data.WorkflowEvent;
 
@@ -45,20 +22,13 @@ import org.ldaptive.SearchOperation;
 import org.ldaptive.SearchResponse;
 
 /**
- * This backing bean is an example how to interact with the EntityService to
- * manage ItemCollections as instances of Entities
- * <p>
- * The bean provides an ItemCollectionAdapter to simplify to access properties
- * of the ItemCollection from an JSP page.
- * <p>
- * See also the TeamPlugin. This plugin maps the team selection into a team item
- * of the workitem during processing.
+ * Reads from a ldap to get the email attributes and add the email addresses
+ * To their corresponding email list based off of that user's organizational group
+ * Those email lists can be accessed in the model. 
  * 
- * @see team.xhtml, teamlist.xhtml
- * 
- * @author rsoika
- * 
+ * @author ekoranda
  */
+
 
 
 @Named
@@ -68,7 +38,11 @@ public class mail implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	public void onWorkflowEvent(@Observes WorkflowEvent workflowEvent) throws AccessDeniedException {
+		
+		// get the ldap bind that was set up at deployment
 		PooledConnectionFactory cf = setUp.cf;
+		
+		// email lists for organizational groups
 		List<String> reviewerEmail = new ArrayList<String>();
 		List<String> managerEmail = new ArrayList<String>();
 		String proposerEmail = null;
@@ -77,19 +51,21 @@ public class mail implements Serializable {
 	    	// read from config.properties file
 	    	Properties prop = new Properties();
 	    	prop.load(new FileInputStream("standalone/configuration/config.properties"));
+	    	// get ldap configurattion details
 	    	String bindDN = prop.getProperty("Base_DN");
+	    	String filter = prop.getProperty("ldapFilter");
 	    	// get the ldap names for the proposer, reviewer, and manager groups
 	    	String proposerName =prop.getProperty("Proposer_Group");
 	    	String reviewerName = prop.getProperty("Reviewer_Group");
 	    	String managerName = prop.getProperty("Manager_Group");
-	    	String filter = prop.getProperty("ldapFilter");
 
 	    	
 	    	// set the filters for finding reviewer email addresses and manager email addresses
 	    	String ldapFilter = "(|(isMemberOf=" + reviewerName + ")(isMemberOf=" + managerName + "))";
+	    	// set the filter for getting the email address of the creator of the workitem
 	    	String proposerFilter = "(" + filter + "=" + workflowEvent.getWorkitem().getItemValue("$creator").get(0) + ")";
 	    	
-	    	// ldap query
+	    	// ldap search
 	    	SearchOperation search = new SearchOperation(cf, bindDN);
 	    	SearchResponse response = search.execute(ldapFilter, "mail", "uid", "isMemberOf");
 	    	SearchResponse proposerResponse = search.execute(proposerFilter, "mail");
@@ -112,7 +88,8 @@ public class mail implements Serializable {
 	    			managerEmail.add(user.getAttribute("mail").getStringValue());
 	    		}	
 	    	}
-			 
+	    	
+	    	
 			
 			
 	    	

@@ -745,7 +745,7 @@
     </bpmn2:intermediateCatchEvent>
     <bpmn2:sequenceFlow id="SequenceFlow_5" sourceRef="Task_3" targetRef="IntermediateCatchEvent_2"/>
     <bpmn2:sequenceFlow id="SequenceFlow_13" sourceRef="IntermediateCatchEvent_2" targetRef="Task_10"/>
-    <bpmn2:intermediateCatchEvent id="IntermediateCatchEvent_5" imixs:activityid="10" name="TESTING">
+    <bpmn2:intermediateCatchEvent id="IntermediateCatchEvent_5" imixs:activityid="10" name="Testing again">
       <bpmn2:extensionElements>
         <imixs:item name="txtactivityresult" type="CDATA">
           <imixs:value><![CDATA[<item name="action">worklist</item>
@@ -956,7 +956,7 @@
       <bpmndi:BPMNShape id="BPMNShape_IntermediateCatchEvent_5" bpmnElement="IntermediateCatchEvent_5">
         <dc:Bounds height="36.0" width="36.0" x="240.0" y="58.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_4">
-          <dc:Bounds height="11.0" width="40.0" x="238.0" y="94.0"/>
+          <dc:Bounds height="11.0" width="54.0" x="231.0" y="94.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_IntermediateCatchEvent_1" bpmnElement="IntermediateCatchEvent_1">

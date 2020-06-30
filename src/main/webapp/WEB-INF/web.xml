@@ -19,22 +19,21 @@
 
 
 
- 
+ <!-- 
 	<login-config>
 		<auth-method>BASIC</auth-method>
 		<realm-name>ApplicationRealm</realm-name>
 	</login-config>
+ -->
 
 
-
-<!-- 
 
 	<login-config>
 		<auth-method>KEYCLOAK-SAML</auth-method>
 	</login-config>
-	
 
- -->
+
+
 
 
 	<security-constraint>
@@ -68,6 +67,9 @@
 	<security-role>
 		<role-name>org.imixs.ACCESSLEVEL.MANAGERACCESS</role-name>
 	</security-role>
+	
+	
+	
 
 
 	

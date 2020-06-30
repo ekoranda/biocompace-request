@@ -5948,3 +5948,84 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.egit.core 1 0 2020-06-24 17:26:29.939
 !MESSAGE Using Apache MINA sshd as ssh client.
+!SESSION 2020-06-25 11:40:42.383 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-06-25 11:40:55.857
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-06-25 11:40:56.004
+!MESSAGE Using Apache MINA sshd as ssh client.
+!SESSION 2020-06-26 08:03:19.335 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-06-26 08:03:26.736
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-06-26 08:03:26.827
+!MESSAGE Using Apache MINA sshd as ssh client.
+!SESSION 2020-06-30 09:14:58.239 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2020-06-30 09:15:13.264
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-06-30 09:15:13.343
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.core.resources 2 2 2020-06-30 13:36:06.498
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2020-06-30 13:36:06.498
+!MESSAGE The project description file (.project) for 'classes' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.ui.ide 4 4 2020-06-30 13:48:45.783
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 2 1 2020-06-30 13:48:45.784
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2020-06-30 13:48:45.784
+!MESSAGE The project description file (.project) for 'classes' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-06-30 13:48:46.905
+!MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2020-06-30 13:49:00.659 -----------------------------------------------
+eclipse.buildId=4.11.0.I20190307-0500
+java.version=1.8.0_181
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.modeling.product -keyring /Users/ekoranda1/.eclipse_keyring
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-06-30 13:49:13.781
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.net 1 0 2020-06-30 13:49:15.849
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.egit.core 1 0 2020-06-30 13:49:15.951
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.core.resources 2 2 2020-06-30 13:54:28.564
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2020-06-30 13:54:28.564
+!MESSAGE The project description file (.project) for 'classes' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY org.eclipse.core.resources 2 2 2020-06-30 13:59:28.805
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2020-06-30 13:59:28.805
+!MESSAGE The project description file (.project) for 'classes' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.

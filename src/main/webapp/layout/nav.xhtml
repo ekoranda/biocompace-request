@@ -49,27 +49,31 @@
 
 				</ul>
 				<hr />
-				<ul>	
-					<ui:fragment
+				<ul>
+				<ui:fragment
+				
+				
 				rendered="#{loginController.getUserNameList().contains('group.manager')}" >
+					
+					
 					<li class="nav-item"><h:commandLink
 							action="/pages/config/teamlist?faces-redirect=true">
 							<span class="typcn typcn-group"></span>
 							<label>Reviewers</label>
 						</h:commandLink></li>
-					</ui:fragment>
 					
 					
-					<ui:fragment
-				rendered="#{loginController.getUserNameList().contains('group.manager')}" >
+					
+					
 					<li class="nav-item"><a target="_blank"
 						href="#{facesContext.externalContext.requestContextPath}/api/model">
 							<span class="typcn typcn-flow-merge"></span><label>Models</label>
 					</a></li>
+					<hr />
 					</ui:fragment>
 					
 
-					<hr />
+					
 					<ui:fragment
 				rendered="#{(loginController.getUserNameList().contains('group.reviewer') or loginController.getUserNameList().contains('group.manager'))}" >
 					<li class="nav-item"><h:commandLink target="admin"
@@ -77,8 +81,10 @@
 							class="typcn typcn-spanner"></span>
 							<label>Admin Dashboard</label>
 					</h:commandLink></li>
+					
 					</ui:fragment>
-				</ul>
+					</ul>
+				
 
 
 
