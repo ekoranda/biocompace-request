@@ -12,6 +12,7 @@
 
 		<h:form>
 			<h2>#{global.worklist}</h2>
+			<h2></h2>
 
 			
 			
@@ -145,6 +146,7 @@
 					
 						</h:dataTable>			
 					</ui:fragment>
+					<h:outputText value="#{workitem.item['otherTools']}" />
 				</h:column>
 				
 				
@@ -159,6 +161,9 @@
 						<h:outputText value="#{workitem.item['txtworkflowstatus']}" />
 					</h:column>
 				</ui:fragment>
+				
+				
+				
 
 			</h:dataTable>
 

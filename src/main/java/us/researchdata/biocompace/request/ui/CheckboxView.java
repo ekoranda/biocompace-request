@@ -93,6 +93,8 @@ public class CheckboxView {
         tools.add("OpenMPI");
         tools.add("SPSS");
         tools.add("Anaconda");
+        tools.add("Other");
+        System.out.println(tools.size());
 
     }
  

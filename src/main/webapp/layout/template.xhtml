@@ -44,6 +44,9 @@
 	<link rel="stylesheet" type="text/css"
 		href="#{facesContext.externalContext.requestContextPath}/layout/css/fonts/typicons.css" />
 
+	<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+
 	<!-- layout -->
 	<link
 		href="#{facesContext.externalContext.requestContextPath}/layout/css/imixs-basic.css"
@@ -55,7 +58,7 @@
 	<link
 		href="#{facesContext.externalContext.requestContextPath}/layout/css/basic.css"
 		charset="UTF-8" type="text/css" rel="stylesheet" />
-
+		
 </h:head>
 <h:body>
 
@@ -136,6 +139,45 @@
 					});
 
 		};
+		
+		
+		// if others option was chosen on tools drop box, show the other tools input text box
+		$(function () {
+	        $(".tools").change(function () {
+	        	var element2 = document.querySelector("#workitem_form_id\\:j_idt106\\:tools").innerHTML;
+				if(element2.includes("<input id=\"workitem_form_id:j_idt106:tools:71\" name=\"workitem_form_id:j_idt106:tools\" type=\"checkbox\" value=\"Other\" data-escaped=\"true\" aria-checked=\"true\">")){
+					$("#otherTools").show();
+					document.querySelector("#workitem_form_id\\:j_idt106\\:otherToolsInput").required = true;
+				}else {
+                	$("#otherTools").hide();
+					document.querySelector("#workitem_form_id\\:j_idt106\\:otherToolsInput").required = false;
+                } 
+	        });
+	    });
+		
+		// if others option was chosen on types drop box, show the other types input text box
+		$(function () {
+	        $(".types").change(function () {
+	        	var element2 = document.querySelector("#workitem_form_id\\:j_idt106\\:types").innerHTML;
+				if(element2.includes("<input id=\"workitem_form_id:j_idt106:types:4\" name=\"workitem_form_id:j_idt106:types\" type=\"checkbox\" value=\"Other:\" data-escaped=\"true\" aria-checked=\"true\">")){
+					$("#otherTypes").show();
+					document.querySelector("#workitem_form_id\\:j_idt106\\:otherTypesInput").required = true;
+				}else {
+                	$("#otherTypes").hide();
+					document.querySelector("#workitem_form_id\\:j_idt106\\:otherTypesInput").required = false;
+                } 
+	        });
+	    });
+		
+		
+		// make name mandatory
+		$(function () {
+			document.querySelector("#workitem_form_id\\:j_idt106\\:subject_id").required = true;
+			
+	    });
+		
+		
+		
 
 		/*]]>*/
 	</script>

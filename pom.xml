@@ -283,6 +283,13 @@
     <artifactId>primefaces</artifactId>
     <version>7.0</version>
 </dependency>
+
+<!-- https://mvnrepository.com/artifact/org.richfaces.core/richfaces-core-api -->
+<dependency>
+    <groupId>org.richfaces.core</groupId>
+    <artifactId>richfaces-core-api</artifactId>
+    <version>4.3.7.Final</version>
+</dependency>
   
   <!-- JEE Dependencies -->
 		<dependency>

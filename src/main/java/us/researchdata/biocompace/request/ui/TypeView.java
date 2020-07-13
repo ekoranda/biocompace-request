@@ -38,6 +38,7 @@ public class TypeView {
         types.add("Next Gen Sequencing");
         types.add("Sequence Analysis");
         types.add("Structural Biology");
+        types.add("Other:");
         
  
 

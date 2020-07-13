@@ -8,16 +8,14 @@
 
 <ui:fragment 
 		rendered="#{workflowController.workitem.item['$TaskID'] == 1000 }" >
-		
-				
-		
+	
 	<!-- **** General info ***** -->
 	<!-- Prroposer's name -->
 			<dt style="clear: left; width: 400px;">Requester Name</dt>
 			<dd style="width: 600px;">
-				<h:inputText style="width: 20em;" required="true" 
+				<h:inputText style="width: 20em;" 
 					value="#{workflowController.workitem.item['subject']}"
-				id="subject_id">
+				id="subject_id" class="name">
 				</h:inputText>
 			</dd>
 			
@@ -97,21 +95,44 @@
 			<dt style="clear: left; width: 400px;">Type of Analysis</dt>
 			<dd>
 				<!-- Choose from drop down box -->
-				<p:selectCheckboxMenu id="types" value="#{workflowController.workitem.itemListArray['types']}" label="Types" multiple="true"
+				<p:selectCheckboxMenu class = "types" id="types" value="#{workflowController.workitem.itemListArray['types']}" label="Types" multiple="true"
                 	filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
             		<f:selectItems value="#{typeView.types}" />
         		</p:selectCheckboxMenu>
 			</dd>
 			
+			<div id="otherTypes" style="display: none">
+    			Other Type:
+				<h:inputText style="width: 20em;" 
+					value="#{workflowController.workitem.item['otherType']}"
+				id="otherTypesInput">
+				</h:inputText>
+			</div>
+			
+			
+			
 			<!-- Tools -->
 		 	<dt style="clear: left; width: 400px;">Request for Additional Tools:</dt>
  			<dd>
  				<!-- Choose from drop down box -->
-        		<p:selectCheckboxMenu id="tools" value="#{workflowController.workitem.itemListArray['tools']}" label="Tools" multiple="true"
-                	filter="true" filterMatchMode="startsWith" panelStyle="width:250px">
-            		<f:selectItems value="#{checkboxView.tools}" />
+        		<p:selectCheckboxMenu  class="tools"  id="tools" value="#{workflowController.workitem.itemListArray['tools']}" label="Tools" multiple="true"
+                	filter="true" filterMatchMode="startsWith" panelStyle="width:250px" >
+            		<f:selectItems value="#{checkboxView.tools}"/>
         		</p:selectCheckboxMenu>
 			</dd>
+			
+			<div id="otherTools" style="display: none">
+    			Other Tools:
+    			
+				<h:inputText style="width: 20em;" 
+					value="#{workflowController.workitem.item['otherTools']}"
+				id="otherToolsInput">
+				</h:inputText>
+			</div>
+			
+			
+				
+		
 			
 			<!-- Start Date -->
 			<dt style="clear: left; width: 400px;">Proposed Start Date</dt>
@@ -138,6 +159,7 @@
             		</h:outputText>
     			</p:dialog>
     		</dd>
+    		  		
 </ui:fragment>
 
 </f:subview>
